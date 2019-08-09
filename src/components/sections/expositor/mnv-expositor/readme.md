@@ -20,13 +20,13 @@
 
 ### Used by
 
- - [mnv-expositor-base](../mnv-expositor-base)
+ - [mnv-expositor-base](..\mnv-expositor-base)
 
 ### Depends on
 
-- [mnv-grid](../../../layout/mnv-grid)
-- [mnv-title](../../../typography/mnv-title)
-- [mnv-projeto](../mnv-projeto)
+- [mnv-grid](..\..\..\layout\mnv-grid)
+- [mnv-title](..\..\..\typography\mnv-title)
+- [mnv-projeto](..\mnv-projeto)
 
 ### Graph
 ```mermaid

@@ -16,11 +16,11 @@
 
 ### Used by
 
- - [app-heropage](../../../app-pages/app-heropage)
+ - [app-heropage](..\..\..\app-pages\app-heropage)
 
 ### Depends on
 
-- [mnv-expositor](../mnv-expositor)
+- [mnv-expositor](..\mnv-expositor)
 
 ### Graph
 ```mermaid

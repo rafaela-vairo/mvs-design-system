@@ -16,12 +16,12 @@
 
 ### Used by
 
- - [app-heropage](../../app-pages/app-heropage)
+ - [app-heropage](..\..\app-pages\app-heropage)
 
 ### Depends on
 
-- [mnv-grid](../../layout/mnv-grid)
-- [mnv-title](../../typography/mnv-title)
+- [mnv-grid](..\..\layout\mnv-grid)
+- [mnv-title](..\..\typography\mnv-title)
 - [mnv-bignumber](mnv-bignumber)
 
 ### Graph

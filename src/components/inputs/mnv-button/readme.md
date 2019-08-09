@@ -21,15 +21,13 @@
 
 ### Used by
 
- - [app-home](../../app-pages/app-home)
- - [mnv-card](../../layout/mnv-card)
- - [mnv-hero](../../sections/mnv-hero)
- - [mnv-projeto](../../sections/expositor/mnv-projeto)
+ - [mnv-card](..\..\layout\mnv-card)
+ - [mnv-hero](..\..\sections\mnv-hero)
+ - [mnv-projeto](..\..\sections\expositor\mnv-projeto)
 
 ### Graph
 ```mermaid
 graph TD;
-  app-home --> mnv-button
   mnv-card --> mnv-button
   mnv-hero --> mnv-button
   mnv-projeto --> mnv-button

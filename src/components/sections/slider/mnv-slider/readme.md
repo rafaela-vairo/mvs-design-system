@@ -21,8 +21,8 @@
 
 ### Depends on
 
-- [mnv-slide](../mnv-slide)
-- [mnv-card](../../../layout/mnv-card)
+- [mnv-slide](..\mnv-slide)
+- [mnv-card](..\..\..\layout\mnv-card)
 
 ### Graph
 ```mermaid

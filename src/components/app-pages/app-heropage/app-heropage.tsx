@@ -3,12 +3,12 @@ import { MatchResults } from '@stencil/router'
 import Axios from 'axios'
 
 const dataBase = Axios.create({
-	baseURL: 'https://admin.sustainable.ufrj.br/wp-json/',
+	baseURL: 'https://admin.sustainable.ufrj.br/wp-json/'
 })
 
 @Component({
 	tag: 'app-heropage',
-	styleUrl: 'app-heropage.scss',
+	styleUrl: 'app-heropage.scss'
 })
 export class AppHeropage {
 	@Prop() match: MatchResults

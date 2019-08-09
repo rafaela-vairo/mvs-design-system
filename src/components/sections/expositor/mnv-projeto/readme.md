@@ -22,13 +22,13 @@
 
 ### Used by
 
- - [mnv-expositor](../mnv-expositor)
+ - [mnv-expositor](..\mnv-expositor)
 
 ### Depends on
 
-- [mnv-title](../../../typography/mnv-title)
-- [mnv-paragraph](../../../typography/mnv-paragraph)
-- [mnv-button](../../../inputs/mnv-button)
+- [mnv-title](..\..\..\typography\mnv-title)
+- [mnv-paragraph](..\..\..\typography\mnv-paragraph)
+- [mnv-button](..\..\..\inputs\mnv-button)
 
 ### Graph
 ```mermaid

@@ -21,16 +21,16 @@
 
 ### Used by
 
- - [mnv-list-card](../../sections/mnv-list-card)
- - [mnv-slider](../../sections/slider/mnv-slider)
+ - [mnv-list-card](..\..\sections\mnv-list-card)
+ - [mnv-slider](..\..\sections\slider\mnv-slider)
 
 ### Depends on
 
-- [mnv-title](../../typography/mnv-title)
-- [mnv-subtitle](../../typography/mnv-subtitle)
-- [mnv-divider](../../typography/mnv-divider)
-- [mnv-paragraph](../../typography/mnv-paragraph)
-- [mnv-button](../../inputs/mnv-button)
+- [mnv-title](..\..\typography\mnv-title)
+- [mnv-subtitle](..\..\typography\mnv-subtitle)
+- [mnv-divider](..\..\typography\mnv-divider)
+- [mnv-paragraph](..\..\typography\mnv-paragraph)
+- [mnv-button](..\..\inputs\mnv-button)
 
 ### Graph
 ```mermaid

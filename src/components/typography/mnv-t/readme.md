@@ -1,4 +1,4 @@
-# mnv-slide
+# mnv-t
 
 
 
@@ -9,21 +9,8 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `image`  | `image`   |             | `string` | `undefined` |
+| `level`  | `level`   |             | `number` | `undefined` |
 
-
-## Dependencies
-
-### Used by
-
- - [mnv-slider](..\mnv-slider)
-
-### Graph
-```mermaid
-graph TD;
-  mnv-slider --> mnv-slide
-  style mnv-slide fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

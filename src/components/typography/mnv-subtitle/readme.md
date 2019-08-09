@@ -16,7 +16,7 @@
 
 ### Used by
 
- - [mnv-card](../../layout/mnv-card)
+ - [mnv-card](..\..\layout\mnv-card)
 
 ### Graph
 ```mermaid

@@ -16,19 +16,17 @@
 
 ### Used by
 
- - [app-heropage](../../../app-pages/app-heropage)
- - [app-home](../../../app-pages/app-home)
+ - [app-heropage](..\..\..\app-pages\app-heropage)
 
 ### Depends on
 
-- [mnv-navbutton](../mnv-navbutton)
+- [mnv-navbutton](..\mnv-navbutton)
 
 ### Graph
 ```mermaid
 graph TD;
   mnv-navbar --> mnv-navbutton
   app-heropage --> mnv-navbar
-  app-home --> mnv-navbar
   style mnv-navbar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

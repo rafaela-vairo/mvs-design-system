@@ -19,7 +19,6 @@ export namespace Components {
     'match': MatchResults;
     'numbers': any;
   }
-  interface AppHome {}
   interface AppRoot {}
   interface MnvAbout {
     'mainText': string;
@@ -173,6 +172,9 @@ export namespace Components {
   interface MnvSubtitle {
     'type': string;
   }
+  interface MnvT {
+    'level': number;
+  }
   interface MnvTitle {
     'level': string;
     'overline': string;
@@ -191,12 +193,6 @@ declare global {
   var HTMLAppHeropageElement: {
     prototype: HTMLAppHeropageElement;
     new (): HTMLAppHeropageElement;
-  };
-
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
   };
 
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
@@ -415,6 +411,12 @@ declare global {
     new (): HTMLMnvSubtitleElement;
   };
 
+  interface HTMLMnvTElement extends Components.MnvT, HTMLStencilElement {}
+  var HTMLMnvTElement: {
+    prototype: HTMLMnvTElement;
+    new (): HTMLMnvTElement;
+  };
+
   interface HTMLMnvTitleElement extends Components.MnvTitle, HTMLStencilElement {}
   var HTMLMnvTitleElement: {
     prototype: HTMLMnvTitleElement;
@@ -428,7 +430,6 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'app-heropage': HTMLAppHeropageElement;
-    'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
     'mnv-about': HTMLMnvAboutElement;
     'mnv-anchor': HTMLMnvAnchorElement;
@@ -465,6 +466,7 @@ declare global {
     'mnv-slider': HTMLMnvSliderElement;
     'mnv-strong': HTMLMnvStrongElement;
     'mnv-subtitle': HTMLMnvSubtitleElement;
+    'mnv-t': HTMLMnvTElement;
     'mnv-title': HTMLMnvTitleElement;
     'mnv-tooltip': HTMLMnvTooltipElement;
   }
@@ -476,7 +478,6 @@ declare namespace LocalJSX {
     'match'?: MatchResults;
     'numbers'?: any;
   }
-  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
   interface MnvAbout extends JSXBase.HTMLAttributes<HTMLMnvAboutElement> {
     'mainText'?: string;
@@ -630,6 +631,9 @@ declare namespace LocalJSX {
   interface MnvSubtitle extends JSXBase.HTMLAttributes<HTMLMnvSubtitleElement> {
     'type'?: string;
   }
+  interface MnvT extends JSXBase.HTMLAttributes<HTMLMnvTElement> {
+    'level'?: number;
+  }
   interface MnvTitle extends JSXBase.HTMLAttributes<HTMLMnvTitleElement> {
     'level'?: string;
     'overline'?: string;
@@ -642,7 +646,6 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'app-heropage': AppHeropage;
-    'app-home': AppHome;
     'app-root': AppRoot;
     'mnv-about': MnvAbout;
     'mnv-anchor': MnvAnchor;
@@ -679,6 +682,7 @@ declare namespace LocalJSX {
     'mnv-slider': MnvSlider;
     'mnv-strong': MnvStrong;
     'mnv-subtitle': MnvSubtitle;
+    'mnv-t': MnvT;
     'mnv-title': MnvTitle;
     'mnv-tooltip': MnvTooltip;
   }

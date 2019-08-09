@@ -16,7 +16,7 @@
 
 ### Used by
 
- - [mnv-mob-menu](../mnv-mob-menu)
+ - [mnv-mob-menu](..\mnv-mob-menu)
 
 ### Graph
 ```mermaid

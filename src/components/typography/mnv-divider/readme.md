@@ -9,13 +9,11 @@
 
 ### Used by
 
- - [app-home](../../app-pages/app-home)
- - [mnv-card](../../layout/mnv-card)
+ - [mnv-card](..\..\layout\mnv-card)
 
 ### Graph
 ```mermaid
 graph TD;
-  app-home --> mnv-divider
   mnv-card --> mnv-divider
   style mnv-divider fill:#f9f,stroke:#333,stroke-width:4px
 ```

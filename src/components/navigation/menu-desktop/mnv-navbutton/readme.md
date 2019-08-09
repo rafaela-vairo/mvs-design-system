@@ -18,7 +18,7 @@
 
 ### Used by
 
- - [mnv-navbar](../mnv-navbar)
+ - [mnv-navbar](..\mnv-navbar)
 
 ### Graph
 ```mermaid

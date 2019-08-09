@@ -9,7 +9,7 @@
 
 ### Used by
 
- - [mnv-title](../mnv-title)
+ - [mnv-title](..\mnv-title)
 
 ### Graph
 ```mermaid

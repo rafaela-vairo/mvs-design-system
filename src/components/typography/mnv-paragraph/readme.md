@@ -17,16 +17,14 @@
 
 ### Used by
 
- - [app-home](../../app-pages/app-home)
- - [mnv-about](../../sections/mnv-about)
- - [mnv-card](../../layout/mnv-card)
- - [mnv-footer](../../sections/mnv-footer)
- - [mnv-projeto](../../sections/expositor/mnv-projeto)
+ - [mnv-about](..\..\sections\mnv-about)
+ - [mnv-card](..\..\layout\mnv-card)
+ - [mnv-footer](..\..\sections\mnv-footer)
+ - [mnv-projeto](..\..\sections\expositor\mnv-projeto)
 
 ### Graph
 ```mermaid
 graph TD;
-  app-home --> mnv-paragraph
   mnv-about --> mnv-paragraph
   mnv-card --> mnv-paragraph
   mnv-footer --> mnv-paragraph

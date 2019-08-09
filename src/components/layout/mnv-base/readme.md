@@ -9,14 +9,12 @@
 
 ### Used by
 
- - [app-heropage](../../app-pages/app-heropage)
- - [app-home](../../app-pages/app-home)
+ - [app-heropage](..\..\app-pages\app-heropage)
 
 ### Graph
 ```mermaid
 graph TD;
   app-heropage --> mnv-base
-  app-home --> mnv-base
   style mnv-base fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

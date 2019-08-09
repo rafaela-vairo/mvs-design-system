@@ -20,7 +20,7 @@
 
 ### Depends on
 
-- [mnv-grid](../../../layout/mnv-grid)
+- [mnv-grid](..\..\..\layout\mnv-grid)
 
 ### Graph
 ```mermaid
