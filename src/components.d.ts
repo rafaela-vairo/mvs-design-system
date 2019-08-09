@@ -9,9 +9,6 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   MatchResults,
 } from '@stencil/router';
-import {
-  locations,
-} from './components/sections/mnv-footer/mnv-footer';
 
 export namespace Components {
   interface AppHeropage {
@@ -19,13 +16,16 @@ export namespace Components {
     'match': MatchResults;
     'numbers': any;
   }
-  interface AppRoot {}
   interface MnvAbout {
     'mainText': string;
     'mainTitle': string;
   }
   interface MnvAnchor {
     'href': string;
+  }
+  interface MnvAppBar {
+    'color': 'inherit' | 'primary' | 'secondary' | 'default';
+    'position': 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
   }
   interface MnvBase {}
   interface MnvBg {}
@@ -87,7 +87,7 @@ export namespace Components {
     'src': string;
   }
   interface MnvFooter {
-    'locations': Array<locations>;
+    'locations': string[];
   }
   interface MnvGrid {
     'block': boolean;
@@ -179,8 +179,9 @@ export namespace Components {
     'white': boolean;
   }
   interface MnvTitle {
+    'hierarchy': number;
     'level': string;
-    'overline': string;
+    'override': number;
     'white': boolean;
   }
   interface MnvTooltip {
@@ -198,12 +199,6 @@ declare global {
     new (): HTMLAppHeropageElement;
   };
 
-  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
-  };
-
   interface HTMLMnvAboutElement extends Components.MnvAbout, HTMLStencilElement {}
   var HTMLMnvAboutElement: {
     prototype: HTMLMnvAboutElement;
@@ -214,6 +209,12 @@ declare global {
   var HTMLMnvAnchorElement: {
     prototype: HTMLMnvAnchorElement;
     new (): HTMLMnvAnchorElement;
+  };
+
+  interface HTMLMnvAppBarElement extends Components.MnvAppBar, HTMLStencilElement {}
+  var HTMLMnvAppBarElement: {
+    prototype: HTMLMnvAppBarElement;
+    new (): HTMLMnvAppBarElement;
   };
 
   interface HTMLMnvBaseElement extends Components.MnvBase, HTMLStencilElement {}
@@ -433,9 +434,9 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'app-heropage': HTMLAppHeropageElement;
-    'app-root': HTMLAppRootElement;
     'mnv-about': HTMLMnvAboutElement;
     'mnv-anchor': HTMLMnvAnchorElement;
+    'mnv-app-bar': HTMLMnvAppBarElement;
     'mnv-base': HTMLMnvBaseElement;
     'mnv-bg': HTMLMnvBgElement;
     'mnv-bignumber': HTMLMnvBignumberElement;
@@ -481,13 +482,16 @@ declare namespace LocalJSX {
     'match'?: MatchResults;
     'numbers'?: any;
   }
-  interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
   interface MnvAbout extends JSXBase.HTMLAttributes<HTMLMnvAboutElement> {
     'mainText'?: string;
     'mainTitle'?: string;
   }
   interface MnvAnchor extends JSXBase.HTMLAttributes<HTMLMnvAnchorElement> {
     'href'?: string;
+  }
+  interface MnvAppBar extends JSXBase.HTMLAttributes<HTMLMnvAppBarElement> {
+    'color'?: 'inherit' | 'primary' | 'secondary' | 'default';
+    'position'?: 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
   }
   interface MnvBase extends JSXBase.HTMLAttributes<HTMLMnvBaseElement> {}
   interface MnvBg extends JSXBase.HTMLAttributes<HTMLMnvBgElement> {}
@@ -549,7 +553,7 @@ declare namespace LocalJSX {
     'src'?: string;
   }
   interface MnvFooter extends JSXBase.HTMLAttributes<HTMLMnvFooterElement> {
-    'locations'?: Array<locations>;
+    'locations'?: string[];
   }
   interface MnvGrid extends JSXBase.HTMLAttributes<HTMLMnvGridElement> {
     'block'?: boolean;
@@ -641,8 +645,9 @@ declare namespace LocalJSX {
     'white'?: boolean;
   }
   interface MnvTitle extends JSXBase.HTMLAttributes<HTMLMnvTitleElement> {
+    'hierarchy'?: number;
     'level'?: string;
-    'overline'?: string;
+    'override'?: number;
     'white'?: boolean;
   }
   interface MnvTooltip extends JSXBase.HTMLAttributes<HTMLMnvTooltipElement> {
@@ -652,9 +657,9 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'app-heropage': AppHeropage;
-    'app-root': AppRoot;
     'mnv-about': MnvAbout;
     'mnv-anchor': MnvAnchor;
+    'mnv-app-bar': MnvAppBar;
     'mnv-base': MnvBase;
     'mnv-bg': MnvBg;
     'mnv-bignumber': MnvBignumber;

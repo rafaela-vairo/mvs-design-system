@@ -22,9 +22,8 @@ export class MnvCard {
 				<div class='card-root' style={{ width: `${this.width}px` }}>
 					<div class='header'>
 						{/* <img src={Launch} /> */}
-						<mnv-title level='h5' overline={this.overline}>
-							{this.cardtitle}
-						</mnv-title>
+						<mnv-overline>{this.overline}</mnv-overline>
+						<mnv-title level='t5'>{this.cardtitle}</mnv-title>
 						<mnv-subtitle type='one'>{this.subtitle}</mnv-subtitle>
 						<mnv-divider />
 					</div>

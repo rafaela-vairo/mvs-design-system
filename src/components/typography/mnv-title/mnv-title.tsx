@@ -1,124 +1,67 @@
-import { Component, h, Prop } from '@stencil/core'
+import { Component, h, Prop, Element } from '@stencil/core'
 
 @Component({
 	tag: 'mnv-title',
 	styleUrl: 'mnv-title.scss',
+	shadow: true,
 })
 export class MnvTitle {
+	@Prop() hierarchy: number
+	@Prop() override: number
 	@Prop() level: string
-	@Prop() overline: string
 	@Prop() white: boolean
+	@Element() el: HTMLElement
 
-	// Renderiza o componente
+	depth(parent?: any, descendant?: any) {
+		var depth = 0
+		var ignored = document.querySelector('mnv-grid')
+		while (!descendant.isEqualNode(parent)) {
+			if (!descendant.isEqualNode(ignored)) {
+				depth++
+				descendant = descendant.parentElement
+			} else {
+				depth--
+				descendant = descendant.parentElement
+				console.log('ignored')
+			}
+		}
+		return depth
+	}
+
+	async componentDidLoad() {
+		const getHierarchy = async () => {
+			return await this.depth(document.querySelector('#root'), this.el)
+		}
+		getHierarchy()
+			.then(depth => {
+				console.log(depth)
+				this.hierarchy = depth
+			})
+			.catch(err => console.log(err))
+	}
+
 	render() {
-		if (this.overline) {
-			switch (this.level) {
-				case 'h1':
-					return (
-						<div>
-							<mnv-overline>{this.overline}</mnv-overline>
-							<h1 class='overline'>
-								<slot />
-							</h1>
-						</div>
-					)
-				case 'h2':
-					return (
-						<div>
-							<mnv-overline>{this.overline}</mnv-overline>
-							<h2 class='overline'>
-								<slot />
-							</h2>
-						</div>
-					)
-				case 'h3':
-					return (
-						<div>
-							<mnv-overline>{this.overline}</mnv-overline>
-							<h3 class='overline'>
-								<slot />
-							</h3>
-						</div>
-					)
-				case 'h4':
-					return (
-						<div>
-							<mnv-overline>{this.overline}</mnv-overline>
-							<h4 class='overline'>
-								<slot />
-							</h4>
-						</div>
-					)
-				case 'h5':
-					return (
-						<div>
-							<mnv-overline>{this.overline}</mnv-overline>
-							<h5 class='overline'>
-								<slot />
-							</h5>
-						</div>
-					)
-				case 'h6':
-					return (
-						<div>
-							<mnv-overline>{this.overline}</mnv-overline>
-							<h6 class='overline'>
-								<slot />
-							</h6>
-						</div>
-					)
-			}
+		let white = this.white ? 'white' : null
+		let styling =
+			this.level === 't1' || 't2' || 't3' || 't4' || 't5' || 't6'
+				? this.level
+				: null
+		let setClass = `${styling ? styling : ''} ${white ? white : ''}`
+
+		if (this.override) {
+			let Component = `h${this.override}`
+			return (
+				<Component class={setClass}>
+					<slot />
+				</Component>
+			)
 		} else {
-			switch (this.level) {
-				case 'h1':
-					return (
-						<h1>
-							<slot />
-						</h1>
-					)
-				case 'h1 sans':
-					return (
-						<h1 class='h1sans'>
-							<slot />
-						</h1>
-					)
-				case 'hero':
-					return (
-						<h1 class='hero'>
-							<slot />
-						</h1>
-					)
-				case 'h2':
-					return (
-						<h2>
-							<slot />
-						</h2>
-					)
-				case 'h3':
-					return (
-						<h3>
-							<slot />
-						</h3>
-					)
-				case 'h4':
-					return (
-						<h4>
-							<slot />
-						</h4>
-					)
-				case 'h5':
-					return (
-						<h5>
-							<slot />
-						</h5>
-					)
-				case 'h6':
-					return (
-						<h6>
-							<slot />
-						</h6>
-					)
-			}
+			let Component = `h${this.hierarchy}`
+			return (
+				<Component class={setClass}>
+					<slot />
+				</Component>
+			)
 		}
 	}
 }

@@ -4,7 +4,7 @@ import _ from 'lodash'
 @Component({
 	tag: 'mnv-list-card',
 	styleUrl: 'mnv-list-card.scss',
-	shadow: true
+	shadow: true,
 })
 export class MnvListCard {
 	@Prop() data: any
@@ -13,7 +13,7 @@ export class MnvListCard {
 	async componentWillLoad() {
 		this.data = _.filter(this.data, {
 			acf_fc_layout: 'secao_cartoes',
-			secao_titulo: this.name
+			secao_titulo: this.name,
 		})[0]
 		if (this.data.length > 1) {
 			console.log('Seção possui títulos duplicados')
@@ -27,7 +27,7 @@ export class MnvListCard {
 			<Host>
 				<mnv-grid container class='list-card-root'>
 					<mnv-grid item class='card-title' xl='8' lg='12' md='12' sm='12'>
-						<mnv-title level='h1'>{this.name}</mnv-title>
+						<mnv-title level='t1'>{this.name}</mnv-title>
 					</mnv-grid>
 					{this.data['cartao_conteudo'].map((card, key) => (
 						<mnv-grid

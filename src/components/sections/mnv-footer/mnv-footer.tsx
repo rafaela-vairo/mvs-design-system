@@ -1,35 +1,12 @@
 import { Component, h, Prop } from '@stencil/core'
 import Language from 'material-design-icons/action/svg/production/ic_language_48px.svg'
 
-export interface locations {
-	name?: string
-	address?: string
-	floor?: string
-	cep?: string
-	phone?: string
-	fax?: string
-	email?: string
-}
-
 @Component({
 	tag: 'mnv-footer',
 	styleUrl: 'mnv-footer.scss',
 })
 export class MnvFooter {
-	@Prop() locations: Array<locations>
-
-	componentDidLoad() {
-		this.locations = [
-			{
-				name: 'Campus Fundão',
-				address: 'Av. Pedro Calmon n°550 - Prédio da Reitoria.',
-				floor: '2° andar - Cidade Universitária',
-				cep: 'Rio de Janeiro, RJ - CEP 21941-901',
-				phone: '+55 (21) 3938-9600',
-				fax: '+55 (21) 3938-1605',
-			},
-		]
-	}
+	@Prop() locations: string[]
 
 	render = () => (
 		<footer>
@@ -43,7 +20,7 @@ export class MnvFooter {
 				</mnv-grid>
 				<mnv-grid item sm='12' md='4' lg='4' xl='4' class='address-root'>
 					<div class='address'>
-						<mnv-title level='h5'>Campuses</mnv-title>
+						<mnv-title level='t5'>Campuses</mnv-title>
 						<mnv-paragraph>
 							<ol>
 								<li>University City</li>

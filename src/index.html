@@ -31,19 +31,19 @@
 		<script nomodule src="/build/mnv-ds.js"></script>
 	</head>
 	<body>
-		<!-- <mnv-base>
-			<mnv-t>Nível 1</mnv-t>
+		<mnv-base id="root">
+			<mnv-title>Nível 1</mnv-title>
 			<div>
-				<mnv-t>Nível 2</mnv-t>
+				<mnv-title>Nível 2</mnv-title>
 				<div>
-					<mnv-t>Nível 3</mnv-t>
+					<mnv-title>Nível 3</mnv-title>
 					<mnv-grid container>
-						<mnv-t>Nível 4</mnv-t>
-						<mnv-grid item>
-							<mnv-t>Nível 5</mnv-t>
-							<div>
-								<mnv-t>Nível 6</mnv-t>
-							</div>
+						<mnv-title>Container Nível 3</mnv-title>
+						<mnv-grid container>
+							<mnv-title>Item Nível 3</mnv-title>
+							<mnv-grid container>
+								<mnv-title>Item Nível 3</mnv-title>
+							</mnv-grid>
 						</mnv-grid>
 					</mnv-grid>
 				</div>
@@ -54,7 +54,7 @@
 					<div><mnv-t>Level 2</mnv-t></div>
 				</mnv-grid>
 			</mnv-grid>
-		</mnv-base> -->
-		<app-heropage/>
+		</mnv-base>
+		<mnv-app-bar>Olá mundo</mnv-app-bar>
 	</body>
 </html>

@@ -33,7 +33,7 @@ export class MnvProjeto {
 				</div>
 				<div class='text-block'>
 					<div class='legenda-mobile'>{this.projImgLegenda}</div>
-					<mnv-title level='h4'>{this.projTitle}</mnv-title>
+					<mnv-title level='t4'>{this.projTitle}</mnv-title>
 					<mnv-paragraph>{this.projText}</mnv-paragraph>
 					<form action={this.projButtonUrl}>
 						<mnv-button contained type='submit'>

@@ -3,16 +3,16 @@ import { Component, h, Prop, Element } from '@stencil/core'
 @Component({
 	tag: 'mnv-t',
 	styleUrl: 'mnv-t.scss',
-	shadow: true
+	shadow: true,
 })
 export class MnvT {
-	@Prop({ reflect: true }) hierarchy: number
+	@Prop() hierarchy: number
 	@Prop() override: number
 	@Prop() level: string
 	@Prop() white: boolean
 	@Element() el: HTMLElement
 
-	depth(parent, descendant) {
+	depth(parent?: any, descendant?: any) {
 		var depth = 0
 		var ignored = document.querySelector('mnv-grid')
 		while (!descendant.isEqualNode(parent)) {
@@ -28,9 +28,17 @@ export class MnvT {
 	}
 
 	async componentDidLoad() {
-		this.hierarchy = this.depth(document.querySelector('#root'), this.el)
-		console.log(this.hierarchy)
+		const getHierarchy = async () => {
+			return await this.depth(document.querySelector('#root'), this.el)
+		}
+		getHierarchy()
+			.then(depth => {
+				console.log(depth)
+				this.hierarchy = depth
+			})
+			.catch(err => console.log(err))
 	}
+
 	render() {
 		let white = this.white ? 'white' : null
 		let styling =
@@ -38,86 +46,21 @@ export class MnvT {
 				? this.level
 				: null
 		let setClass = `${styling ? styling : ''} ${white ? white : ''}`
+
 		if (this.override) {
-			if (this.override === 1) {
-				return (
-					<h1 class={setClass}>
-						<slot />
-					</h1>
-				)
-			} else if (this.override === 2) {
-				return (
-					<h2 class={setClass}>
-						<slot />
-					</h2>
-				)
-			} else if (this.override === 3) {
-				return (
-					<h3 class={setClass}>
-						<slot />
-					</h3>
-				)
-			} else if (this.override === 4) {
-				return (
-					<h4 class={setClass}>
-						<slot />
-					</h4>
-				)
-			} else if (this.override === 5) {
-				return (
-					<h5 class={setClass}>
-						<slot />
-					</h5>
-				)
-			} else if (this.override >= 6) {
-				return (
-					<h6 class={setClass}>
-						<slot />
-					</h6>
-				)
-			} else {
-				return <slot />
-			}
+			let Component = `h${this.override}`
+			return (
+				<Component class={setClass}>
+					<slot />
+				</Component>
+			)
 		} else {
-			if (this.hierarchy === 1) {
-				return (
-					<h1 class={setClass}>
-						<slot />
-					</h1>
-				)
-			} else if (this.hierarchy === 2) {
-				return (
-					<h2 class={setClass}>
-						<slot />
-					</h2>
-				)
-			} else if (this.hierarchy === 3) {
-				return (
-					<h3 class={setClass}>
-						<slot />
-					</h3>
-				)
-			} else if (this.hierarchy === 4) {
-				return (
-					<h4 class={setClass}>
-						<slot />
-					</h4>
-				)
-			} else if (this.hierarchy === 5) {
-				return (
-					<h5 class={setClass}>
-						<slot />
-					</h5>
-				)
-			} else if (this.hierarchy >= 6) {
-				return (
-					<h6 class={setClass}>
-						<slot />
-					</h6>
-				)
-			} else {
-				return <slot />
-			}
+			let Component = `h${this.hierarchy}`
+			return (
+				<Component class={setClass}>
+					<slot />
+				</Component>
+			)
 		}
 	}
 }

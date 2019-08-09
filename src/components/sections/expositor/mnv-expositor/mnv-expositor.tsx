@@ -23,8 +23,8 @@ export class MnvExpositor {
 				>
 					<mnv-grid container>
 						<mnv-grid item block xl='12' lg='12' md='12' sm='12'>
-							<mnv-title level='h1'>{this.sectionTitle}</mnv-title>
-							<mnv-title level='h3'>{this.sectionSubtitle}</mnv-title>
+							<mnv-title level='t1'>{this.sectionTitle}</mnv-title>
+							<mnv-title level='t3'>{this.sectionSubtitle}</mnv-title>
 						</mnv-grid>
 					</mnv-grid>
 				</div>
