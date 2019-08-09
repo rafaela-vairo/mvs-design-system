@@ -173,7 +173,10 @@ export namespace Components {
     'type': string;
   }
   interface MnvT {
-    'level': number;
+    'hierarchy': number;
+    'level': string;
+    'override': number;
+    'white': boolean;
   }
   interface MnvTitle {
     'level': string;
@@ -632,7 +635,10 @@ declare namespace LocalJSX {
     'type'?: string;
   }
   interface MnvT extends JSXBase.HTMLAttributes<HTMLMnvTElement> {
-    'level'?: number;
+    'hierarchy'?: number;
+    'level'?: string;
+    'override'?: number;
+    'white'?: boolean;
   }
   interface MnvTitle extends JSXBase.HTMLAttributes<HTMLMnvTitleElement> {
     'level'?: string;

@@ -1,4 +1,4 @@
-:host {
+mnv-hero {
 	.image {
 		// width: 100vw;
 		height: 102vh;
@@ -13,18 +13,28 @@
 			mnv-title > * {
 				color: $mnv-text-light;
 			}
-			h1.hero {
+			.hero {
+				font-family: $mnv-font-playfair-display;
+				font-weight: 700;
 				@include xl {
 					margin-top: 150px;
+					font-size: 69px;
+					line-height: 90px;
 				}
 				@include lg {
 					margin-top: 98px;
+					font-size: 63px;
+					line-height: 81px;
 				}
 				@include md {
 					margin-top: 123px;
+					font-size: 56px;
+					line-height: 75px;
 				}
 				@include sm {
 					margin-top: 92.5px;
+					font-size: 53px;
+					line-height: 69px;
 				}
 			}
 

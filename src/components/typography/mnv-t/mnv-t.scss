@@ -1,10 +1,22 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:host > * {
 	color: $mnv-text-dark;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-size: 1em;
+}
+
+.white {
+	color: $mnv-text-light;
+}
+
+.t1,
+.t2,
+.t3,
+.t4,
+.t5,
+.t6 {
 	&.overline {
 		margin-top: 15px;
 	}
@@ -14,7 +26,7 @@ h6 {
 	margin-inline-end: 0px;
 }
 
-h1 {
+.t1 {
 	font-family: $mnv-font-playfair-display;
 	font-weight: 700;
 	&.sans {
@@ -24,46 +36,22 @@ h1 {
 	@include xl {
 		font-size: 52px;
 		line-height: 75px;
-		//letter-spacing: 0.5px;
-		&.hero {
-			font-size: 69px;
-			line-height: 90px;
-			//letter-spacing: 1px;
-		}
 	}
 	@include lg {
 		font-size: 47px;
 		line-height: 67.5px;
-		//letter-spacing: 0.5px;
-		&.hero {
-			font-size: 63px;
-			line-height: 81px;
-			//letter-spacing: 1px;
-		}
 	}
 	@include md {
 		font-size: 42px;
 		line-height: 62.5px;
-		//letter-spacing: 0.5px;
-		&.hero {
-			font-size: 56px;
-			line-height: 75px;
-			//letter-spacing: 1px;
-		}
 	}
 	@include sm {
 		font-size: 40px;
 		line-height: 57.5px;
-		//letter-spacing: 0px;
-		&.hero {
-			font-size: 53px;
-			line-height: 69px;
-			//letter-spacing: 0px;
-		}
 	}
 }
 
-h2 {
+.t2 {
 	font-family: $mnv-font-alegreya-sans;
 	font-weight: 400;
 	@include xl {
@@ -88,7 +76,7 @@ h2 {
 	}
 }
 
-h3 {
+.t3 {
 	font-family: $mnv-font-alegreya-sans;
 	font-weight: 700;
 	@include xl {
@@ -113,7 +101,7 @@ h3 {
 	}
 }
 
-h4 {
+.t4 {
 	font-family: $mnv-font-alegreya-sans;
 	font-weight: 400;
 	@include xl {
@@ -138,7 +126,7 @@ h4 {
 	}
 }
 
-h5 {
+.t5 {
 	font-family: $mnv-font-alegreya-sans;
 	font-weight: 700;
 	@include xl {
@@ -163,7 +151,7 @@ h5 {
 	}
 }
 
-h6 {
+.t6 {
 	font-family: $mnv-font-alegreya-sans;
 	font-weight: 400;
 	@include xl {

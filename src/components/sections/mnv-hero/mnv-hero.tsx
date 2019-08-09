@@ -2,8 +2,8 @@ import { Component, h, Prop } from '@stencil/core'
 
 @Component({
 	tag: 'mnv-hero',
-	styleUrl: 'mnv-hero.scss',
-	shadow: true
+	styleUrl: 'mnv-hero.scss'
+	//shadow: true
 })
 export class Mnvhero {
 	@Prop() background: string
@@ -16,16 +16,18 @@ export class Mnvhero {
 		let setBgImg = `url('${this.bgimg}')`
 		return (
 			<div class='image' style={{ backgroundImage: setBgImg }}>
-				<div class='body'>
+				<div class='body' id='root'>
 					<mnv-grid container>
 						<mnv-grid item sm='12' md='9' lg='6' xl='6'>
-							<mnv-title level='hero'>{this.herotitle}</mnv-title>
+							<mnv-t white class='hero'>
+								{this.herotitle}
+							</mnv-t>
 						</mnv-grid>
 						<mnv-grid item md='3' lg='6' xl='6' />
 						<mnv-grid item sm='12' md='6' lg='4' xl='4'>
-							<mnv-title level='h4'>
+							<mnv-t override={2} level='t4' white>
 								<slot />
-							</mnv-title>
+							</mnv-t>
 						</mnv-grid>
 						{this.button ? (
 							<mnv-grid item sm='12' md='12' lg='12' xl='12'>

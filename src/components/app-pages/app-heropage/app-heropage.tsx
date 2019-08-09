@@ -27,53 +27,54 @@ export class AppHeropage {
 	render() {
 		return (
 			<div class='app-heropage'>
-				<mnv-base />
-				<mnv-navbar />
-				<mnv-mob-menu />
-				<mnv-hero
-					id='home'
-					herotitle={this.data['cabecalho']['cabecalho_titulo']}
-					bgimg={this.data['cabecalho']['cabecalho_imagem']['url']}
-				>
-					{this.data['cabecalho']['cabecalho_descricao']}
-				</mnv-hero>
-				<mnv-bg>
-					<div>
-						<mnv-about
-							id='about'
-							mainTitle={this.data['apresentacao']['apresentacao_titulo']}
-							mainText={this.data['apresentacao']['apresentacao_texto']}
-						/>
-					</div>
-					<div>
-						<mnv-bignumbers id='numbers' setNumbers={this.numbers} />
-					</div>
-					<div>
-						<mnv-expositor-base id='projects' data={this.data['secoes']} />
-					</div>
-					<div>
-						<mnv-list-card
-							name='Teaching'
-							id='teaching'
-							data={this.data.secoes}
-						/>
-					</div>
-					<div>
-						<mnv-list-card
-							name='Research'
-							id='research'
-							data={this.data.secoes}
-						/>
-					</div>
-					<div>
-						<mnv-list-card
-							name='Extension'
-							id='extension'
-							data={this.data.secoes}
-						/>
-					</div>
-				</mnv-bg>
-				<mnv-footer id='footer' />
+				<mnv-base>
+					<mnv-navbar />
+					<mnv-mob-menu />
+					<mnv-hero
+						id='home'
+						herotitle={this.data['cabecalho']['cabecalho_titulo']}
+						bgimg={this.data['cabecalho']['cabecalho_imagem']['url']}
+					>
+						{this.data['cabecalho']['cabecalho_descricao']}
+					</mnv-hero>
+					<mnv-bg>
+						<div>
+							<mnv-about
+								id='about'
+								mainTitle={this.data['apresentacao']['apresentacao_titulo']}
+								mainText={this.data['apresentacao']['apresentacao_texto']}
+							/>
+						</div>
+						<div>
+							<mnv-bignumbers id='numbers' setNumbers={this.numbers} />
+						</div>
+						<div>
+							<mnv-expositor-base id='projects' data={this.data['secoes']} />
+						</div>
+						<div>
+							<mnv-list-card
+								name='Teaching'
+								id='teaching'
+								data={this.data.secoes}
+							/>
+						</div>
+						<div>
+							<mnv-list-card
+								name='Research'
+								id='research'
+								data={this.data.secoes}
+							/>
+						</div>
+						<div>
+							<mnv-list-card
+								name='Extension'
+								id='extension'
+								data={this.data.secoes}
+							/>
+						</div>
+					</mnv-bg>
+					<mnv-footer id='footer' />
+				</mnv-base>
 			</div>
 		)
 	}
