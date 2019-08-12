@@ -28,18 +28,12 @@
 		"@stencil/core": "^1.2.3",
 		"@stencil/sass": "^1.0.1",
 		"@types/jest": "24.0.15",
-		"@types/lodash": "^4.14.136",
 		"@types/puppeteer": "1.12.4",
 		"jest": "24.8.0",
 		"jest-cli": "24.8.0",
-		"lodash": "^4.17.15",
 		"puppeteer": "1.17.0",
 		"workbox-build": "4.3.1"
 	},
 	"license": "AGPL-3.0",
-	"dependencies": {
-		"@stencil/router": "^1.0.1",
-		"axios": "^0.19.0",
-		"material-design-icons": "^3.0.1"
-	}
+	"dependencies": {}
 }
