@@ -6,44 +6,41 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import {
-  MatchResults,
-} from '@stencil/router';
+
 
 export namespace Components {
-  interface AppHeropage {
-    'data': any;
-    'match': MatchResults;
-    'numbers': any;
-  }
-  interface MnvAbout {
-    'mainText': string;
-    'mainTitle': string;
-  }
-  interface MnvAnchor {
+  interface MvsAnchor {
     'href': string;
   }
-  interface MnvAppBar {
+  interface MvsAppBar {
     'color': 'inherit' | 'primary' | 'secondary' | 'default';
     'position': 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
   }
-  interface MnvBase {}
-  interface MnvBg {}
-  interface MnvBignumber {
-    'numbers': any;
-  }
-  interface MnvBignumbers {
-    'setNumbers': any[];
-  }
-  interface MnvButton {
-    'contained': boolean;
+  interface MvsBase {}
+  interface MvsBg {}
+  interface MvsButton {
+    /**
+    * Caso `true`, desabilita o botão.
+    */
     'disabled': boolean;
+    /**
+    * Caso `true`, botão terá largura 100%.
+    */
     'full': boolean;
+    /**
+    * Caso `true`, botão não terá margens.
+    */
     'marginzero': boolean;
-    'outlined': boolean;
-    'type': string;
+    /**
+    * Define o tipo do botão.
+    */
+    'type': 'button' | 'submit' | 'reset';
+    /**
+    * Define estilo do botão.
+    */
+    'variant': 'text' | 'outlined' | 'contained';
   }
-  interface MnvCard {
+  interface MvsCard {
     'button': string;
     'cardtitle': any;
     'link': string;
@@ -51,32 +48,12 @@ export namespace Components {
     'subtitle': any;
     'width': number;
   }
-  interface MnvCol {
-    'class': string;
-  }
-  interface MnvContainer {
-    'lg': number;
-    'md': number;
-    'sm': number;
-    'xl': number;
-    'xs': number;
-  }
-  interface MnvDivider {}
-  interface MnvExpositor {
-    'projects': any;
-    'sectionSubtitle': string;
-    'sectionTitle': string;
-    'spotlight': any;
-    'spotlightAlt': string;
-  }
-  interface MnvExpositorBase {
-    'data': any;
-  }
-  interface MnvFigure {
+  interface MvsDivider {}
+  interface MvsFigure {
     'alt': string;
     'src': string;
   }
-  interface MnvFigureCaption {
+  interface MvsFigureCaption {
     'alt': string;
     'bold': boolean;
     'boldspotlight': boolean;
@@ -86,57 +63,67 @@ export namespace Components {
     'italictext': boolean;
     'src': string;
   }
-  interface MnvFooter {
-    'locations': string[];
-  }
-  interface MnvGrid {
+  interface MvsFlexgrid {
+    /**
+    * Altera visualização de flex para block.
+    */
     'block': boolean;
+    /**
+    * Caso `true`, o componente se comportará como `container` capaz de receber `items`.
+    */
     'container': boolean;
-    'indented': boolean;
+    /**
+    * Caso `true`, o componente se comportará como `item`, contido em um `container`.
+    */
     'item': boolean;
-    'lg': string;
-    'md': string;
-    'sm': string;
-    'spacing': number;
-    'xl': string;
+    /**
+    * Largura do componente no breakpoint Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'lg': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Medium, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'md': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Small, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'sm': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Define espaçamento entre componentes do tipo `item`. Usando somente em componentes tipo `container`.
+    */
+    'spacing': string;
+    /**
+    * Largura do componente no breakpoint Extra Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'xl': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
-  interface MnvHero {
-    'background': string;
-    'bgimg': string;
-    'button': string;
-    'herotitle': string;
-  }
-  interface MnvIconbutton {
+  interface MvsIconbutton {
     'disabled': boolean;
     'type': string;
   }
-  interface MnvListCard {
-    'data': any;
-    'name': string;
-  }
-  interface MnvMark {}
-  interface MnvMobButton {
+  interface MvsMark {}
+  interface MvsMobButton {
     'open': boolean;
   }
-  interface MnvMobDrawer {
+  interface MvsMobDrawer {
     'open': boolean;
   }
-  interface MnvMobMenu {
+  interface MvsMobMenu {
     'open': boolean;
     'setClass': string;
   }
-  interface MnvNavbar {
+  interface MvsNavbar {
     'setClass': string;
   }
-  interface MnvNavbutton {
+  interface MvsNavbutton {
     'contained': boolean;
     'disabled': boolean;
     'marginzero': boolean;
     'outlined': boolean;
     'type': string;
   }
-  interface MnvOverline {}
-  interface MnvParagraph {
+  interface MvsOverline {}
+  interface MvsParagraph {
     /**
     * Altera o parágrafo para tamanho reduzido (body 2).
     */
@@ -146,46 +133,37 @@ export namespace Components {
     */
     'capitular': boolean;
   }
-  interface MnvPre {}
-  interface MnvProjeto {
-    'projButton': string;
-    'projButtonUrl': string;
-    'projImg': string;
-    'projImgAlt': string;
-    'projImgLegenda': string;
-    'projText': string;
-    'projTitle': string;
-  }
-  interface MnvRow {}
-  interface MnvSlide {
-    'image': string;
-  }
-  interface MnvSlider {
-    'cards': any[];
-    'currentIndex': number;
-    'height': number;
-    'images': string[];
-    'translateValue': number;
-    'width': number;
-  }
-  interface MnvStrong {}
-  interface MnvSubtitle {
+  interface MvsPre {}
+  interface MvsStrong {}
+  interface MvsSubtitle {
     'type': string;
   }
-  interface MnvT {
-    'hierarchy': number;
-    'level': string;
-    'override': number;
+  interface MvsTitle {
+    /**
+    * Define estilo de título a ser usado pelo componente.
+    */
+    'level': true | false | 't1' | 't2' | 't3' | 't4' | 't5' | 't6';
+    /**
+    * Sobreescreve o tag html definido automaticamente.
+    */
+    'override': true | false | 1 | 2 | 3 | 4 | 5 | 6;
+    /**
+    * Propriedade interna que define automaticamente a tag H a ser usada.
+    */
+    'rank': number;
+    /**
+    * Define texto de cor branca, para fundos escuros.
+    */
     'white': boolean;
   }
-  interface MnvTitle {
-    'hierarchy': number;
-    'level': string;
-    'override': number;
-    'white': boolean;
-  }
-  interface MnvTooltip {
+  interface MvsTooltip {
+    /**
+    * Define conteúdo do tooltip.
+    */
     'label': string;
+    /**
+    * Define largura do tooltip.
+    */
     'length': string;
   }
 }
@@ -193,323 +171,210 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLAppHeropageElement extends Components.AppHeropage, HTMLStencilElement {}
-  var HTMLAppHeropageElement: {
-    prototype: HTMLAppHeropageElement;
-    new (): HTMLAppHeropageElement;
+  interface HTMLMvsAnchorElement extends Components.MvsAnchor, HTMLStencilElement {}
+  var HTMLMvsAnchorElement: {
+    prototype: HTMLMvsAnchorElement;
+    new (): HTMLMvsAnchorElement;
   };
 
-  interface HTMLMnvAboutElement extends Components.MnvAbout, HTMLStencilElement {}
-  var HTMLMnvAboutElement: {
-    prototype: HTMLMnvAboutElement;
-    new (): HTMLMnvAboutElement;
+  interface HTMLMvsAppBarElement extends Components.MvsAppBar, HTMLStencilElement {}
+  var HTMLMvsAppBarElement: {
+    prototype: HTMLMvsAppBarElement;
+    new (): HTMLMvsAppBarElement;
   };
 
-  interface HTMLMnvAnchorElement extends Components.MnvAnchor, HTMLStencilElement {}
-  var HTMLMnvAnchorElement: {
-    prototype: HTMLMnvAnchorElement;
-    new (): HTMLMnvAnchorElement;
+  interface HTMLMvsBaseElement extends Components.MvsBase, HTMLStencilElement {}
+  var HTMLMvsBaseElement: {
+    prototype: HTMLMvsBaseElement;
+    new (): HTMLMvsBaseElement;
   };
 
-  interface HTMLMnvAppBarElement extends Components.MnvAppBar, HTMLStencilElement {}
-  var HTMLMnvAppBarElement: {
-    prototype: HTMLMnvAppBarElement;
-    new (): HTMLMnvAppBarElement;
+  interface HTMLMvsBgElement extends Components.MvsBg, HTMLStencilElement {}
+  var HTMLMvsBgElement: {
+    prototype: HTMLMvsBgElement;
+    new (): HTMLMvsBgElement;
   };
 
-  interface HTMLMnvBaseElement extends Components.MnvBase, HTMLStencilElement {}
-  var HTMLMnvBaseElement: {
-    prototype: HTMLMnvBaseElement;
-    new (): HTMLMnvBaseElement;
+  interface HTMLMvsButtonElement extends Components.MvsButton, HTMLStencilElement {}
+  var HTMLMvsButtonElement: {
+    prototype: HTMLMvsButtonElement;
+    new (): HTMLMvsButtonElement;
   };
 
-  interface HTMLMnvBgElement extends Components.MnvBg, HTMLStencilElement {}
-  var HTMLMnvBgElement: {
-    prototype: HTMLMnvBgElement;
-    new (): HTMLMnvBgElement;
+  interface HTMLMvsCardElement extends Components.MvsCard, HTMLStencilElement {}
+  var HTMLMvsCardElement: {
+    prototype: HTMLMvsCardElement;
+    new (): HTMLMvsCardElement;
   };
 
-  interface HTMLMnvBignumberElement extends Components.MnvBignumber, HTMLStencilElement {}
-  var HTMLMnvBignumberElement: {
-    prototype: HTMLMnvBignumberElement;
-    new (): HTMLMnvBignumberElement;
+  interface HTMLMvsDividerElement extends Components.MvsDivider, HTMLStencilElement {}
+  var HTMLMvsDividerElement: {
+    prototype: HTMLMvsDividerElement;
+    new (): HTMLMvsDividerElement;
   };
 
-  interface HTMLMnvBignumbersElement extends Components.MnvBignumbers, HTMLStencilElement {}
-  var HTMLMnvBignumbersElement: {
-    prototype: HTMLMnvBignumbersElement;
-    new (): HTMLMnvBignumbersElement;
+  interface HTMLMvsFigureElement extends Components.MvsFigure, HTMLStencilElement {}
+  var HTMLMvsFigureElement: {
+    prototype: HTMLMvsFigureElement;
+    new (): HTMLMvsFigureElement;
   };
 
-  interface HTMLMnvButtonElement extends Components.MnvButton, HTMLStencilElement {}
-  var HTMLMnvButtonElement: {
-    prototype: HTMLMnvButtonElement;
-    new (): HTMLMnvButtonElement;
+  interface HTMLMvsFigureCaptionElement extends Components.MvsFigureCaption, HTMLStencilElement {}
+  var HTMLMvsFigureCaptionElement: {
+    prototype: HTMLMvsFigureCaptionElement;
+    new (): HTMLMvsFigureCaptionElement;
   };
 
-  interface HTMLMnvCardElement extends Components.MnvCard, HTMLStencilElement {}
-  var HTMLMnvCardElement: {
-    prototype: HTMLMnvCardElement;
-    new (): HTMLMnvCardElement;
+  interface HTMLMvsFlexgridElement extends Components.MvsFlexgrid, HTMLStencilElement {}
+  var HTMLMvsFlexgridElement: {
+    prototype: HTMLMvsFlexgridElement;
+    new (): HTMLMvsFlexgridElement;
   };
 
-  interface HTMLMnvColElement extends Components.MnvCol, HTMLStencilElement {}
-  var HTMLMnvColElement: {
-    prototype: HTMLMnvColElement;
-    new (): HTMLMnvColElement;
+  interface HTMLMvsIconbuttonElement extends Components.MvsIconbutton, HTMLStencilElement {}
+  var HTMLMvsIconbuttonElement: {
+    prototype: HTMLMvsIconbuttonElement;
+    new (): HTMLMvsIconbuttonElement;
   };
 
-  interface HTMLMnvContainerElement extends Components.MnvContainer, HTMLStencilElement {}
-  var HTMLMnvContainerElement: {
-    prototype: HTMLMnvContainerElement;
-    new (): HTMLMnvContainerElement;
+  interface HTMLMvsMarkElement extends Components.MvsMark, HTMLStencilElement {}
+  var HTMLMvsMarkElement: {
+    prototype: HTMLMvsMarkElement;
+    new (): HTMLMvsMarkElement;
   };
 
-  interface HTMLMnvDividerElement extends Components.MnvDivider, HTMLStencilElement {}
-  var HTMLMnvDividerElement: {
-    prototype: HTMLMnvDividerElement;
-    new (): HTMLMnvDividerElement;
+  interface HTMLMvsMobButtonElement extends Components.MvsMobButton, HTMLStencilElement {}
+  var HTMLMvsMobButtonElement: {
+    prototype: HTMLMvsMobButtonElement;
+    new (): HTMLMvsMobButtonElement;
   };
 
-  interface HTMLMnvExpositorElement extends Components.MnvExpositor, HTMLStencilElement {}
-  var HTMLMnvExpositorElement: {
-    prototype: HTMLMnvExpositorElement;
-    new (): HTMLMnvExpositorElement;
+  interface HTMLMvsMobDrawerElement extends Components.MvsMobDrawer, HTMLStencilElement {}
+  var HTMLMvsMobDrawerElement: {
+    prototype: HTMLMvsMobDrawerElement;
+    new (): HTMLMvsMobDrawerElement;
   };
 
-  interface HTMLMnvExpositorBaseElement extends Components.MnvExpositorBase, HTMLStencilElement {}
-  var HTMLMnvExpositorBaseElement: {
-    prototype: HTMLMnvExpositorBaseElement;
-    new (): HTMLMnvExpositorBaseElement;
+  interface HTMLMvsMobMenuElement extends Components.MvsMobMenu, HTMLStencilElement {}
+  var HTMLMvsMobMenuElement: {
+    prototype: HTMLMvsMobMenuElement;
+    new (): HTMLMvsMobMenuElement;
   };
 
-  interface HTMLMnvFigureElement extends Components.MnvFigure, HTMLStencilElement {}
-  var HTMLMnvFigureElement: {
-    prototype: HTMLMnvFigureElement;
-    new (): HTMLMnvFigureElement;
+  interface HTMLMvsNavbarElement extends Components.MvsNavbar, HTMLStencilElement {}
+  var HTMLMvsNavbarElement: {
+    prototype: HTMLMvsNavbarElement;
+    new (): HTMLMvsNavbarElement;
   };
 
-  interface HTMLMnvFigureCaptionElement extends Components.MnvFigureCaption, HTMLStencilElement {}
-  var HTMLMnvFigureCaptionElement: {
-    prototype: HTMLMnvFigureCaptionElement;
-    new (): HTMLMnvFigureCaptionElement;
+  interface HTMLMvsNavbuttonElement extends Components.MvsNavbutton, HTMLStencilElement {}
+  var HTMLMvsNavbuttonElement: {
+    prototype: HTMLMvsNavbuttonElement;
+    new (): HTMLMvsNavbuttonElement;
   };
 
-  interface HTMLMnvFooterElement extends Components.MnvFooter, HTMLStencilElement {}
-  var HTMLMnvFooterElement: {
-    prototype: HTMLMnvFooterElement;
-    new (): HTMLMnvFooterElement;
+  interface HTMLMvsOverlineElement extends Components.MvsOverline, HTMLStencilElement {}
+  var HTMLMvsOverlineElement: {
+    prototype: HTMLMvsOverlineElement;
+    new (): HTMLMvsOverlineElement;
   };
 
-  interface HTMLMnvGridElement extends Components.MnvGrid, HTMLStencilElement {}
-  var HTMLMnvGridElement: {
-    prototype: HTMLMnvGridElement;
-    new (): HTMLMnvGridElement;
+  interface HTMLMvsParagraphElement extends Components.MvsParagraph, HTMLStencilElement {}
+  var HTMLMvsParagraphElement: {
+    prototype: HTMLMvsParagraphElement;
+    new (): HTMLMvsParagraphElement;
   };
 
-  interface HTMLMnvHeroElement extends Components.MnvHero, HTMLStencilElement {}
-  var HTMLMnvHeroElement: {
-    prototype: HTMLMnvHeroElement;
-    new (): HTMLMnvHeroElement;
+  interface HTMLMvsPreElement extends Components.MvsPre, HTMLStencilElement {}
+  var HTMLMvsPreElement: {
+    prototype: HTMLMvsPreElement;
+    new (): HTMLMvsPreElement;
   };
 
-  interface HTMLMnvIconbuttonElement extends Components.MnvIconbutton, HTMLStencilElement {}
-  var HTMLMnvIconbuttonElement: {
-    prototype: HTMLMnvIconbuttonElement;
-    new (): HTMLMnvIconbuttonElement;
+  interface HTMLMvsStrongElement extends Components.MvsStrong, HTMLStencilElement {}
+  var HTMLMvsStrongElement: {
+    prototype: HTMLMvsStrongElement;
+    new (): HTMLMvsStrongElement;
   };
 
-  interface HTMLMnvListCardElement extends Components.MnvListCard, HTMLStencilElement {}
-  var HTMLMnvListCardElement: {
-    prototype: HTMLMnvListCardElement;
-    new (): HTMLMnvListCardElement;
+  interface HTMLMvsSubtitleElement extends Components.MvsSubtitle, HTMLStencilElement {}
+  var HTMLMvsSubtitleElement: {
+    prototype: HTMLMvsSubtitleElement;
+    new (): HTMLMvsSubtitleElement;
   };
 
-  interface HTMLMnvMarkElement extends Components.MnvMark, HTMLStencilElement {}
-  var HTMLMnvMarkElement: {
-    prototype: HTMLMnvMarkElement;
-    new (): HTMLMnvMarkElement;
+  interface HTMLMvsTitleElement extends Components.MvsTitle, HTMLStencilElement {}
+  var HTMLMvsTitleElement: {
+    prototype: HTMLMvsTitleElement;
+    new (): HTMLMvsTitleElement;
   };
 
-  interface HTMLMnvMobButtonElement extends Components.MnvMobButton, HTMLStencilElement {}
-  var HTMLMnvMobButtonElement: {
-    prototype: HTMLMnvMobButtonElement;
-    new (): HTMLMnvMobButtonElement;
-  };
-
-  interface HTMLMnvMobDrawerElement extends Components.MnvMobDrawer, HTMLStencilElement {}
-  var HTMLMnvMobDrawerElement: {
-    prototype: HTMLMnvMobDrawerElement;
-    new (): HTMLMnvMobDrawerElement;
-  };
-
-  interface HTMLMnvMobMenuElement extends Components.MnvMobMenu, HTMLStencilElement {}
-  var HTMLMnvMobMenuElement: {
-    prototype: HTMLMnvMobMenuElement;
-    new (): HTMLMnvMobMenuElement;
-  };
-
-  interface HTMLMnvNavbarElement extends Components.MnvNavbar, HTMLStencilElement {}
-  var HTMLMnvNavbarElement: {
-    prototype: HTMLMnvNavbarElement;
-    new (): HTMLMnvNavbarElement;
-  };
-
-  interface HTMLMnvNavbuttonElement extends Components.MnvNavbutton, HTMLStencilElement {}
-  var HTMLMnvNavbuttonElement: {
-    prototype: HTMLMnvNavbuttonElement;
-    new (): HTMLMnvNavbuttonElement;
-  };
-
-  interface HTMLMnvOverlineElement extends Components.MnvOverline, HTMLStencilElement {}
-  var HTMLMnvOverlineElement: {
-    prototype: HTMLMnvOverlineElement;
-    new (): HTMLMnvOverlineElement;
-  };
-
-  interface HTMLMnvParagraphElement extends Components.MnvParagraph, HTMLStencilElement {}
-  var HTMLMnvParagraphElement: {
-    prototype: HTMLMnvParagraphElement;
-    new (): HTMLMnvParagraphElement;
-  };
-
-  interface HTMLMnvPreElement extends Components.MnvPre, HTMLStencilElement {}
-  var HTMLMnvPreElement: {
-    prototype: HTMLMnvPreElement;
-    new (): HTMLMnvPreElement;
-  };
-
-  interface HTMLMnvProjetoElement extends Components.MnvProjeto, HTMLStencilElement {}
-  var HTMLMnvProjetoElement: {
-    prototype: HTMLMnvProjetoElement;
-    new (): HTMLMnvProjetoElement;
-  };
-
-  interface HTMLMnvRowElement extends Components.MnvRow, HTMLStencilElement {}
-  var HTMLMnvRowElement: {
-    prototype: HTMLMnvRowElement;
-    new (): HTMLMnvRowElement;
-  };
-
-  interface HTMLMnvSlideElement extends Components.MnvSlide, HTMLStencilElement {}
-  var HTMLMnvSlideElement: {
-    prototype: HTMLMnvSlideElement;
-    new (): HTMLMnvSlideElement;
-  };
-
-  interface HTMLMnvSliderElement extends Components.MnvSlider, HTMLStencilElement {}
-  var HTMLMnvSliderElement: {
-    prototype: HTMLMnvSliderElement;
-    new (): HTMLMnvSliderElement;
-  };
-
-  interface HTMLMnvStrongElement extends Components.MnvStrong, HTMLStencilElement {}
-  var HTMLMnvStrongElement: {
-    prototype: HTMLMnvStrongElement;
-    new (): HTMLMnvStrongElement;
-  };
-
-  interface HTMLMnvSubtitleElement extends Components.MnvSubtitle, HTMLStencilElement {}
-  var HTMLMnvSubtitleElement: {
-    prototype: HTMLMnvSubtitleElement;
-    new (): HTMLMnvSubtitleElement;
-  };
-
-  interface HTMLMnvTElement extends Components.MnvT, HTMLStencilElement {}
-  var HTMLMnvTElement: {
-    prototype: HTMLMnvTElement;
-    new (): HTMLMnvTElement;
-  };
-
-  interface HTMLMnvTitleElement extends Components.MnvTitle, HTMLStencilElement {}
-  var HTMLMnvTitleElement: {
-    prototype: HTMLMnvTitleElement;
-    new (): HTMLMnvTitleElement;
-  };
-
-  interface HTMLMnvTooltipElement extends Components.MnvTooltip, HTMLStencilElement {}
-  var HTMLMnvTooltipElement: {
-    prototype: HTMLMnvTooltipElement;
-    new (): HTMLMnvTooltipElement;
+  interface HTMLMvsTooltipElement extends Components.MvsTooltip, HTMLStencilElement {}
+  var HTMLMvsTooltipElement: {
+    prototype: HTMLMvsTooltipElement;
+    new (): HTMLMvsTooltipElement;
   };
   interface HTMLElementTagNameMap {
-    'app-heropage': HTMLAppHeropageElement;
-    'mnv-about': HTMLMnvAboutElement;
-    'mnv-anchor': HTMLMnvAnchorElement;
-    'mnv-app-bar': HTMLMnvAppBarElement;
-    'mnv-base': HTMLMnvBaseElement;
-    'mnv-bg': HTMLMnvBgElement;
-    'mnv-bignumber': HTMLMnvBignumberElement;
-    'mnv-bignumbers': HTMLMnvBignumbersElement;
-    'mnv-button': HTMLMnvButtonElement;
-    'mnv-card': HTMLMnvCardElement;
-    'mnv-col': HTMLMnvColElement;
-    'mnv-container': HTMLMnvContainerElement;
-    'mnv-divider': HTMLMnvDividerElement;
-    'mnv-expositor': HTMLMnvExpositorElement;
-    'mnv-expositor-base': HTMLMnvExpositorBaseElement;
-    'mnv-figure': HTMLMnvFigureElement;
-    'mnv-figure-caption': HTMLMnvFigureCaptionElement;
-    'mnv-footer': HTMLMnvFooterElement;
-    'mnv-grid': HTMLMnvGridElement;
-    'mnv-hero': HTMLMnvHeroElement;
-    'mnv-iconbutton': HTMLMnvIconbuttonElement;
-    'mnv-list-card': HTMLMnvListCardElement;
-    'mnv-mark': HTMLMnvMarkElement;
-    'mnv-mob-button': HTMLMnvMobButtonElement;
-    'mnv-mob-drawer': HTMLMnvMobDrawerElement;
-    'mnv-mob-menu': HTMLMnvMobMenuElement;
-    'mnv-navbar': HTMLMnvNavbarElement;
-    'mnv-navbutton': HTMLMnvNavbuttonElement;
-    'mnv-overline': HTMLMnvOverlineElement;
-    'mnv-paragraph': HTMLMnvParagraphElement;
-    'mnv-pre': HTMLMnvPreElement;
-    'mnv-projeto': HTMLMnvProjetoElement;
-    'mnv-row': HTMLMnvRowElement;
-    'mnv-slide': HTMLMnvSlideElement;
-    'mnv-slider': HTMLMnvSliderElement;
-    'mnv-strong': HTMLMnvStrongElement;
-    'mnv-subtitle': HTMLMnvSubtitleElement;
-    'mnv-t': HTMLMnvTElement;
-    'mnv-title': HTMLMnvTitleElement;
-    'mnv-tooltip': HTMLMnvTooltipElement;
+    'mvs-anchor': HTMLMvsAnchorElement;
+    'mvs-app-bar': HTMLMvsAppBarElement;
+    'mvs-base': HTMLMvsBaseElement;
+    'mvs-bg': HTMLMvsBgElement;
+    'mvs-button': HTMLMvsButtonElement;
+    'mvs-card': HTMLMvsCardElement;
+    'mvs-divider': HTMLMvsDividerElement;
+    'mvs-figure': HTMLMvsFigureElement;
+    'mvs-figure-caption': HTMLMvsFigureCaptionElement;
+    'mvs-flexgrid': HTMLMvsFlexgridElement;
+    'mvs-iconbutton': HTMLMvsIconbuttonElement;
+    'mvs-mark': HTMLMvsMarkElement;
+    'mvs-mob-button': HTMLMvsMobButtonElement;
+    'mvs-mob-drawer': HTMLMvsMobDrawerElement;
+    'mvs-mob-menu': HTMLMvsMobMenuElement;
+    'mvs-navbar': HTMLMvsNavbarElement;
+    'mvs-navbutton': HTMLMvsNavbuttonElement;
+    'mvs-overline': HTMLMvsOverlineElement;
+    'mvs-paragraph': HTMLMvsParagraphElement;
+    'mvs-pre': HTMLMvsPreElement;
+    'mvs-strong': HTMLMvsStrongElement;
+    'mvs-subtitle': HTMLMvsSubtitleElement;
+    'mvs-title': HTMLMvsTitleElement;
+    'mvs-tooltip': HTMLMvsTooltipElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface AppHeropage extends JSXBase.HTMLAttributes<HTMLAppHeropageElement> {
-    'data'?: any;
-    'match'?: MatchResults;
-    'numbers'?: any;
-  }
-  interface MnvAbout extends JSXBase.HTMLAttributes<HTMLMnvAboutElement> {
-    'mainText'?: string;
-    'mainTitle'?: string;
-  }
-  interface MnvAnchor extends JSXBase.HTMLAttributes<HTMLMnvAnchorElement> {
+  interface MvsAnchor extends JSXBase.HTMLAttributes<HTMLMvsAnchorElement> {
     'href'?: string;
   }
-  interface MnvAppBar extends JSXBase.HTMLAttributes<HTMLMnvAppBarElement> {
+  interface MvsAppBar extends JSXBase.HTMLAttributes<HTMLMvsAppBarElement> {
     'color'?: 'inherit' | 'primary' | 'secondary' | 'default';
     'position'?: 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
   }
-  interface MnvBase extends JSXBase.HTMLAttributes<HTMLMnvBaseElement> {}
-  interface MnvBg extends JSXBase.HTMLAttributes<HTMLMnvBgElement> {}
-  interface MnvBignumber extends JSXBase.HTMLAttributes<HTMLMnvBignumberElement> {
-    'numbers'?: any;
-  }
-  interface MnvBignumbers extends JSXBase.HTMLAttributes<HTMLMnvBignumbersElement> {
-    'setNumbers'?: any[];
-  }
-  interface MnvButton extends JSXBase.HTMLAttributes<HTMLMnvButtonElement> {
-    'contained'?: boolean;
+  interface MvsBase extends JSXBase.HTMLAttributes<HTMLMvsBaseElement> {}
+  interface MvsBg extends JSXBase.HTMLAttributes<HTMLMvsBgElement> {}
+  interface MvsButton extends JSXBase.HTMLAttributes<HTMLMvsButtonElement> {
+    /**
+    * Caso `true`, desabilita o botão.
+    */
     'disabled'?: boolean;
+    /**
+    * Caso `true`, botão terá largura 100%.
+    */
     'full'?: boolean;
+    /**
+    * Caso `true`, botão não terá margens.
+    */
     'marginzero'?: boolean;
-    'outlined'?: boolean;
-    'type'?: string;
+    /**
+    * Define o tipo do botão.
+    */
+    'type'?: 'button' | 'submit' | 'reset';
+    /**
+    * Define estilo do botão.
+    */
+    'variant'?: 'text' | 'outlined' | 'contained';
   }
-  interface MnvCard extends JSXBase.HTMLAttributes<HTMLMnvCardElement> {
+  interface MvsCard extends JSXBase.HTMLAttributes<HTMLMvsCardElement> {
     'button'?: string;
     'cardtitle'?: any;
     'link'?: string;
@@ -517,32 +382,12 @@ declare namespace LocalJSX {
     'subtitle'?: any;
     'width'?: number;
   }
-  interface MnvCol extends JSXBase.HTMLAttributes<HTMLMnvColElement> {
-    'class'?: string;
-  }
-  interface MnvContainer extends JSXBase.HTMLAttributes<HTMLMnvContainerElement> {
-    'lg'?: number;
-    'md'?: number;
-    'sm'?: number;
-    'xl'?: number;
-    'xs'?: number;
-  }
-  interface MnvDivider extends JSXBase.HTMLAttributes<HTMLMnvDividerElement> {}
-  interface MnvExpositor extends JSXBase.HTMLAttributes<HTMLMnvExpositorElement> {
-    'projects'?: any;
-    'sectionSubtitle'?: string;
-    'sectionTitle'?: string;
-    'spotlight'?: any;
-    'spotlightAlt'?: string;
-  }
-  interface MnvExpositorBase extends JSXBase.HTMLAttributes<HTMLMnvExpositorBaseElement> {
-    'data'?: any;
-  }
-  interface MnvFigure extends JSXBase.HTMLAttributes<HTMLMnvFigureElement> {
+  interface MvsDivider extends JSXBase.HTMLAttributes<HTMLMvsDividerElement> {}
+  interface MvsFigure extends JSXBase.HTMLAttributes<HTMLMvsFigureElement> {
     'alt'?: string;
     'src'?: string;
   }
-  interface MnvFigureCaption extends JSXBase.HTMLAttributes<HTMLMnvFigureCaptionElement> {
+  interface MvsFigureCaption extends JSXBase.HTMLAttributes<HTMLMvsFigureCaptionElement> {
     'alt'?: string;
     'bold'?: boolean;
     'boldspotlight'?: boolean;
@@ -552,57 +397,67 @@ declare namespace LocalJSX {
     'italictext'?: boolean;
     'src'?: string;
   }
-  interface MnvFooter extends JSXBase.HTMLAttributes<HTMLMnvFooterElement> {
-    'locations'?: string[];
-  }
-  interface MnvGrid extends JSXBase.HTMLAttributes<HTMLMnvGridElement> {
+  interface MvsFlexgrid extends JSXBase.HTMLAttributes<HTMLMvsFlexgridElement> {
+    /**
+    * Altera visualização de flex para block.
+    */
     'block'?: boolean;
+    /**
+    * Caso `true`, o componente se comportará como `container` capaz de receber `items`.
+    */
     'container'?: boolean;
-    'indented'?: boolean;
+    /**
+    * Caso `true`, o componente se comportará como `item`, contido em um `container`.
+    */
     'item'?: boolean;
-    'lg'?: string;
-    'md'?: string;
-    'sm'?: string;
-    'spacing'?: number;
-    'xl'?: string;
+    /**
+    * Largura do componente no breakpoint Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'lg'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Medium, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'md'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Small, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'sm'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Define espaçamento entre componentes do tipo `item`. Usando somente em componentes tipo `container`.
+    */
+    'spacing'?: string;
+    /**
+    * Largura do componente no breakpoint Extra Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'xl'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
-  interface MnvHero extends JSXBase.HTMLAttributes<HTMLMnvHeroElement> {
-    'background'?: string;
-    'bgimg'?: string;
-    'button'?: string;
-    'herotitle'?: string;
-  }
-  interface MnvIconbutton extends JSXBase.HTMLAttributes<HTMLMnvIconbuttonElement> {
+  interface MvsIconbutton extends JSXBase.HTMLAttributes<HTMLMvsIconbuttonElement> {
     'disabled'?: boolean;
     'type'?: string;
   }
-  interface MnvListCard extends JSXBase.HTMLAttributes<HTMLMnvListCardElement> {
-    'data'?: any;
-    'name'?: string;
-  }
-  interface MnvMark extends JSXBase.HTMLAttributes<HTMLMnvMarkElement> {}
-  interface MnvMobButton extends JSXBase.HTMLAttributes<HTMLMnvMobButtonElement> {
+  interface MvsMark extends JSXBase.HTMLAttributes<HTMLMvsMarkElement> {}
+  interface MvsMobButton extends JSXBase.HTMLAttributes<HTMLMvsMobButtonElement> {
     'open'?: boolean;
   }
-  interface MnvMobDrawer extends JSXBase.HTMLAttributes<HTMLMnvMobDrawerElement> {
+  interface MvsMobDrawer extends JSXBase.HTMLAttributes<HTMLMvsMobDrawerElement> {
     'open'?: boolean;
   }
-  interface MnvMobMenu extends JSXBase.HTMLAttributes<HTMLMnvMobMenuElement> {
+  interface MvsMobMenu extends JSXBase.HTMLAttributes<HTMLMvsMobMenuElement> {
     'open'?: boolean;
     'setClass'?: string;
   }
-  interface MnvNavbar extends JSXBase.HTMLAttributes<HTMLMnvNavbarElement> {
+  interface MvsNavbar extends JSXBase.HTMLAttributes<HTMLMvsNavbarElement> {
     'setClass'?: string;
   }
-  interface MnvNavbutton extends JSXBase.HTMLAttributes<HTMLMnvNavbuttonElement> {
+  interface MvsNavbutton extends JSXBase.HTMLAttributes<HTMLMvsNavbuttonElement> {
     'contained'?: boolean;
     'disabled'?: boolean;
     'marginzero'?: boolean;
     'outlined'?: boolean;
     'type'?: string;
   }
-  interface MnvOverline extends JSXBase.HTMLAttributes<HTMLMnvOverlineElement> {}
-  interface MnvParagraph extends JSXBase.HTMLAttributes<HTMLMnvParagraphElement> {
+  interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {}
+  interface MvsParagraph extends JSXBase.HTMLAttributes<HTMLMvsParagraphElement> {
     /**
     * Altera o parágrafo para tamanho reduzido (body 2).
     */
@@ -612,90 +467,65 @@ declare namespace LocalJSX {
     */
     'capitular'?: boolean;
   }
-  interface MnvPre extends JSXBase.HTMLAttributes<HTMLMnvPreElement> {}
-  interface MnvProjeto extends JSXBase.HTMLAttributes<HTMLMnvProjetoElement> {
-    'projButton'?: string;
-    'projButtonUrl'?: string;
-    'projImg'?: string;
-    'projImgAlt'?: string;
-    'projImgLegenda'?: string;
-    'projText'?: string;
-    'projTitle'?: string;
-  }
-  interface MnvRow extends JSXBase.HTMLAttributes<HTMLMnvRowElement> {}
-  interface MnvSlide extends JSXBase.HTMLAttributes<HTMLMnvSlideElement> {
-    'image'?: string;
-  }
-  interface MnvSlider extends JSXBase.HTMLAttributes<HTMLMnvSliderElement> {
-    'cards'?: any[];
-    'currentIndex'?: number;
-    'height'?: number;
-    'images'?: string[];
-    'translateValue'?: number;
-    'width'?: number;
-  }
-  interface MnvStrong extends JSXBase.HTMLAttributes<HTMLMnvStrongElement> {}
-  interface MnvSubtitle extends JSXBase.HTMLAttributes<HTMLMnvSubtitleElement> {
+  interface MvsPre extends JSXBase.HTMLAttributes<HTMLMvsPreElement> {}
+  interface MvsStrong extends JSXBase.HTMLAttributes<HTMLMvsStrongElement> {}
+  interface MvsSubtitle extends JSXBase.HTMLAttributes<HTMLMvsSubtitleElement> {
     'type'?: string;
   }
-  interface MnvT extends JSXBase.HTMLAttributes<HTMLMnvTElement> {
-    'hierarchy'?: number;
-    'level'?: string;
-    'override'?: number;
+  interface MvsTitle extends JSXBase.HTMLAttributes<HTMLMvsTitleElement> {
+    /**
+    * Define estilo de título a ser usado pelo componente.
+    */
+    'level'?: true | false | 't1' | 't2' | 't3' | 't4' | 't5' | 't6';
+    /**
+    * Sobreescreve o tag html definido automaticamente.
+    */
+    'override'?: true | false | 1 | 2 | 3 | 4 | 5 | 6;
+    /**
+    * Propriedade interna que define automaticamente a tag H a ser usada.
+    */
+    'rank'?: number;
+    /**
+    * Define texto de cor branca, para fundos escuros.
+    */
     'white'?: boolean;
   }
-  interface MnvTitle extends JSXBase.HTMLAttributes<HTMLMnvTitleElement> {
-    'hierarchy'?: number;
-    'level'?: string;
-    'override'?: number;
-    'white'?: boolean;
-  }
-  interface MnvTooltip extends JSXBase.HTMLAttributes<HTMLMnvTooltipElement> {
+  interface MvsTooltip extends JSXBase.HTMLAttributes<HTMLMvsTooltipElement> {
+    /**
+    * Define conteúdo do tooltip.
+    */
     'label'?: string;
+    /**
+    * Define largura do tooltip.
+    */
     'length'?: string;
   }
 
   interface IntrinsicElements {
-    'app-heropage': AppHeropage;
-    'mnv-about': MnvAbout;
-    'mnv-anchor': MnvAnchor;
-    'mnv-app-bar': MnvAppBar;
-    'mnv-base': MnvBase;
-    'mnv-bg': MnvBg;
-    'mnv-bignumber': MnvBignumber;
-    'mnv-bignumbers': MnvBignumbers;
-    'mnv-button': MnvButton;
-    'mnv-card': MnvCard;
-    'mnv-col': MnvCol;
-    'mnv-container': MnvContainer;
-    'mnv-divider': MnvDivider;
-    'mnv-expositor': MnvExpositor;
-    'mnv-expositor-base': MnvExpositorBase;
-    'mnv-figure': MnvFigure;
-    'mnv-figure-caption': MnvFigureCaption;
-    'mnv-footer': MnvFooter;
-    'mnv-grid': MnvGrid;
-    'mnv-hero': MnvHero;
-    'mnv-iconbutton': MnvIconbutton;
-    'mnv-list-card': MnvListCard;
-    'mnv-mark': MnvMark;
-    'mnv-mob-button': MnvMobButton;
-    'mnv-mob-drawer': MnvMobDrawer;
-    'mnv-mob-menu': MnvMobMenu;
-    'mnv-navbar': MnvNavbar;
-    'mnv-navbutton': MnvNavbutton;
-    'mnv-overline': MnvOverline;
-    'mnv-paragraph': MnvParagraph;
-    'mnv-pre': MnvPre;
-    'mnv-projeto': MnvProjeto;
-    'mnv-row': MnvRow;
-    'mnv-slide': MnvSlide;
-    'mnv-slider': MnvSlider;
-    'mnv-strong': MnvStrong;
-    'mnv-subtitle': MnvSubtitle;
-    'mnv-t': MnvT;
-    'mnv-title': MnvTitle;
-    'mnv-tooltip': MnvTooltip;
+    'mvs-anchor': MvsAnchor;
+    'mvs-app-bar': MvsAppBar;
+    'mvs-base': MvsBase;
+    'mvs-bg': MvsBg;
+    'mvs-button': MvsButton;
+    'mvs-card': MvsCard;
+    'mvs-divider': MvsDivider;
+    'mvs-figure': MvsFigure;
+    'mvs-figure-caption': MvsFigureCaption;
+    'mvs-flexgrid': MvsFlexgrid;
+    'mvs-iconbutton': MvsIconbutton;
+    'mvs-mark': MvsMark;
+    'mvs-mob-button': MvsMobButton;
+    'mvs-mob-drawer': MvsMobDrawer;
+    'mvs-mob-menu': MvsMobMenu;
+    'mvs-navbar': MvsNavbar;
+    'mvs-navbutton': MvsNavbutton;
+    'mvs-overline': MvsOverline;
+    'mvs-paragraph': MvsParagraph;
+    'mvs-pre': MvsPre;
+    'mvs-strong': MvsStrong;
+    'mvs-subtitle': MvsSubtitle;
+    'mvs-title': MvsTitle;
+    'mvs-tooltip': MvsTooltip;
   }
 }
 

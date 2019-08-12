@@ -1,0 +1,69 @@
+button {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	color: $mvs-color-white;
+	text-transform: lowercase;
+	background-color: rgba(0, 0, 0, 0);
+	font-family: $mvs-font-alegreya-sans-sc;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	border: none;
+	vertical-align: middle;
+	transition: all $mvs-transition-cubic-03;
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 51%;
+		right: 51%;
+		bottom: 10px;
+		background: $mvs-color-white;
+		height: 2px;
+		transition-property: left, right;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-out;
+	}
+	&.marginzero {
+		margin: 0px !important;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+		color: $mvs-color-white;
+		&:before {
+			left: 10%;
+			right: 10%;
+		}
+	}
+	&:disabled,
+	&:disabled > *,
+	&:disabled:hover,
+	&:disabled:active {
+		cursor: default;
+		color: rgba($mvs-text-dark, 0.4);
+	}
+	@include xl {
+		min-width: 90px;
+		padding: 15px;
+		font-size: 29px;
+	}
+	@include lg {
+		min-width: 81px;
+		padding: 13.5px;
+		font-size: 26px;
+	}
+	@include md {
+		min-width: 75px;
+		padding: 16.5px;
+		margin: 12.5px;
+		font-size: 17px;
+	}
+	@include sm {
+		min-width: 69px;
+		padding: 15px;
+		margin: 11.5px;
+		font-size: 16px;
+	}
+}

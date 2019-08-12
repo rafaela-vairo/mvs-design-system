@@ -27,34 +27,17 @@
 			type="image/vnd.microsoft.icon"
 		/>
 
-		<script type="module" src="/build/mnv-ds.esm.js"></script>
-		<script nomodule src="/build/mnv-ds.js"></script>
+		<script type="module" src="/build/mvs-ds.esm.js"></script>
+		<script nomodule src="/build/mvs-ds.js"></script>
 	</head>
 	<body>
-		<mnv-base id="root">
-			<mnv-title>Nível 1</mnv-title>
-			<div>
-				<mnv-title>Nível 2</mnv-title>
-				<div>
-					<mnv-title>Nível 3</mnv-title>
-					<mnv-grid container>
-						<mnv-title>Container Nível 3</mnv-title>
-						<mnv-grid container>
-							<mnv-title>Item Nível 3</mnv-title>
-							<mnv-grid container>
-								<mnv-title>Item Nível 3</mnv-title>
-							</mnv-grid>
-						</mnv-grid>
-					</mnv-grid>
-				</div>
-			</div>
-			<mnv-grid container>
-				<mnv-grid item>
-					<mnv-t>Level 1</mnv-t>
-					<div><mnv-t>Level 2</mnv-t></div>
-				</mnv-grid>
-			</mnv-grid>
-		</mnv-base>
-		<mnv-app-bar>Olá mundo</mnv-app-bar>
+		<mvs-base id="root">
+			<mvs-flexgrid container>
+				<mvs-flexgrid item xl="10" style="background-color: yellow;">
+					<mvs-title level="t1">Rank 2, Level 4</mvs-title>
+					<mvs-flexgrid container><mvs-title>Nível 1</mvs-title></mvs-flexgrid>
+				</mvs-flexgrid>
+			</mvs-flexgrid>
+		</mvs-base>
 	</body>
 </html>

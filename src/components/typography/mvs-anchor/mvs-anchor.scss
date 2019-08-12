@@ -1,0 +1,13 @@
+a {
+    color: inherit;
+    text-decoration: underline $mvs-color-primary-light;
+    &:hover, &:active {
+        color: $mvs-color-primary-light;
+    }
+    &:visited {
+        color: lighten($mvs-text-dark, 50%);
+        &:hover, &:active {
+            color: $mvs-color-primary-light;
+        }
+    }
+}

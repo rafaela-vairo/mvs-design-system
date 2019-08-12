@@ -1,0 +1,187 @@
+button {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	color: $mvs-color-primary;
+	text-transform: lowercase;
+	background-color: rgba(0, 0, 0, 0);
+	font-family: $mvs-font-alegreya-sans-sc;
+	font-weight: 700;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	border: none;
+	vertical-align: middle;
+	transition: all $mvs-transition-cubic-03;
+	@include xl {
+		padding: 19.5px;
+		min-width: 90;
+		margin: 15;
+		font-size: 23px;
+	}
+	@include lg {
+		padding: 17.5px;
+		min-width: 81;
+		margin: 13.5;
+		font-size: 21px;
+	}
+	@include md {
+		padding: 16.5px;
+		min-width: 75;
+		margin: 12.5;
+		font-size: 19px;
+	}
+	@include sm {
+		padding: 15px;
+		min-width: 69;
+		margin: 11.5;
+		font-size: 18px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 51%;
+		right: 51%;
+		bottom: 10px;
+		background: $mvs-color-primary-light;
+		height: 2px;
+		transition-property: left, right;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
+	&.marginzero {
+		margin: 0px !important;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+		color: $mvs-color-primary-light;
+		&:before {
+			left: 21px;
+			right: 21px;
+		}
+	}
+	&:disabled,
+	&:disabled > *,
+	&:disabled:hover,
+	&:disabled:active {
+		cursor: default;
+		color: rgba($mvs-text-dark, 0.4);
+		&:before {
+			left: 51%;
+			right: 51%;
+		}
+	}
+
+	&.outlined {
+		color: $mvs-color-white;
+		position: relative;
+		background-color: rgba(0, 0, 0, 0);
+		border: 2px solid $mvs-color-primary-light;
+		transition: transform $mvs-transition-cubic-03;
+		transform: perspective(1px) translateZ(0);
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+		position: relative;
+		&:disabled,
+		&:disabled > *,
+		&:disabled:hover,
+		&:disabled:active {
+			cursor: default;
+			color: rgba($mvs-color-primary-light, 0.5);
+			border-color: rgba($mvs-color-primary-light, 0.5);
+			&:before {
+				transform: scaleX(0);
+			}
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			outline: none;
+			color: white;
+			&:before {
+				transform: scaleX(1);
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			transition: all $mvs-transition-cubic-03;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			background: $mvs-color-primary-light;
+			transform: scaleX(0);
+			transform-origin: 0 50%;
+		}
+	}
+
+	&.contained {
+		background-color: $mvs-color-primary;
+		color: $mvs-text-light;
+		border: 2px solid $mvs-color-primary;
+		box-shadow: 0 3px 5px rgba($mvs-color-black, 0.3),
+			0 3px 5px rgba($mvs-color-primary-dark, 0.3);
+		transition: box-shadow $mvs-transition-cubic-03;
+		&:disabled,
+		&:disabled > *,
+		&:disabled:hover,
+		&:disabled:active {
+			cursor: default;
+			color: rgba($mvs-text-light, 0.4);
+			background-color: $mvs-color-primary-dark;
+			border-color: $mvs-color-primary-dark;
+			box-shadow: 0 0px 0px rgba($mvs-color-black, 0.3),
+				0 0px 0px rgba($mvs-color-primary-dark, 0.3);
+		}
+		&:hover {
+			box-shadow: 0 10px 20px rgba($mvs-color-black, 0.3),
+				0 6px 6px rgba($mvs-color-primary-dark, 0.3);
+		}
+		&:focus {
+			outline: none;
+			background-color: $mvs-color-primary-light;
+			border-color: $mvs-color-primary-light;
+			box-shadow: 0 3px 5px rgba($mvs-color-black, 0.3),
+				0 3px 5px rgba($mvs-color-primary-dark, 0.3);
+		}
+		&:active {
+			background-color: $mvs-color-primary-light;
+			border-color: $mvs-color-primary-light;
+			box-shadow: 0 15px 30px rgba($mvs-color-black, 0.3),
+				0 11px 15px rgba($mvs-color-primary-dark, 0.3);
+		}
+		@include xl {
+			padding: 19.5px;
+		}
+		@include lg {
+			padding: 17.5px;
+		}
+		@include md {
+			padding: 16.5px;
+		}
+		@include sm {
+			padding: 15px;
+		}
+	}
+
+	&.full {
+		width: 100%;
+
+		@include xl {
+			padding: 19.5px;
+		}
+		@include lg {
+			padding: 17.5px;
+		}
+		@include md {
+			padding: 16.5px;
+		}
+		@include sm {
+			padding: 15px;
+		}
+	}
+}
