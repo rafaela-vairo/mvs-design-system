@@ -1,4 +1,4 @@
-# mvs-mob-button
+# mvs-mob-drawer
 
 
 
@@ -16,13 +16,13 @@
 
 ### Used by
 
- - [mvs-mob-menu](../mvs-mob-menu)
+ - [mvs-navbar](../mvs-navbar)
 
 ### Graph
 ```mermaid
 graph TD;
-  mvs-mob-menu --> mvs-mob-button
-  style mvs-mob-button fill:#f9f,stroke:#333,stroke-width:4px
+  mvs-navbar --> mvs-mob-drawer
+  style mvs-mob-drawer fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

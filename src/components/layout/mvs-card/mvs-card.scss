@@ -1,5 +1,5 @@
 .card-root {
-	background-color: $mvs-color-white;
+	background-color: $color-white;
 	@include xl {
 		height: 433px;
 	}
@@ -41,8 +41,8 @@
 	&:hover {
 		div.action {
 			mvs-button > button {
-				background-color: $mvs-color-primary-light;
-				border-color: $mvs-color-primary-light;
+				background-color: $color-primary-light;
+				border-color: $color-primary-light;
 				font-family: 'Alegreya Sans SC';
 				font-weight: 700;
 
@@ -83,7 +83,7 @@
 		}
 
 		mvs-subtitle span {
-			color: $mvs-text-dark-60;
+			color: $text-dark-70;
 
 			@include xl {
 				padding-bottom: 15px;
@@ -146,7 +146,7 @@
 		bottom: 0px;
 		left: 0px;
 		width: 100%;
-		background-color: $mvs-color-primary;
+		background-color: $color-primary;
 
 		@include xl {
 			height: 15px;
@@ -226,7 +226,7 @@
 			}
 
 			&:active {
-				background-color: $mvs-color-primary-light;
+				background-color: $color-primary-light;
 				font-family: 'Alegreya Sans SC';
 				font-weight: 700;
 

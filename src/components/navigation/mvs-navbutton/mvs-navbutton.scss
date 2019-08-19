@@ -2,15 +2,15 @@ button {
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	color: $mvs-color-white;
+	color: $color-white;
 	text-transform: lowercase;
 	background-color: rgba(0, 0, 0, 0);
-	font-family: $mvs-font-alegreya-sans-sc;
+	font-family: $font-alegreya-sans-sc;
 	letter-spacing: 1px;
 	border-radius: 3px;
 	border: none;
 	vertical-align: middle;
-	transition: all $mvs-transition-cubic-03;
+	transition: all $transition-cubic-03;
 	&:before {
 		content: '';
 		position: absolute;
@@ -18,7 +18,7 @@ button {
 		left: 51%;
 		right: 51%;
 		bottom: 10px;
-		background: $mvs-color-white;
+		background: $color-white;
 		height: 2px;
 		transition-property: left, right;
 		transition-duration: 0.2s;
@@ -27,11 +27,22 @@ button {
 	&.marginzero {
 		margin: 0px !important;
 	}
+	&.primary {
+		color: $color-primary;
+		&:before {
+			background: $color-primary;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color-primary;
+		}
+	}
 	&:hover,
 	&:focus,
 	&:active {
 		outline: none;
-		color: $mvs-color-white;
+		color: $color-white;
 		&:before {
 			left: 10%;
 			right: 10%;
@@ -42,7 +53,7 @@ button {
 	&:disabled:hover,
 	&:disabled:active {
 		cursor: default;
-		color: rgba($mvs-text-dark, 0.4);
+		color: rgba($text-dark, 0.4);
 	}
 	@include xl {
 		min-width: 90px;

@@ -1,135 +1,136 @@
-$tooltip-bg:            $mvs-color-primary-light !default;
-$tooltip-move:          4px !default;
-$tooltip-text-color:     $mvs-text-dark !default;
+$tooltip-bg: $color-primary-light !default;
+$tooltip-move: 4px !default;
+$tooltip-text-color: $text-dark !default;
 
-@mixin base-effects () {
-  opacity: 0;
-  pointer-events: none;
-  transition: all .18s ease-out .18s;
+@mixin base-effects() {
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.18s ease-out 0.18s;
 }
 
-@mixin no-effects () {
-  transition: none;
+@mixin no-effects() {
+	transition: none;
 }
 
 @mixin normalized-text() {
-  text-indent: 0;
-  font-family: $mvs-font-body;
-  font-weight: normal;
-  font-style: normal;
-  text-shadow: none;
+	text-indent: 0;
+	font-family: $font-body;
+	font-weight: normal;
+	font-style: normal;
+	text-shadow: none;
 }
 
 :host {
-  --tooltip-color: #{$tooltip-bg};
-  --tooltip-move: #{$tooltip-move};
-  --tooltip-text-color: #{$tooltip-text-color};
+	--tooltip-color: #{$tooltip-bg};
+	--tooltip-move: #{$tooltip-move};
+	--tooltip-text-color: #{$tooltip-text-color};
 }
 
 button[aria-label] {
-    overflow: visible;
+	overflow: visible;
 }
 
 [aria-label] {
-    position: relative;
-    cursor: pointer;
-    &:after {
-      @include base-effects();
-      @include normalized-text();
+	position: relative;
+	cursor: pointer;
+	&:after {
+		@include base-effects();
+		@include normalized-text();
 
-      background: var(--tooltip-color);
-      border-radius: 2px;
-      color: var(--text-color);
-      content: attr(aria-label);
-      padding: .5em 1em;
-      position: absolute;
-      white-space: nowrap;
-      z-index: 10;
-    }
+		background: var(--tooltip-color);
+		border-radius: 2px;
+		color: var(--text-color);
+		content: attr(aria-label);
+		padding: 0.5em 1em;
+		position: absolute;
+		white-space: nowrap;
+		z-index: 10;
+	}
 
-    &:before {
-      @include base-effects();
-      content: "";
-      position: absolute;
-      z-index: 10;
-    }
+	&:before {
+		@include base-effects();
+		content: '';
+		position: absolute;
+		z-index: 10;
+	}
 
-    &:after {
-        left: 50%;
-        margin-top: 5px;;
-        top: 100%;
-        transform: translate(-50%, calc(var(--tooltip-move) * -1));
-    }
+	&:after {
+		left: 50%;
+		margin-top: 5px;
+		top: 100%;
+		transform: translate(-50%, calc(var(--tooltip-move) * -1));
+	}
 
-    &:before {
+	&:before {
+		left: 50%;
+		top: 100%;
+		transform: translate(-50%, calc(var(--tooltip-move) * -1));
+	}
 
-        left: 50%;
-        top: 100%;
-        transform: translate(-50%, calc(var(--tooltip-move) * -1));
-    }
+	&:hover,
+	&[data-tooltip-visible] {
+		&:after {
+			transform: translate(-50%, 0);
+		}
 
-    &:hover, &[data-tooltip-visible] {
-        &:after {
-        transform: translate(-50%, 0);
-        }
+		&:before {
+			transform: translate(-50%, 0);
+		}
+	}
 
-        &:before {
-        transform: translate(-50%, 0);
-        }
-    }
+	&:hover,
+	&[data-tooltip-visible],
+	&:not([data-tooltip-nofocus]):focus {
+		&:before,
+		&:after {
+			opacity: 1;
+			pointer-events: none;
+		}
+	}
 
-    &:hover, &[data-tooltip-visible], &:not([data-tooltip-nofocus]):focus {
-      &:before,
-      &:after {
-        opacity: 1;      
-        pointer-events: none;
-      }
-    }
+	&[data-tooltip-break] {
+		&:after {
+			white-space: pre;
+		}
 
-    &[data-tooltip-break] {
-      &:after {
-        white-space: pre;
-      }
+		&[data-tooltip-length] {
+			&:after {
+				white-space: pre-line;
+				word-break: break-word;
+			}
+		}
+	}
 
-      &[data-tooltip-length] {
-        &:after {
-          white-space: pre-line;
-          word-break: break-word;
-        }
-      }
-    }
+	&[data-tooltip-length='medium'] {
+		&:after {
+			white-space: normal;
+			width: 150px;
+		}
+	}
 
+	&[data-tooltip-length='large'] {
+		&:after {
+			white-space: normal;
+			width: 260px;
+		}
+	}
 
-    &[data-tooltip-length="medium"] {
-      &:after {
-        white-space: normal;
-        width: 150px;
-      }
-    }
+	&[data-tooltip-length='xlarge'] {
+		&:after {
+			white-space: normal;
+			width: 380px;
 
-    &[data-tooltip-length="large"] {
-      &:after {
-        white-space: normal;
-        width: 260px;
-      }
-    }
+			@media screen and (max-width: 768px) {
+				white-space: normal;
+				width: 90vw;
+			}
+		}
+	}
 
-    &[data-tooltip-length="xlarge"] {
-      &:after {
-        white-space: normal;
-        width: 380px;
-
-        @media screen and (max-width: 768px) {
-          white-space: normal;
-          width: 90vw;
-        }
-      }
-    }
-
-    &[data-tooltip-length="fit"] {
-      &:after {
-        white-space: normal;
-        width: 100%;
-      }
-    }
+	&[data-tooltip-length='fit'] {
+		&:after {
+			white-space: normal;
+			width: 100%;
+		}
+	}
 }

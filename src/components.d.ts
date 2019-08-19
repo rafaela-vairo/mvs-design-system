@@ -12,10 +12,6 @@ export namespace Components {
   interface MvsAnchor {
     'href': string;
   }
-  interface MvsAppBar {
-    'color': 'inherit' | 'primary' | 'secondary' | 'default';
-    'position': 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
-  }
   interface MvsBase {}
   interface MvsBg {}
   interface MvsButton {
@@ -108,18 +104,18 @@ export namespace Components {
   interface MvsMobDrawer {
     'open': boolean;
   }
-  interface MvsMobMenu {
-    'open': boolean;
-    'setClass': string;
-  }
   interface MvsNavbar {
+    'color': 'inherit' | 'primary' | 'secondary' | 'default';
+    'lastScrollY': number;
+    'links': { name: string; url: string }[];
+    'logo': string;
+    'open': boolean;
+    'position': 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
     'setClass': string;
   }
   interface MvsNavbutton {
-    'contained': boolean;
+    'color': 'primary' | 'white' | 'black';
     'disabled': boolean;
-    'marginzero': boolean;
-    'outlined': boolean;
     'type': string;
   }
   interface MvsOverline {}
@@ -175,12 +171,6 @@ declare global {
   var HTMLMvsAnchorElement: {
     prototype: HTMLMvsAnchorElement;
     new (): HTMLMvsAnchorElement;
-  };
-
-  interface HTMLMvsAppBarElement extends Components.MvsAppBar, HTMLStencilElement {}
-  var HTMLMvsAppBarElement: {
-    prototype: HTMLMvsAppBarElement;
-    new (): HTMLMvsAppBarElement;
   };
 
   interface HTMLMvsBaseElement extends Components.MvsBase, HTMLStencilElement {}
@@ -255,12 +245,6 @@ declare global {
     new (): HTMLMvsMobDrawerElement;
   };
 
-  interface HTMLMvsMobMenuElement extends Components.MvsMobMenu, HTMLStencilElement {}
-  var HTMLMvsMobMenuElement: {
-    prototype: HTMLMvsMobMenuElement;
-    new (): HTMLMvsMobMenuElement;
-  };
-
   interface HTMLMvsNavbarElement extends Components.MvsNavbar, HTMLStencilElement {}
   var HTMLMvsNavbarElement: {
     prototype: HTMLMvsNavbarElement;
@@ -316,7 +300,6 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'mvs-anchor': HTMLMvsAnchorElement;
-    'mvs-app-bar': HTMLMvsAppBarElement;
     'mvs-base': HTMLMvsBaseElement;
     'mvs-bg': HTMLMvsBgElement;
     'mvs-button': HTMLMvsButtonElement;
@@ -329,7 +312,6 @@ declare global {
     'mvs-mark': HTMLMvsMarkElement;
     'mvs-mob-button': HTMLMvsMobButtonElement;
     'mvs-mob-drawer': HTMLMvsMobDrawerElement;
-    'mvs-mob-menu': HTMLMvsMobMenuElement;
     'mvs-navbar': HTMLMvsNavbarElement;
     'mvs-navbutton': HTMLMvsNavbuttonElement;
     'mvs-overline': HTMLMvsOverlineElement;
@@ -345,10 +327,6 @@ declare global {
 declare namespace LocalJSX {
   interface MvsAnchor extends JSXBase.HTMLAttributes<HTMLMvsAnchorElement> {
     'href'?: string;
-  }
-  interface MvsAppBar extends JSXBase.HTMLAttributes<HTMLMvsAppBarElement> {
-    'color'?: 'inherit' | 'primary' | 'secondary' | 'default';
-    'position'?: 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
   }
   interface MvsBase extends JSXBase.HTMLAttributes<HTMLMvsBaseElement> {}
   interface MvsBg extends JSXBase.HTMLAttributes<HTMLMvsBgElement> {}
@@ -442,18 +420,18 @@ declare namespace LocalJSX {
   interface MvsMobDrawer extends JSXBase.HTMLAttributes<HTMLMvsMobDrawerElement> {
     'open'?: boolean;
   }
-  interface MvsMobMenu extends JSXBase.HTMLAttributes<HTMLMvsMobMenuElement> {
-    'open'?: boolean;
-    'setClass'?: string;
-  }
   interface MvsNavbar extends JSXBase.HTMLAttributes<HTMLMvsNavbarElement> {
+    'color'?: 'inherit' | 'primary' | 'secondary' | 'default';
+    'lastScrollY'?: number;
+    'links'?: { name: string; url: string }[];
+    'logo'?: string;
+    'open'?: boolean;
+    'position'?: 'fixed' | 'sticky' | 'absolute' | 'static' | 'relative';
     'setClass'?: string;
   }
   interface MvsNavbutton extends JSXBase.HTMLAttributes<HTMLMvsNavbuttonElement> {
-    'contained'?: boolean;
+    'color'?: 'primary' | 'white' | 'black';
     'disabled'?: boolean;
-    'marginzero'?: boolean;
-    'outlined'?: boolean;
     'type'?: string;
   }
   interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {}
@@ -503,7 +481,6 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'mvs-anchor': MvsAnchor;
-    'mvs-app-bar': MvsAppBar;
     'mvs-base': MvsBase;
     'mvs-bg': MvsBg;
     'mvs-button': MvsButton;
@@ -516,7 +493,6 @@ declare namespace LocalJSX {
     'mvs-mark': MvsMark;
     'mvs-mob-button': MvsMobButton;
     'mvs-mob-drawer': MvsMobDrawer;
-    'mvs-mob-menu': MvsMobMenu;
     'mvs-navbar': MvsNavbar;
     'mvs-navbutton': MvsNavbutton;
     'mvs-overline': MvsOverline;

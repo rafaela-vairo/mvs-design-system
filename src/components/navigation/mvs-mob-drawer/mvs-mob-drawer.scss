@@ -8,8 +8,8 @@
 	left: 0;
 	height: var(--set-height, 0);
 	width: 100vw;
-	background: $mvs-color-bg-light;
-	color: $mvs-text-dark;
+	background: $color-light;
+	color: $text-dark;
 	transition: height 0.3s ease;
 	z-index: 2;
 }

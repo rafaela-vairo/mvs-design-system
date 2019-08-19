@@ -1,19 +1,19 @@
 :host > * {
     cursor: pointer;
 	text-transform: lowercase;
-	background-color: rgba($mvs-color-primary-light, 0);
+	background-color: rgba($color-primary-light, 0);
 	border-radius: 30px;
     border: none;
     vertical-align: middle;
 	line-height: 1;
-	transition: border $mvs-transition-cubic-03;
-	border: 2px solid rgba($mvs-color-primary-light, 0);
+	transition: border $transition-cubic-03;
+	border: 2px solid rgba($color-primary-light, 0);
 	&:hover {
-		border: 2px solid $mvs-color-primary-light;
+		border: 2px solid $color-primary-light;
 	}
 	&:disabled, &:disabled > *, &:disabled:hover, &:disabled:active {
 		cursor: default;
-		border: 2px solid rgba($mvs-color-primary-light, 0);
+		border: 2px solid rgba($color-primary-light, 0);
 	}
 	@include xl {
         width: 60px;

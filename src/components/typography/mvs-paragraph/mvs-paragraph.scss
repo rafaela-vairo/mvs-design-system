@@ -1,7 +1,7 @@
 :host {
-	font-family: $mvs-font-alegreya-sans;
+	font-family: $font-alegreya-sans;
 	.capitular::first-letter {
-		font-family: $mvs-font-playfair-display;
+		font-family: $font-playfair-display;
 		float: left;
 		@include xl {
 			font-size: 90px;
