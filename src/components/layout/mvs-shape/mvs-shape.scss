@@ -1,0 +1,41 @@
+:host {
+	width: 100%;
+}
+
+div {
+	border-radius: 3px;
+	box-sizing: border-box;
+	box-shadow: 0 3px 5px $color-black, 0 3px 5px $color-primary-dark;
+	transition: box-shadow $transition-cubic-03;
+	&:hover {
+		box-shadow: 0 10px 20px $color-black, 0 6px 6px $color-primary-dark;
+	}
+}
+
+.primary {
+	background-color: $color-primary;
+}
+.secondary {
+	background-color: $color-secondary;
+}
+.black {
+	background-color: $color-black;
+}
+.dark {
+	background-color: $color-dark;
+}
+.light {
+	background-color: $color-light;
+}
+.white {
+	background-color: $color-white;
+}
+.error {
+	background-color: $color-error;
+}
+.warning {
+	background-color: $color-warning;
+}
+.confirm {
+	background-color: $color-confirm;
+}

@@ -130,6 +130,17 @@ export namespace Components {
     'capitular': boolean;
   }
   interface MvsPre {}
+  interface MvsShape {
+    'bg': | 'primary'
+    | 'secondary'
+    | 'black'
+    | 'dark'
+    | 'light'
+    | 'white'
+    | 'error'
+    | 'warning'
+    | 'confirm';
+  }
   interface MvsStrong {}
   interface MvsSubtitle {
     'type': string;
@@ -275,6 +286,12 @@ declare global {
     new (): HTMLMvsPreElement;
   };
 
+  interface HTMLMvsShapeElement extends Components.MvsShape, HTMLStencilElement {}
+  var HTMLMvsShapeElement: {
+    prototype: HTMLMvsShapeElement;
+    new (): HTMLMvsShapeElement;
+  };
+
   interface HTMLMvsStrongElement extends Components.MvsStrong, HTMLStencilElement {}
   var HTMLMvsStrongElement: {
     prototype: HTMLMvsStrongElement;
@@ -317,6 +334,7 @@ declare global {
     'mvs-overline': HTMLMvsOverlineElement;
     'mvs-paragraph': HTMLMvsParagraphElement;
     'mvs-pre': HTMLMvsPreElement;
+    'mvs-shape': HTMLMvsShapeElement;
     'mvs-strong': HTMLMvsStrongElement;
     'mvs-subtitle': HTMLMvsSubtitleElement;
     'mvs-title': HTMLMvsTitleElement;
@@ -446,6 +464,17 @@ declare namespace LocalJSX {
     'capitular'?: boolean;
   }
   interface MvsPre extends JSXBase.HTMLAttributes<HTMLMvsPreElement> {}
+  interface MvsShape extends JSXBase.HTMLAttributes<HTMLMvsShapeElement> {
+    'bg'?: | 'primary'
+    | 'secondary'
+    | 'black'
+    | 'dark'
+    | 'light'
+    | 'white'
+    | 'error'
+    | 'warning'
+    | 'confirm';
+  }
   interface MvsStrong extends JSXBase.HTMLAttributes<HTMLMvsStrongElement> {}
   interface MvsSubtitle extends JSXBase.HTMLAttributes<HTMLMvsSubtitleElement> {
     'type'?: string;
@@ -498,6 +527,7 @@ declare namespace LocalJSX {
     'mvs-overline': MvsOverline;
     'mvs-paragraph': MvsParagraph;
     'mvs-pre': MvsPre;
+    'mvs-shape': MvsShape;
     'mvs-strong': MvsStrong;
     'mvs-subtitle': MvsSubtitle;
     'mvs-title': MvsTitle;
