@@ -31,7 +31,7 @@
 		<script nomodule src="/build/mvs-ds.js"></script>
 	</head>
 	<body>
-		<mvs-base id="root">
+		<mvs-base>
 			<mvs-navbar>Menu</mvs-navbar>
 			<mvs-flexgrid container style="background-color: rgba(156, 168, 198, 1);">
 				<mvs-flexgrid
@@ -49,10 +49,13 @@
 					style="border: 1px dashed rgb(247, 0, 255);"
 				>
 					<mvs-shape>
-						<div style="padding: 30px;">
+						<div style="padding: 30px;" id="root">
 							<mvs-title level="t1"
 								>Título 1 lorem ipsum dolor sit amet</mvs-title
 							>
+							<div>
+								<mvs-title override="1">Título 2</mvs-title>
+							</div>
 							<mvs-title level="t2"
 								>Título 2 lorem ipsum dolor sit amet</mvs-title
 							>
