@@ -1,6 +1,6 @@
 .alternating > div:nth-of-type(even) {
-	background-color: $color-dark !important;
+	background-color: $color-medium !important;
 }
 .alternating > div:nth-of-type(odd) {
-	background-color: $color-light !important;
+	background-color: $color-medium !important;
 }

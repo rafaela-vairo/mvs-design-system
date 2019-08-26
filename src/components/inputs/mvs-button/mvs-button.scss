@@ -12,42 +12,33 @@ button {
 	border: none;
 	vertical-align: middle;
 	transition: all $transition-cubic-03;
+	padding: $inset-sm;
+	&.ghost,
+	&.contained {
+		margin: $spacing-xs 0 0 0;
+		&:hover {
+			margin: 0 0 $spacing-xs 0;
+		}
+	}
 	@include xl {
-		padding: 19.5px;
-		min-width: 90;
-		margin: 15;
+		min-width: 90px;
+		min-height: 22px;
 		font-size: 23px;
 	}
 	@include lg {
-		padding: 17.5px;
-		min-width: 81;
-		margin: 13.5;
+		min-width: 81px;
+		min-height: 20px;
 		font-size: 21px;
 	}
 	@include md {
-		padding: 16.5px;
-		min-width: 75;
-		margin: 12.5;
+		min-width: 75px;
+		min-height: 15px;
 		font-size: 19px;
 	}
 	@include sm {
-		padding: 15px;
-		min-width: 69;
-		margin: 11.5;
+		min-width: 69px;
+		min-height: 15px;
 		font-size: 18px;
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		left: 51%;
-		right: 51%;
-		bottom: 10px;
-		background: $color-primary-light;
-		height: 2px;
-		transition-property: left, right;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
 	}
 	&.marginzero {
 		margin: 0px !important;
@@ -56,30 +47,19 @@ button {
 	&:focus,
 	&:active {
 		outline: none;
-		color: $color-primary-light;
-		&:before {
-			left: 21px;
-			right: 21px;
-		}
 	}
 	&:disabled,
 	&:disabled > *,
 	&:disabled:hover,
 	&:disabled:active {
 		cursor: default;
-		color: rgba($text-dark, 0.4);
-		&:before {
-			left: 51%;
-			right: 51%;
-		}
+		color: rgba($color-black, 0.25);
 	}
 
-	&.outlined {
-		color: $color-white;
+	&.ghost {
 		position: relative;
 		background-color: rgba(0, 0, 0, 0);
-		border: 2px solid $color-primary-light;
-		transition: transform $transition-cubic-03;
+		border: 2px solid $color-primary-dark;
 		transform: perspective(1px) translateZ(0);
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 		position: relative;
@@ -88,34 +68,20 @@ button {
 		&:disabled:hover,
 		&:disabled:active {
 			cursor: default;
-			color: rgba($color-primary-light, 0.5);
-			border-color: rgba($color-primary-light, 0.5);
-			&:before {
-				transform: scaleX(0);
-			}
+			border-color: rgba($color-black, 0.25);
 		}
 		&:hover,
 		&:focus,
 		&:active {
 			outline: none;
-			color: white;
-			&:before {
-				transform: scaleX(1);
-			}
 		}
-		&:before {
-			content: '';
-			position: absolute;
-			z-index: -1;
-			transition: all $transition-cubic-03;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			height: 100%;
-			background: $color-primary-light;
-			transform: scaleX(0);
-			transform-origin: 0 50%;
+		&:hover,
+		&:focus {
+			border: 2px solid $color-secondary;
+		}
+		&:active {
+			border: 2px solid $color-primary-dark;
+			background-color: rgba($color-primary, 0.15);
 		}
 	}
 
@@ -125,7 +91,6 @@ button {
 		border: 2px solid $color-primary;
 		box-shadow: 0 3px 5px rgba($color-black, 0.3),
 			0 3px 5px rgba($color-primary-dark, 0.3);
-		transition: box-shadow $transition-cubic-03;
 		&:disabled,
 		&:disabled > *,
 		&:disabled:hover,
@@ -153,35 +118,6 @@ button {
 			border-color: $color-primary-light;
 			box-shadow: 0 15px 30px rgba($color-black, 0.3),
 				0 11px 15px rgba($color-primary-dark, 0.3);
-		}
-		@include xl {
-			padding: 19.5px;
-		}
-		@include lg {
-			padding: 17.5px;
-		}
-		@include md {
-			padding: 16.5px;
-		}
-		@include sm {
-			padding: 15px;
-		}
-	}
-
-	&.full {
-		width: 100%;
-
-		@include xl {
-			padding: 19.5px;
-		}
-		@include lg {
-			padding: 17.5px;
-		}
-		@include md {
-			padding: 16.5px;
-		}
-		@include sm {
-			padding: 15px;
 		}
 	}
 }

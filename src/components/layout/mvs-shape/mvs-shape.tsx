@@ -11,6 +11,7 @@ export class MvsShape {
 		| 'secondary'
 		| 'black'
 		| 'dark'
+		| 'medium'
 		| 'light'
 		| 'white'
 		| 'error'

@@ -34,7 +34,7 @@ export namespace Components {
     /**
     * Define estilo do botão.
     */
-    'variant': 'text' | 'outlined' | 'contained';
+    'variant': 'flat' | 'ghost' | 'contained';
   }
   interface MvsCard {
     'button': string;
@@ -135,6 +135,7 @@ export namespace Components {
     | 'secondary'
     | 'black'
     | 'dark'
+    | 'medium'
     | 'light'
     | 'white'
     | 'error'
@@ -368,7 +369,7 @@ declare namespace LocalJSX {
     /**
     * Define estilo do botão.
     */
-    'variant'?: 'text' | 'outlined' | 'contained';
+    'variant'?: 'flat' | 'ghost' | 'contained';
   }
   interface MvsCard extends JSXBase.HTMLAttributes<HTMLMvsCardElement> {
     'button'?: string;
@@ -469,6 +470,7 @@ declare namespace LocalJSX {
     | 'secondary'
     | 'black'
     | 'dark'
+    | 'medium'
     | 'light'
     | 'white'
     | 'error'

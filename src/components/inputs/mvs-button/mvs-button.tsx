@@ -3,7 +3,7 @@ import { Component, Prop, h } from '@stencil/core'
 @Component({
 	tag: 'mvs-button',
 	styleUrl: 'mvs-button.scss',
-	// shadow: true,
+	//shadow: true,
 })
 export class MvsButton {
 	/**
@@ -17,7 +17,7 @@ export class MvsButton {
 	/**
 	 * Define estilo do botão.
 	 */
-	@Prop() variant: 'text' | 'outlined' | 'contained' = 'text'
+	@Prop() variant: 'flat' | 'ghost' | 'contained' = 'flat'
 	/**
 	 * Caso `true`, botão terá largura 100%.
 	 */

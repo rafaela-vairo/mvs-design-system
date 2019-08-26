@@ -4,7 +4,6 @@ import { sass } from '@stencil/sass'
 export const config: Config = {
 	namespace: 'mvs-ds',
 	globalScript: 'src/global/script.js',
-	globalStyle: 'src/global/variables.css',
 	outputTargets: [
 		{
 			type: 'dist',
