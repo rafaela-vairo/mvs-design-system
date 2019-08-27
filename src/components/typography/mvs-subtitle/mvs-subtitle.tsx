@@ -7,7 +7,7 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class MvsSubtitle {
 
-    @Prop() type: string;
+    @Prop() type: 'one' | 'two';
 
     render() {
         switch (this.type) {

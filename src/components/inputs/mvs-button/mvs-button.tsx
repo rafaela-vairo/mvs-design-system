@@ -23,13 +23,12 @@ export class MvsButton {
 	 */
 	@Prop() full: boolean = false
 	/**
-	 * Caso `true`, botão não terá margens.
+	 * Caso `true`, botão terá tema light/night mode.
 	 */
-	@Prop() marginzero: boolean = false
+	@Prop() light: boolean = false
 	render() {
-		let marginzero = this.marginzero ? 'marginzero ' : ''
-		let full = this.full ? 'full' : ''
-		let genClass = marginzero + this.variant + full
+		let light = this.light ? 'light ' : ''
+		let genClass = this.variant + ' ' + light
 		return (
 			<button class={genClass} type={this.type} disabled={this.disabled}>
 				<slot />

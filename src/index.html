@@ -95,11 +95,18 @@
 								architecto ut ullam.
 							</mvs-paragraph>
 						</div>
-
-						<mvs-button variant="ghost">Botão</mvs-button
-						><mvs-button variant="ghost">Botão</mvs-button
-						><mvs-button variant="contained">Botão</mvs-button
-						><mvs-button variant="flat">Botão</mvs-button>
+						<div class="buttons">
+							<style scoped>
+								.buttons {
+									padding: 0 30px 30px 30px;
+								}
+								.buttons > *:not(:first-of-type) {
+									margin: 20px;
+								}
+							</style>
+							<mvs-button variant="ghost">Botão</mvs-button
+							><mvs-button variant="ghost" disabled>Botão</mvs-button>
+						</div>
 					</mvs-shape>
 				</mvs-flexgrid>
 			</mvs-flexgrid>

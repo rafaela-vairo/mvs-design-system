@@ -24,9 +24,9 @@ export namespace Components {
     */
     'full': boolean;
     /**
-    * Caso `true`, botão não terá margens.
+    * Caso `true`, botão terá tema light/night mode.
     */
-    'marginzero': boolean;
+    'light': boolean;
     /**
     * Define o tipo do botão.
     */
@@ -43,6 +43,9 @@ export namespace Components {
     'overline': any;
     'subtitle': any;
     'width': number;
+  }
+  interface MvsCardList {
+    'data': any[];
   }
   interface MvsDivider {}
   interface MvsFigure {
@@ -118,6 +121,15 @@ export namespace Components {
     'disabled': boolean;
     'type': string;
   }
+  interface MvsNewCard {
+    'buttonlink': string;
+    'buttontext': string;
+    'maintext': string;
+    'media': string;
+    'overline': string;
+    'subtitle': string;
+    'title': string;
+  }
   interface MvsOverline {}
   interface MvsParagraph {
     /**
@@ -144,7 +156,7 @@ export namespace Components {
   }
   interface MvsStrong {}
   interface MvsSubtitle {
-    'type': string;
+    'type': 'one' | 'two';
   }
   interface MvsTitle {
     /**
@@ -209,6 +221,12 @@ declare global {
     new (): HTMLMvsCardElement;
   };
 
+  interface HTMLMvsCardListElement extends Components.MvsCardList, HTMLStencilElement {}
+  var HTMLMvsCardListElement: {
+    prototype: HTMLMvsCardListElement;
+    new (): HTMLMvsCardListElement;
+  };
+
   interface HTMLMvsDividerElement extends Components.MvsDivider, HTMLStencilElement {}
   var HTMLMvsDividerElement: {
     prototype: HTMLMvsDividerElement;
@@ -269,6 +287,12 @@ declare global {
     new (): HTMLMvsNavbuttonElement;
   };
 
+  interface HTMLMvsNewCardElement extends Components.MvsNewCard, HTMLStencilElement {}
+  var HTMLMvsNewCardElement: {
+    prototype: HTMLMvsNewCardElement;
+    new (): HTMLMvsNewCardElement;
+  };
+
   interface HTMLMvsOverlineElement extends Components.MvsOverline, HTMLStencilElement {}
   var HTMLMvsOverlineElement: {
     prototype: HTMLMvsOverlineElement;
@@ -322,6 +346,7 @@ declare global {
     'mvs-bg': HTMLMvsBgElement;
     'mvs-button': HTMLMvsButtonElement;
     'mvs-card': HTMLMvsCardElement;
+    'mvs-card-list': HTMLMvsCardListElement;
     'mvs-divider': HTMLMvsDividerElement;
     'mvs-figure': HTMLMvsFigureElement;
     'mvs-figure-caption': HTMLMvsFigureCaptionElement;
@@ -332,6 +357,7 @@ declare global {
     'mvs-mob-drawer': HTMLMvsMobDrawerElement;
     'mvs-navbar': HTMLMvsNavbarElement;
     'mvs-navbutton': HTMLMvsNavbuttonElement;
+    'mvs-new-card': HTMLMvsNewCardElement;
     'mvs-overline': HTMLMvsOverlineElement;
     'mvs-paragraph': HTMLMvsParagraphElement;
     'mvs-pre': HTMLMvsPreElement;
@@ -359,9 +385,9 @@ declare namespace LocalJSX {
     */
     'full'?: boolean;
     /**
-    * Caso `true`, botão não terá margens.
+    * Caso `true`, botão terá tema light/night mode.
     */
-    'marginzero'?: boolean;
+    'light'?: boolean;
     /**
     * Define o tipo do botão.
     */
@@ -378,6 +404,9 @@ declare namespace LocalJSX {
     'overline'?: any;
     'subtitle'?: any;
     'width'?: number;
+  }
+  interface MvsCardList extends JSXBase.HTMLAttributes<HTMLMvsCardListElement> {
+    'data'?: any[];
   }
   interface MvsDivider extends JSXBase.HTMLAttributes<HTMLMvsDividerElement> {}
   interface MvsFigure extends JSXBase.HTMLAttributes<HTMLMvsFigureElement> {
@@ -453,6 +482,15 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'type'?: string;
   }
+  interface MvsNewCard extends JSXBase.HTMLAttributes<HTMLMvsNewCardElement> {
+    'buttonlink'?: string;
+    'buttontext'?: string;
+    'maintext'?: string;
+    'media'?: string;
+    'overline'?: string;
+    'subtitle'?: string;
+    'title'?: string;
+  }
   interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {}
   interface MvsParagraph extends JSXBase.HTMLAttributes<HTMLMvsParagraphElement> {
     /**
@@ -479,7 +517,7 @@ declare namespace LocalJSX {
   }
   interface MvsStrong extends JSXBase.HTMLAttributes<HTMLMvsStrongElement> {}
   interface MvsSubtitle extends JSXBase.HTMLAttributes<HTMLMvsSubtitleElement> {
-    'type'?: string;
+    'type'?: 'one' | 'two';
   }
   interface MvsTitle extends JSXBase.HTMLAttributes<HTMLMvsTitleElement> {
     /**
@@ -516,6 +554,7 @@ declare namespace LocalJSX {
     'mvs-bg': MvsBg;
     'mvs-button': MvsButton;
     'mvs-card': MvsCard;
+    'mvs-card-list': MvsCardList;
     'mvs-divider': MvsDivider;
     'mvs-figure': MvsFigure;
     'mvs-figure-caption': MvsFigureCaption;
@@ -526,6 +565,7 @@ declare namespace LocalJSX {
     'mvs-mob-drawer': MvsMobDrawer;
     'mvs-navbar': MvsNavbar;
     'mvs-navbutton': MvsNavbutton;
+    'mvs-new-card': MvsNewCard;
     'mvs-overline': MvsOverline;
     'mvs-paragraph': MvsParagraph;
     'mvs-pre': MvsPre;

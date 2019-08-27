@@ -13,36 +13,34 @@ button {
 	vertical-align: middle;
 	transition: all $transition-cubic-03;
 	padding: $inset-sm;
+	margin: $spacing-xs 0 0 0;
 	&.ghost,
 	&.contained {
-		margin: $spacing-xs 0 0 0;
-		&:hover {
+		&:hover:not([disabled]) {
 			margin: 0 0 $spacing-xs 0;
 		}
 	}
 	@include xl {
 		min-width: 90px;
 		min-height: 22px;
-		font-size: 23px;
+		@include smallcaps-xl;
 	}
 	@include lg {
 		min-width: 81px;
 		min-height: 20px;
-		font-size: 21px;
+		@include smallcaps-lg;
 	}
 	@include md {
 		min-width: 75px;
 		min-height: 15px;
-		font-size: 19px;
+		@include smallcaps-md;
 	}
 	@include sm {
 		min-width: 69px;
 		min-height: 15px;
-		font-size: 18px;
+		@include smallcaps-sm;
 	}
-	&.marginzero {
-		margin: 0px !important;
-	}
+
 	&:hover,
 	&:focus,
 	&:active {
@@ -53,16 +51,29 @@ button {
 	&:disabled:hover,
 	&:disabled:active {
 		cursor: default;
-		color: rgba($color-black, 0.25);
+		color: rgba($color-black, 0.4);
+	}
+
+	&.flat {
+		background-color: rgba(0, 0, 0, 0);
+		box-shadow: none;
+		&:hover:not([disabled]) {
+			color: $color-secondary;
+		}
+		&:focus:not([disabled]) {
+			color: $color-primary;
+			background-color: rgba($color-primary, 0.25);
+		}
+		&:active:not([disabled]) {
+			color: $color-primary;
+			background-color: rgba($color-primary, 0.15);
+		}
 	}
 
 	&.ghost {
-		position: relative;
 		background-color: rgba(0, 0, 0, 0);
 		border: 2px solid $color-primary-dark;
-		transform: perspective(1px) translateZ(0);
-		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-		position: relative;
+		box-shadow: none;
 		&:disabled,
 		&:disabled > *,
 		&:disabled:hover,
@@ -76,10 +87,10 @@ button {
 			outline: none;
 		}
 		&:hover,
-		&:focus {
+		&:focus:not([disabled]) {
 			border: 2px solid $color-secondary;
 		}
-		&:active {
+		&:active:not([disabled]) {
 			border: 2px solid $color-primary-dark;
 			background-color: rgba($color-primary, 0.15);
 		}
@@ -89,35 +100,104 @@ button {
 		background-color: $color-primary;
 		color: $text-light;
 		border: 2px solid $color-primary;
-		box-shadow: 0 3px 5px rgba($color-black, 0.3),
-			0 3px 5px rgba($color-primary-dark, 0.3);
+		box-shadow: $shadow-regular;
 		&:disabled,
 		&:disabled > *,
 		&:disabled:hover,
 		&:disabled:active {
 			cursor: default;
 			color: rgba($text-light, 0.4);
-			background-color: $color-primary-dark;
-			border-color: $color-primary-dark;
-			box-shadow: 0 0px 0px rgba($color-black, 0.3),
-				0 0px 0px rgba($color-primary-dark, 0.3);
+			background-color: rgba($color-black, 0.25);
+			border-color: rgba($color-black, 0);
+			box-shadow: none;
+		}
+		&:hover,
+		&:focus {
+			background-color: $color-primary-light;
+			border-color: $color-primary-light;
 		}
 		&:hover {
-			box-shadow: 0 10px 20px rgba($color-black, 0.3),
-				0 6px 6px rgba($color-primary-dark, 0.3);
+			box-shadow: $shadow-regular-hover;
 		}
 		&:focus {
 			outline: none;
-			background-color: $color-primary-light;
-			border-color: $color-primary-light;
-			box-shadow: 0 3px 5px rgba($color-black, 0.3),
-				0 3px 5px rgba($color-primary-dark, 0.3);
+			color: $text-light-70;
 		}
 		&:active {
-			background-color: $color-primary-light;
-			border-color: $color-primary-light;
-			box-shadow: 0 15px 30px rgba($color-black, 0.3),
-				0 11px 15px rgba($color-primary-dark, 0.3);
+			background-color: $color-primary-dark;
+			border-color: $color-primary-dark;
+		}
+	}
+
+	&.light {
+		&.flat {
+			background-color: rgba(0, 0, 0, 0);
+			color: $color-secondary-light;
+			&:disabled,
+			&:disabled > *,
+			&:disabled:hover,
+			&:disabled:active {
+				color: rgba($color-white, 0.4);
+			}
+			&:hover:not([disabled]) {
+				color: $text-light;
+			}
+			&:focus:not([disabled]) {
+				color: $color-secondary-light;
+				background-color: rgba($color-primary, 0.25);
+			}
+			&:active:not([disabled]) {
+				color: $color-primary;
+				background-color: rgba($color-primary, 0.15);
+			}
+		}
+
+		&.ghost {
+			background-color: rgba(0, 0, 0, 0);
+			border: 2px solid $color-secondary;
+			color: $text-light;
+			&:disabled,
+			&:disabled > *,
+			&:disabled:hover,
+			&:disabled:active {
+				border-color: rgba($color-white, 0.4);
+				color: rgba($color-white, 0.4);
+			}
+			&:hover,
+			&:focus:not([disabled]) {
+				border: 2px solid $color-secondary-light;
+			}
+			&:active:not([disabled]) {
+				border: 2px solid $color-secondary-light;
+				background-color: rgba($color-secondary-light, 0.25);
+			}
+		}
+
+		&.contained {
+			background-color: $color-secondary;
+			border: 2px solid $color-secondary;
+			box-shadow: $shadow-dark;
+			&:disabled,
+			&:disabled > *,
+			&:disabled:hover,
+			&:disabled:active {
+				color: rgba($color-light, 0.4);
+				background-color: rgba($color-white, 0.2);
+				border-color: rgba($color-white, 0);
+				box-shadow: none;
+			}
+			&:hover,
+			&:focus {
+				background-color: $color-secondary-light;
+				border-color: $color-secondary-light;
+			}
+			&:hover {
+				box-shadow: $shadow-dark-hover;
+			}
+			&:active {
+				background-color: $color-secondary-dark;
+				border-color: $color-secondary-dark;
+			}
 		}
 	}
 }

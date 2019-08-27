@@ -1,28 +1,41 @@
 //Breakpoints
 
 @mixin sm {
-  @media (max-width: #{$screen-sm-max}) {
-    @content;
-  }
+	@media (max-width: #{$screen-sm-max}) {
+		@content;
+	}
 }
 @mixin md {
-  @media (min-width: #{$screen-md-min}) and (max-width:#{$screen-md-max}) {
-    @content;
-  }
+	@media (min-width: #{$screen-md-min}) and (max-width:#{$screen-md-max}) {
+		@content;
+	}
 }
 @mixin lg {
-  @media (min-width: #{$screen-lg-min}) and (max-width:#{$screen-lg-max}) {
-    @content;
-  }
+	@media (min-width: #{$screen-lg-min}) and (max-width:#{$screen-lg-max}) {
+		@content;
+	}
 }
 @mixin xl {
-  @media (min-width: #{$screen-xl-min}) {
-    @content;
-  }
+	@media (min-width: #{$screen-xl-min}) {
+		@content;
+	}
 }
 
-//Animations
+//Tipography
 
-@mixin BGeaseInOut01 {
-  transition: background-color 0.1s ease-in-out;
+@mixin smallcaps-xl {
+	font-size: 29px;
+	line-height: 40px;
+}
+@mixin smallcaps-lg {
+	font-size: 24px;
+	line-height: 32px;
+}
+@mixin smallcaps-md {
+	font-size: 23px;
+	line-height: 32px;
+}
+@mixin smallcaps-sm {
+	font-size: 19px;
+	line-height: 24px;
 }

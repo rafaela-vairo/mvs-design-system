@@ -19,27 +19,6 @@ export class MvsCard {
 	render() {
 		return (
 			<div onClick={this.handleClick}>
-				<div class='card-root' style={{ width: `${this.width}px` }}>
-					<div class='header'>
-						{/* <img src={Launch} /> */}
-						<mvs-overline>{this.overline}</mvs-overline>
-						<mvs-title level='t5'>{this.cardtitle}</mvs-title>
-						<mvs-subtitle type='one'>{this.subtitle}</mvs-subtitle>
-						<mvs-divider />
-					</div>
-					<div class='body'>
-						<mvs-paragraph>
-							<slot />
-						</mvs-paragraph>
-					</div>
-					<div class='action'>
-						<form action={this.link}>
-							<mvs-button marginzero variant='contained' full type='submit'>
-								{this.button}
-							</mvs-button>
-						</form>
-					</div>
-				</div>
 			</div>
 		)
 	}
