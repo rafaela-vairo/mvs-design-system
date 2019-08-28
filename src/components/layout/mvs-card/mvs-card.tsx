@@ -18,7 +18,20 @@ export class MvsCard {
 
 	render() {
 		return (
-			<div onClick={this.handleClick}>
+			<div class='root'>
+				<div class='text'>
+					<mvs-title level='t5'>
+						<a href='https://google.com'>
+							Sint et est voluptatum magnam magnam eum fugit sit minima.
+						</a>
+					</mvs-title>
+					<mvs-subtitle type='two'>
+						Aut eum omnis eligendi recusandae. Consequatur enim voluptas ullam
+						ea minus sint quam possimus fugit. Ut non facilis. Labore minima ad
+						porro voluptas nihil. Voluptates assumenda exercitationem cupiditate
+						ducimus voluptatem vitae et sit alias.
+					</mvs-subtitle>
+				</div>
 			</div>
 		)
 	}

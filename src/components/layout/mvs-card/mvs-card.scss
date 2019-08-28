@@ -1,254 +1,51 @@
-.card-root {
-	background-color: $color-white;
-	@include xl {
-		height: 433px;
-	}
-	@include lg {
-		height: 419px;
-	}
-	@include md {
-		height: 426px;
-	}
-	@include sm {
-		height: 382px;
-	}
-}
+:host {
+	width: 100%;
 
-:host > * {
 	cursor: pointer;
-	min-width: 300px;
-	position: relative;
-	box-shadow: -5px 5px 10px -6px #999, 5px 5px 10px -6px #999;
-	border-radius: 5px;
-	overflow: hidden;
-
-	@include xl {
-		margin: 30px;
+	a {
+		text-decoration: none;
+		color: inherit;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
-
-	@include lg {
-		margin: 27px;
+	.root {
+		min-height: 200px;
+		position: relative;
+		padding: $inset-sm;
+		border-radius: 3px;
+		box-sizing: border-box;
+		box-shadow: 0 3px 5px $color-black, 0 3px 5px $color-primary-dark;
+		transition: box-shadow $transition-cubic-03;
+		&:hover {
+			box-shadow: 0 10px 20px $color-black, 0 6px 6px $color-primary-dark;
+		}
+	}
+	.text {
+		padding: $inset-strech-md;
+		display: flex;
+		flex-direction: column;
+		& > *:not(:last-child) {
+			padding-bottom: $spacing-lg;
+		}
 	}
 
 	@include md {
-		margin: 25px;
+		.text > *:not(:last-child) {
+			padding-bottom: $spacing-md;
+		}
 	}
 
 	@include sm {
-		margin: 23px;
-	}
-
-	&:hover {
-		div.action {
-			mvs-button > button {
-				background-color: $color-primary-light;
-				border-color: $color-primary-light;
-				font-family: 'Alegreya Sans SC';
-				font-weight: 700;
-
-				@include xl {
-					height: 45px;
-				}
-
-				@include lg {
-					height: 40.5px;
-				}
-			}
-		}
-	}
-
-	div.header {
-		padding: 30px 30px 0 30px;
-
-		mvs-overline {
-			text-transform: uppercase;
-		}
-
-		mvs-title h5 {
-			@include xl {
-				padding: 15px 0 10px 0;
-			}
-
-			@include lg {
-				padding: 13.5px 0 9px 0;
-			}
-
-			@include md {
-				padding: 12.5px 0 8.3px 0;
-			}
-
-			@include sm {
-				padding: 5.75px 0 3.8px 0;
-			}
-		}
-
-		mvs-subtitle span {
-			color: $text-dark-70;
-
-			@include xl {
-				padding-bottom: 15px;
-			}
-
-			@include lg {
-				padding-bottom: 13.5px;
-			}
-
-			@include md {
-				padding-bottom: 12.5px;
-			}
-
-			@include sm {
-				padding-bottom: 5.75px;
-			}
-		}
-
-		mvs-divider {
-			@include xl {
-				padding-bottom: 30px;
-			}
-
-			@include lg {
-				padding-bottom: 27px;
-			}
-
-			@include md {
-				padding-bottom: 25px;
-			}
-
-			@include sm {
-				padding-bottom: 11.5px;
-			}
-		}
-	}
-
-	div.body {
-		padding: 0 30px 75px 30px;
-
-		@include xl {
-			padding-bottom: 75px;
-		}
-
-		@include lg {
-			padding-bottom: 67.5px;
-		}
-
-		@include md {
-			padding-bottom: 62.5px;
-		}
-
-		@include sm {
-			padding-bottom: 46px;
-		}
-	}
-
-	div.action {
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-		width: 100%;
-		background-color: $color-primary;
-
-		@include xl {
-			height: 15px;
-		}
-
-		@include lg {
-			height: 13.5px;
-		}
-
-		img {
-			margin-bottom: -5px;
-			@include xl {
-				margin-left: 7.5px;
-			}
-			@include lg {
-				margin-left: 6.75px;
-			}
-			@include md {
-				margin-left: 6.25px;
-			}
-			@include sm {
-				margin-left: 5.75px;
-			}
-			filter: invert(100%);
-		}
-
-		mvs-button > button {
-			padding: 0;
-			border-radius: 0;
-
-			@include xl {
-				content: '';
-				position: absolute;
-				z-index: 999;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				height: 0;
-				-webkit-transform-origin: 0% 100%;
-				transform-origin: 0% 100%;
-				-webkit-transition-property: height;
-				transition-property: height;
-				-webkit-transition-duration: 0.3s;
-				transition-duration: 0.3s;
-				-webkit-transition-timing-function: ease-out;
-				transition-timing-function: ease-out;
-				font-size: 21px;
-			}
-
-			@include lg {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				height: 0;
-				-webkit-transform-origin: 0% 100%;
-				transform-origin: 0% 100%;
-				-webkit-transition-property: transform;
-				transition-property: height;
-				-webkit-transition-duration: 0.3s;
-				transition-duration: 0.3s;
-				-webkit-transition-timing-function: ease-out;
-				transition-timing-function: ease-out;
-				font-size: 19px;
-			}
-
-			@include md {
-				height: 37.5px;
-				font-size: 19px;
-			}
-
-			@include sm {
-				height: 34.5px;
-				font-size: 18px;
-			}
-
-			&:active {
-				background-color: $color-primary-light;
-				font-family: 'Alegreya Sans SC';
-				font-weight: 700;
-
-				@include xl {
-					height: 45px;
-					font-size: 21px;
-				}
-
-				@include lg {
-					height: 40.5px;
-					font-size: 19px;
-				}
-
-				@include md {
-					height: 37.5px;
-					font-size: 17px;
-				}
-
-				@include sm {
-					height: 34.5px;
-					font-size: 16px;
-				}
+		.text {
+			padding: $inset-strech-sm;
+			& > *:not(:last-child) {
+				padding-bottom: $spacing-sm;
 			}
 		}
 	}

@@ -1,5 +1,8 @@
 :host > * {
 	font-family: 'Alegreya Sans';
+	span {
+		display: block;
+	}
 	.one {
 		font-weight: 700;
 		@include xl {
