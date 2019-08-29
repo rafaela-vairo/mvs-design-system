@@ -20,17 +20,23 @@ export class MvsCard {
 		return (
 			<div class='root'>
 				<div class='text'>
+					<mvs-overline>Lorem Ipsum</mvs-overline>
 					<mvs-title level='t5'>
 						<a href='https://google.com'>
 							Sint et est voluptatum magnam magnam eum fugit sit minima.
 						</a>
 					</mvs-title>
 					<mvs-subtitle type='two'>
+						Vero reiciendis pariatur doloremque aliquam maiores. Praesentium quo
+						nemo in autem eum.
+					</mvs-subtitle>
+					<mvs-paragraph bodytwo>
 						Aut eum omnis eligendi recusandae. Consequatur enim voluptas ullam
 						ea minus sint quam possimus fugit. Ut non facilis. Labore minima ad
 						porro voluptas nihil. Voluptates assumenda exercitationem cupiditate
 						ducimus voluptatem vitae et sit alias.
-					</mvs-subtitle>
+					</mvs-paragraph>
+					<mvs-button>Ação</mvs-button>
 				</div>
 			</div>
 		)
