@@ -14,7 +14,21 @@
 			height: 100%;
 		}
 	}
+	.media-container {
+		margin-left: -$inset-sm;
+		margin-right: -$inset-sm;
+		margin-top: -$inset-sm;
+	}
+	.media {
+		display: block;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		object-fit: cover;
+	}
 	.root {
+		overflow: hidden;
 		min-height: 200px;
 		position: relative;
 		padding: $inset-sm;
@@ -33,19 +47,73 @@
 		& > *:not(:last-child) {
 			padding-bottom: $spacing-lg;
 		}
+		mvs-paragraph {
+			margin-top: $spacing-lg;
+		}
+		mvs-paragraph::before {
+			content: '';
+			margin-top: -$spacing-lg;
+			position: absolute;
+			display: inline-block;
+			width: calc(100% - 2 * (#{$inset-sm} + #{$inset-md}));
+			height: 2px;
+			background-color: rgba($color-black, 0.3);
+		}
+		mvs-button {
+			z-index: 5;
+			margin: -$spacing-sm;
+		}
+		.buttons {
+			display: flex;
+			& > * {
+				padding-right: calc(2 * #{$spacing-sm} + #{$spacing-xs});
+			}
+		}
+	}
+
+	@include xl {
+		.media {
+			height: 264px;
+		}
+	}
+
+	@include lg {
+		.media {
+			height: 216px;
+		}
 	}
 
 	@include md {
+		.media {
+			height: 184px;
+		}
 		.text > *:not(:last-child) {
 			padding-bottom: $spacing-md;
+			mvs-paragraph {
+				margin-top: $spacing-md;
+			}
+			mvs-paragraph::before {
+				margin-top: -$spacing-md;
+				width: calc(100% - 2 * (#{$inset-sm} + #{$inset-md}));
+			}
 		}
 	}
 
 	@include sm {
+		.media {
+			height: 144px;
+		}
 		.text {
 			padding: $inset-strech-sm;
 			& > *:not(:last-child) {
 				padding-bottom: $spacing-sm;
+			}
+			mvs-paragraph {
+				margin-top: $spacing-sm;
+			}
+			mvs-paragraph::before {
+				margin-top: -$spacing-sm;
+				width: calc(100% - 4 * #{$inset-sm});
 			}
 		}
 	}

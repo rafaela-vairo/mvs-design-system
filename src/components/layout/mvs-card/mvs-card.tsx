@@ -8,9 +8,9 @@ import { Component, h, Prop } from '@stencil/core'
 })
 export class MvsCard {
 	@Prop({ reflect: true }) overline: any
-	@Prop() cardtitle: any
-	@Prop() subtitle: any
-	@Prop() button: string
+	@Prop() cardtitle: string = 'Título'
+	@Prop() subtitle: string = 'Subtítulo'
+	@Prop() button: string = 'Botão'
 	@Prop() link: string = 'http://google.com'
 	@Prop() width: number
 
@@ -19,6 +19,13 @@ export class MvsCard {
 	render() {
 		return (
 			<div class='root'>
+				<div class='media-container'>
+					<img
+						class='media'
+						src='https://material-ui.com/static/images/cards/contemplative-reptile.jpg'
+					/>
+				</div>
+
 				<div class='text'>
 					<mvs-overline>Lorem Ipsum</mvs-overline>
 					<mvs-title level='t5'>
@@ -36,7 +43,10 @@ export class MvsCard {
 						porro voluptas nihil. Voluptates assumenda exercitationem cupiditate
 						ducimus voluptatem vitae et sit alias.
 					</mvs-paragraph>
-					<mvs-button>Ação</mvs-button>
+					<div class='buttons'>
+						<mvs-button>Ação</mvs-button>
+						<mvs-button>Ação</mvs-button>
+					</div>
 				</div>
 			</div>
 		)

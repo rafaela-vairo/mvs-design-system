@@ -38,10 +38,10 @@ export namespace Components {
   }
   interface MvsCard {
     'button': string;
-    'cardtitle': any;
+    'cardtitle': string;
     'link': string;
     'overline': any;
-    'subtitle': any;
+    'subtitle': string;
     'width': number;
   }
   interface MvsCardList {
@@ -399,10 +399,10 @@ declare namespace LocalJSX {
   }
   interface MvsCard extends JSXBase.HTMLAttributes<HTMLMvsCardElement> {
     'button'?: string;
-    'cardtitle'?: any;
+    'cardtitle'?: string;
     'link'?: string;
     'overline'?: any;
-    'subtitle'?: any;
+    'subtitle'?: string;
     'width'?: number;
   }
   interface MvsCardList extends JSXBase.HTMLAttributes<HTMLMvsCardListElement> {
