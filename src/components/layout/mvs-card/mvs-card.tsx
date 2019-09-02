@@ -8,17 +8,16 @@ import { Component, h, Prop } from '@stencil/core'
 })
 export class MvsCard {
 	@Prop({ reflect: true }) overline: any
-	@Prop() cardtitle: string = 'Título'
-	@Prop() subtitle: string = 'Subtítulo'
-	@Prop() button: string = 'Botão'
+	@Prop() cardtitle: string
+	@Prop() subtitle: string
+	@Prop() text: string
+	@Prop() button: string
 	@Prop() link: string = 'http://google.com'
 	@Prop() width: number
 
-	handleClick = () => (window.location.href = this.link)
-
 	render() {
 		return (
-			<div class='root'>
+			<div class='root' tabindex='0'>
 				<div class='media-container'>
 					<img
 						class='media'
@@ -27,9 +26,9 @@ export class MvsCard {
 				</div>
 
 				<div class='text'>
-					<mvs-overline>Lorem Ipsum</mvs-overline>
+					<mvs-overline>{this.cardtitle}</mvs-overline>
 					<mvs-title level='t5'>
-						<a href='https://google.com'>
+						<a href={this.link}>
 							Sint et est voluptatum magnam magnam eum fugit sit minima.
 						</a>
 					</mvs-title>

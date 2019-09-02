@@ -1,10 +1,12 @@
 :host {
 	width: 100%;
-
 	cursor: pointer;
 	a {
 		text-decoration: none;
 		color: inherit;
+		&:focus {
+			color: $color-primary;
+		}
 		&::after {
 			content: '';
 			position: absolute;
@@ -28,16 +30,26 @@
 		object-fit: cover;
 	}
 	.root {
+		background-color: $color-white;
 		overflow: hidden;
 		min-height: 200px;
 		position: relative;
+		margin-top: $spacing-sm;
 		padding: $inset-sm;
 		border-radius: 3px;
 		box-sizing: border-box;
-		box-shadow: 0 3px 5px $color-black, 0 3px 5px $color-primary-dark;
-		transition: box-shadow $transition-cubic-03;
+		box-shadow: $shadow-regular;
+		transition: all $transition-cubic-03;
+		&:active {
+			background-color: rgba($color-primary, 0.15);
+		}
+		&:focus {
+			background-color: rgba($color-primary, 0.25);
+		}
 		&:hover {
-			box-shadow: 0 10px 20px $color-black, 0 6px 6px $color-primary-dark;
+			box-shadow: $shadow-regular-hover;
+			margin-bottom: $spacing-sm;
+			margin-top: 0;
 		}
 	}
 	.text {

@@ -42,10 +42,11 @@ export namespace Components {
     'link': string;
     'overline': any;
     'subtitle': string;
+    'text': string;
     'width': number;
   }
   interface MvsCardList {
-    'data': any[];
+    'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
   }
   interface MvsDivider {}
   interface MvsFigure {
@@ -403,10 +404,11 @@ declare namespace LocalJSX {
     'link'?: string;
     'overline'?: any;
     'subtitle'?: string;
+    'text'?: string;
     'width'?: number;
   }
   interface MvsCardList extends JSXBase.HTMLAttributes<HTMLMvsCardListElement> {
-    'data'?: any[];
+    'data'?: { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
   }
   interface MvsDivider extends JSXBase.HTMLAttributes<HTMLMvsDividerElement> {}
   interface MvsFigure extends JSXBase.HTMLAttributes<HTMLMvsFigureElement> {

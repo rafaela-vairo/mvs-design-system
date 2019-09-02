@@ -31,21 +31,29 @@
 		font-size: 21px;
 		line-height: 30px;
 		letter-spacing: 0.6px;
+		margin-top: calc(21px - 30px);
+		margin-bottom: calc((21px - 30px) * 0.8);
 	}
 	@include lg {
 		font-size: 19px;
 		line-height: 27px;
 		letter-spacing: 0.5px;
+		margin-top: calc(19px - 27px);
+		margin-bottom: calc((19px - 27px) * 0.8);
 	}
 	@include md {
 		font-size: 17px;
 		line-height: 25px;
 		letter-spacing: 0.4px;
+		margin-top: calc(17px - 25px);
+		margin-bottom: calc((17px - 25px) * 0.8);
 	}
 	@include sm {
 		font-size: 16px;
 		line-height: 23px;
 		letter-spacing: 0px;
+		margin-top: calc(16px - 23px);
+		margin-bottom: calc((16px - 23px) * 0.8);
 	}
 }
 .bodytwo {
@@ -55,20 +63,28 @@
 		font-size: 20px;
 		line-height: 30px;
 		letter-spacing: 0.5px;
+		margin-top: calc(20px - 30px);
+		margin-bottom: calc((20px - 30px) * 0.8);
 	}
 	@include lg {
 		font-size: 18px;
 		line-height: 27px;
 		letter-spacing: 0.4px;
+		margin-top: calc(18px - 27px);
+		margin-bottom: calc((18px - 27px) * 0.8);
 	}
 	@include md {
 		font-size: 16px;
 		line-height: 25px;
 		letter-spacing: 0.3px;
+		margin-top: calc(16px - 25px);
+		margin-bottom: calc((16px - 25px) * 0.8);
 	}
 	@include sm {
 		font-size: 15px;
 		line-height: 23px;
 		letter-spacing: 0px;
+		margin-top: calc(15px - 23px);
+		margin-bottom: calc((15px - 23px) * 0.8);
 	}
 }
