@@ -9,6 +9,10 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface MvsAbout {
+    'aboutTitle': any;
+    'text': any;
+  }
   interface MvsAnchor {
     'href': string;
   }
@@ -47,6 +51,14 @@ export namespace Components {
   }
   interface MvsCardList {
     'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
+  }
+  interface MvsCountdown {
+    'days': number;
+    'deadline': string;
+    'endMessage': string;
+    'hours': number;
+    'minutes': number;
+    'seconds': number;
   }
   interface MvsDivider {}
   interface MvsFigure {
@@ -192,6 +204,12 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLMvsAboutElement extends Components.MvsAbout, HTMLStencilElement {}
+  var HTMLMvsAboutElement: {
+    prototype: HTMLMvsAboutElement;
+    new (): HTMLMvsAboutElement;
+  };
+
   interface HTMLMvsAnchorElement extends Components.MvsAnchor, HTMLStencilElement {}
   var HTMLMvsAnchorElement: {
     prototype: HTMLMvsAnchorElement;
@@ -226,6 +244,12 @@ declare global {
   var HTMLMvsCardListElement: {
     prototype: HTMLMvsCardListElement;
     new (): HTMLMvsCardListElement;
+  };
+
+  interface HTMLMvsCountdownElement extends Components.MvsCountdown, HTMLStencilElement {}
+  var HTMLMvsCountdownElement: {
+    prototype: HTMLMvsCountdownElement;
+    new (): HTMLMvsCountdownElement;
   };
 
   interface HTMLMvsDividerElement extends Components.MvsDivider, HTMLStencilElement {}
@@ -342,12 +366,14 @@ declare global {
     new (): HTMLMvsTooltipElement;
   };
   interface HTMLElementTagNameMap {
+    'mvs-about': HTMLMvsAboutElement;
     'mvs-anchor': HTMLMvsAnchorElement;
     'mvs-base': HTMLMvsBaseElement;
     'mvs-bg': HTMLMvsBgElement;
     'mvs-button': HTMLMvsButtonElement;
     'mvs-card': HTMLMvsCardElement;
     'mvs-card-list': HTMLMvsCardListElement;
+    'mvs-countdown': HTMLMvsCountdownElement;
     'mvs-divider': HTMLMvsDividerElement;
     'mvs-figure': HTMLMvsFigureElement;
     'mvs-figure-caption': HTMLMvsFigureCaptionElement;
@@ -371,6 +397,10 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface MvsAbout extends JSXBase.HTMLAttributes<HTMLMvsAboutElement> {
+    'aboutTitle'?: any;
+    'text'?: any;
+  }
   interface MvsAnchor extends JSXBase.HTMLAttributes<HTMLMvsAnchorElement> {
     'href'?: string;
   }
@@ -409,6 +439,14 @@ declare namespace LocalJSX {
   }
   interface MvsCardList extends JSXBase.HTMLAttributes<HTMLMvsCardListElement> {
     'data'?: { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
+  }
+  interface MvsCountdown extends JSXBase.HTMLAttributes<HTMLMvsCountdownElement> {
+    'days'?: number;
+    'deadline'?: string;
+    'endMessage'?: string;
+    'hours'?: number;
+    'minutes'?: number;
+    'seconds'?: number;
   }
   interface MvsDivider extends JSXBase.HTMLAttributes<HTMLMvsDividerElement> {}
   interface MvsFigure extends JSXBase.HTMLAttributes<HTMLMvsFigureElement> {
@@ -551,12 +589,14 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'mvs-about': MvsAbout;
     'mvs-anchor': MvsAnchor;
     'mvs-base': MvsBase;
     'mvs-bg': MvsBg;
     'mvs-button': MvsButton;
     'mvs-card': MvsCard;
     'mvs-card-list': MvsCardList;
+    'mvs-countdown': MvsCountdown;
     'mvs-divider': MvsDivider;
     'mvs-figure': MvsFigure;
     'mvs-figure-caption': MvsFigureCaption;

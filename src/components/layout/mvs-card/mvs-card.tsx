@@ -7,7 +7,7 @@ import { Component, h, Prop } from '@stencil/core'
 	shadow: true,
 })
 export class MvsCard {
-	@Prop({ reflect: true }) overline: any
+	@Prop() overline: any
 	@Prop() cardtitle: string
 	@Prop() subtitle: string
 	@Prop() text: string
@@ -26,25 +26,14 @@ export class MvsCard {
 				</div>
 
 				<div class='text'>
-					<mvs-overline>{this.cardtitle}</mvs-overline>
+					<mvs-overline>{this.overline}</mvs-overline>
 					<mvs-title level='t5'>
-						<a href={this.link}>
-							Sint et est voluptatum magnam magnam eum fugit sit minima.
-						</a>
+						<a href={this.link}>{this.cardtitle}</a>
 					</mvs-title>
-					<mvs-subtitle type='two'>
-						Vero reiciendis pariatur doloremque aliquam maiores. Praesentium quo
-						nemo in autem eum.
-					</mvs-subtitle>
-					<mvs-paragraph bodytwo>
-						Aut eum omnis eligendi recusandae. Consequatur enim voluptas ullam
-						ea minus sint quam possimus fugit. Ut non facilis. Labore minima ad
-						porro voluptas nihil. Voluptates assumenda exercitationem cupiditate
-						ducimus voluptatem vitae et sit alias.
-					</mvs-paragraph>
+					<mvs-subtitle type='two'>{this.subtitle}</mvs-subtitle>
+					<mvs-paragraph bodytwo>{this.text}</mvs-paragraph>
 					<div class='buttons'>
-						<mvs-button>Ação</mvs-button>
-						<mvs-button>Ação</mvs-button>
+						<mvs-button>{this.button}</mvs-button>
 					</div>
 				</div>
 			</div>

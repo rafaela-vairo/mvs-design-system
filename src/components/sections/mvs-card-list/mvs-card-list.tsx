@@ -62,18 +62,20 @@ export class MvsCardList {
 	@Prop() data = cards
 	render() {
 		return (
-			<div>
+			<mvs-flexgrid container>
 				{this.data.map(cards => (
-					<mvs-card
-						overline={cards.overline}
-						cardtitle={cards.title}
-						subtitle={cards.subtitle}
-						text={cards.text}
-						button={cards.button}
-						link={cards.link}
-					/>
+					<mvs-flexgrid xl={6} lg={6} md={6} sm={6} item>
+						<mvs-card
+							overline={cards.overline}
+							cardtitle={cards.title}
+							subtitle={cards.subtitle}
+							text={cards.text}
+							button={cards.button}
+							link={cards.link}
+						/>
+					</mvs-flexgrid>
 				))}
-			</div>
+			</mvs-flexgrid>
 		)
 	}
 }
