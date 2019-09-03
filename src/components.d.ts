@@ -53,12 +53,12 @@ export namespace Components {
     'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
   }
   interface MvsCountdown {
-    'days': number;
     'deadline': string;
     'endMessage': string;
     'hours': number;
     'minutes': number;
     'seconds': number;
+    'spanProcent': any;
   }
   interface MvsDivider {}
   interface MvsFigure {
@@ -441,12 +441,12 @@ declare namespace LocalJSX {
     'data'?: { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
   }
   interface MvsCountdown extends JSXBase.HTMLAttributes<HTMLMvsCountdownElement> {
-    'days'?: number;
     'deadline'?: string;
     'endMessage'?: string;
     'hours'?: number;
     'minutes'?: number;
     'seconds'?: number;
+    'spanProcent'?: any;
   }
   interface MvsDivider extends JSXBase.HTMLAttributes<HTMLMvsDividerElement> {}
   interface MvsFigure extends JSXBase.HTMLAttributes<HTMLMvsFigureElement> {
