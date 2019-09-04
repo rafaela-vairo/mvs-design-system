@@ -95,8 +95,10 @@ export class MvsCountdown {
 					<div class='root'>
 						<canvas class='canvas' width='800' height='800' />
 						<div class='tag'>
-							<div>{this.days}</div>
-							<div>dias</div>
+							<div class='number'>{this.days}</div>
+							<mvs-title class='text' level='t4'>
+								DIAS
+							</mvs-title>
 						</div>
 					</div>
 				</mvs-flexgrid>

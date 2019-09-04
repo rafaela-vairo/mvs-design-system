@@ -16,6 +16,7 @@ mvs-countdown {
 		}
 	}
 	.tag {
+		font-family: $font-alegreya-sans;
 		width: 300px;
 		height: 300px;
 		align-items: center;
@@ -26,6 +27,10 @@ mvs-countdown {
 		position: absolute;
 		top: 0;
 		left: 0;
+		.number {
+			font-size: 64px;
+			font-weight: 700;
+		}
 	}
 }
 
