@@ -56,24 +56,32 @@ export class MvsCountdown {
 
 		var posX = can.width / 2,
 			posY = can.height / 2,
+			circ = can.width / 3,
+			line = can.width / 30,
 			oneProcent = 360 / 100,
 			result = oneProcent * ((d / 380) * 100)
 
 		c.lineCap = 'flat'
 
 		c.beginPath()
-		c.arc(posX, posY, 70, (Math.PI / 180) * 270, (Math.PI / 180) * (270 + 360))
+		c.arc(
+			posX,
+			posY,
+			circ,
+			(Math.PI / 180) * 270,
+			(Math.PI / 180) * (270 + 360)
+		)
 		c.strokeStyle = 'rgba(236, 238, 255, .15)'
-		c.lineWidth = 10
+		c.lineWidth = line
 		c.stroke()
 
 		c.beginPath()
 		c.strokeStyle = 'rgba(73, 165, 249, 1)'
-		c.lineWidth = 10
+		c.lineWidth = line
 		c.arc(
 			posX,
 			posY,
-			70,
+			circ,
 			(Math.PI / 180) * 270,
 			(Math.PI / 180) * (270 + result)
 		)
@@ -84,10 +92,13 @@ export class MvsCountdown {
 		return (
 			<mvs-flexgrid container xl={12} lg={12} md={12} sm={12}>
 				<mvs-flexgrid item block xl={12} lg={12} md={12} sm={12}>
-					<p>Hello world</p>
-					<p>{this.spanProcent}</p>
-					<p>{this.counter}</p>
-					<canvas class='canvas' width='300' height='300'></canvas>
+					<div class='root'>
+						<canvas class='canvas' width='800' height='800' />
+						<div class='tag'>
+							<div>{this.days}</div>
+							<div>dias</div>
+						</div>
+					</div>
 				</mvs-flexgrid>
 			</mvs-flexgrid>
 		)

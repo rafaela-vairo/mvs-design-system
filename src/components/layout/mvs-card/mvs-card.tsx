@@ -13,16 +13,16 @@ export class MvsCard {
 	@Prop() text: string
 	@Prop() button: string
 	@Prop() link: string = 'http://google.com'
+	@Prop() media: string =
+		'https://material-ui.com/static/images/cards/contemplative-reptile.jpg'
+	@Prop() alt: string = 'Texto alternativo em falta, favor entrar em contato'
 	@Prop() width: number
 
 	render() {
 		return (
 			<div class='root' tabindex='0'>
 				<div class='media-container'>
-					<img
-						class='media'
-						src='https://material-ui.com/static/images/cards/contemplative-reptile.jpg'
-					/>
+					<img class='media' src={this.media} alt={this.alt} />
 				</div>
 
 				<div class='text'>

@@ -41,9 +41,11 @@ export namespace Components {
     'variant': 'flat' | 'ghost' | 'contained';
   }
   interface MvsCard {
+    'alt': string;
     'button': string;
     'cardtitle': string;
     'link': string;
+    'media': string;
     'overline': any;
     'subtitle': string;
     'text': string;
@@ -133,15 +135,6 @@ export namespace Components {
     'color': 'primary' | 'white' | 'black';
     'disabled': boolean;
     'type': string;
-  }
-  interface MvsNewCard {
-    'buttonlink': string;
-    'buttontext': string;
-    'maintext': string;
-    'media': string;
-    'overline': string;
-    'subtitle': string;
-    'title': string;
   }
   interface MvsOverline {}
   interface MvsParagraph {
@@ -312,12 +305,6 @@ declare global {
     new (): HTMLMvsNavbuttonElement;
   };
 
-  interface HTMLMvsNewCardElement extends Components.MvsNewCard, HTMLStencilElement {}
-  var HTMLMvsNewCardElement: {
-    prototype: HTMLMvsNewCardElement;
-    new (): HTMLMvsNewCardElement;
-  };
-
   interface HTMLMvsOverlineElement extends Components.MvsOverline, HTMLStencilElement {}
   var HTMLMvsOverlineElement: {
     prototype: HTMLMvsOverlineElement;
@@ -384,7 +371,6 @@ declare global {
     'mvs-mob-drawer': HTMLMvsMobDrawerElement;
     'mvs-navbar': HTMLMvsNavbarElement;
     'mvs-navbutton': HTMLMvsNavbuttonElement;
-    'mvs-new-card': HTMLMvsNewCardElement;
     'mvs-overline': HTMLMvsOverlineElement;
     'mvs-paragraph': HTMLMvsParagraphElement;
     'mvs-pre': HTMLMvsPreElement;
@@ -429,9 +415,11 @@ declare namespace LocalJSX {
     'variant'?: 'flat' | 'ghost' | 'contained';
   }
   interface MvsCard extends JSXBase.HTMLAttributes<HTMLMvsCardElement> {
+    'alt'?: string;
     'button'?: string;
     'cardtitle'?: string;
     'link'?: string;
+    'media'?: string;
     'overline'?: any;
     'subtitle'?: string;
     'text'?: string;
@@ -522,15 +510,6 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'type'?: string;
   }
-  interface MvsNewCard extends JSXBase.HTMLAttributes<HTMLMvsNewCardElement> {
-    'buttonlink'?: string;
-    'buttontext'?: string;
-    'maintext'?: string;
-    'media'?: string;
-    'overline'?: string;
-    'subtitle'?: string;
-    'title'?: string;
-  }
   interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {}
   interface MvsParagraph extends JSXBase.HTMLAttributes<HTMLMvsParagraphElement> {
     /**
@@ -607,7 +586,6 @@ declare namespace LocalJSX {
     'mvs-mob-drawer': MvsMobDrawer;
     'mvs-navbar': MvsNavbar;
     'mvs-navbutton': MvsNavbutton;
-    'mvs-new-card': MvsNewCard;
     'mvs-overline': MvsOverline;
     'mvs-paragraph': MvsParagraph;
     'mvs-pre': MvsPre;
