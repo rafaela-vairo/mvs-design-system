@@ -17,12 +17,16 @@
 
 ### Used by
 
+ - [mvs-about](../../sections/mvs-about)
  - [mvs-card](../../layout/mvs-card)
+ - [mvs-countdown](../../layout/mvs-countdown)
 
 ### Graph
 ```mermaid
 graph TD;
+  mvs-about --> mvs-title
   mvs-card --> mvs-title
+  mvs-countdown --> mvs-title
   style mvs-title fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -17,11 +17,13 @@
 
 ### Used by
 
+ - [mvs-about](../../sections/mvs-about)
  - [mvs-card](../../layout/mvs-card)
 
 ### Graph
 ```mermaid
 graph TD;
+  mvs-about --> mvs-paragraph
   mvs-card --> mvs-paragraph
   style mvs-paragraph fill:#f9f,stroke:#333,stroke-width:4px
 ```
