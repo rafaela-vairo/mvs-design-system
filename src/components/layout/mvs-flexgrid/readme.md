@@ -19,6 +19,23 @@ Componente para criação de grids para layouts responsivos. Estabelece um `cont
 | `xl`        | `xl`        | Largura do componente no breakpoint Extra Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente. | `1 \| 10 \| 11 \| 12 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| boolean` | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [mvs-about](../../sections/mvs-about)
+ - [mvs-card-list](../../sections/mvs-card-list)
+ - [mvs-countdown](../mvs-countdown)
+
+### Graph
+```mermaid
+graph TD;
+  mvs-about --> mvs-flexgrid
+  mvs-card-list --> mvs-flexgrid
+  mvs-countdown --> mvs-flexgrid
+  style mvs-flexgrid fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

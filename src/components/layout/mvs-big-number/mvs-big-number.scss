@@ -1,0 +1,85 @@
+:host {
+
+    .content {
+        padding: 0;
+        width: 100%;
+    }
+
+    .content .element {
+        @include xl {
+            text-align: left;
+            margin: $spacing-xl;
+        }
+    
+        @include lg {
+            text-align: left;
+            margin: $spacing-lg;
+        }
+    
+        @include md {
+            text-align: left;
+            margin: $spacing-lg;
+        }
+    
+        @include sm {
+            text-align: center;
+            margin: $spacing-lg;
+        }
+    }
+
+    .icon {
+        @include xl {
+            height: 96px;
+            width: 96px;
+        }
+    
+        @include lg {
+            height: 72px;
+            width: 72px;
+        }
+    
+        @include md {
+            height: 64px;
+            width: 64px;
+        }
+    
+        @include sm {
+            height: 48px;
+            width: 48px;
+        }
+    }
+
+    .title {
+        margin-top: $spacing-xs;
+        margin-bottom: $spacing-sm;
+        font-family: $font-alegreya-sans;
+        font-weight: $font-bold;
+        color: $text-primary;
+        line-height: 64px;
+        font-size: 64px;
+
+        @include xl {
+            line-height: 64px;
+            font-size: 64px;
+        }
+    
+        @include lg {
+            line-height: 56px;
+            font-size: 56px;
+        }
+    
+        @include md {
+            line-height: 48px;
+            font-size: 48px;
+        }
+    
+        @include sm {
+            line-height: 40px;
+            font-size: 40px;
+        }
+    }
+
+    .subtitle {
+        color: $text-dark;
+    }
+}

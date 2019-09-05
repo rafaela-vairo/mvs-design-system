@@ -18,6 +18,9 @@ export namespace Components {
   }
   interface MvsBase {}
   interface MvsBg {}
+  interface MvsBigNumber {
+    'elements': Array<any>;
+  }
   interface MvsButton {
     /**
     * Caso `true`, desabilita o botão.
@@ -227,6 +230,12 @@ declare global {
     new (): HTMLMvsBgElement;
   };
 
+  interface HTMLMvsBigNumberElement extends Components.MvsBigNumber, HTMLStencilElement {}
+  var HTMLMvsBigNumberElement: {
+    prototype: HTMLMvsBigNumberElement;
+    new (): HTMLMvsBigNumberElement;
+  };
+
   interface HTMLMvsButtonElement extends Components.MvsButton, HTMLStencilElement {}
   var HTMLMvsButtonElement: {
     prototype: HTMLMvsButtonElement;
@@ -369,6 +378,7 @@ declare global {
     'mvs-anchor': HTMLMvsAnchorElement;
     'mvs-base': HTMLMvsBaseElement;
     'mvs-bg': HTMLMvsBgElement;
+    'mvs-big-number': HTMLMvsBigNumberElement;
     'mvs-button': HTMLMvsButtonElement;
     'mvs-card': HTMLMvsCardElement;
     'mvs-card-list': HTMLMvsCardListElement;
@@ -405,6 +415,9 @@ declare namespace LocalJSX {
   }
   interface MvsBase extends JSXBase.HTMLAttributes<HTMLMvsBaseElement> {}
   interface MvsBg extends JSXBase.HTMLAttributes<HTMLMvsBgElement> {}
+  interface MvsBigNumber extends JSXBase.HTMLAttributes<HTMLMvsBigNumberElement> {
+    'elements'?: Array<any>;
+  }
   interface MvsButton extends JSXBase.HTMLAttributes<HTMLMvsButtonElement> {
     /**
     * Caso `true`, desabilita o botão.
@@ -591,6 +604,7 @@ declare namespace LocalJSX {
     'mvs-anchor': MvsAnchor;
     'mvs-base': MvsBase;
     'mvs-bg': MvsBg;
+    'mvs-big-number': MvsBigNumber;
     'mvs-button': MvsButton;
     'mvs-card': MvsCard;
     'mvs-card-list': MvsCardList;

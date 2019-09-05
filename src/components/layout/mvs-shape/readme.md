@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                                                                                       | Default   |
-| -------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------- | --------- |
-| `bg`     | `bg`      |             | `"black" \| "confirm" \| "dark" \| "error" \| "light" \| "primary" \| "secondary" \| "warning" \| "white"` | `'white'` |
+| Property | Attribute | Description | Type                                                                                                                   | Default   |
+| -------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- | --------- |
+| `bg`     | `bg`      |             | `"black" \| "confirm" \| "dark" \| "error" \| "light" \| "medium" \| "primary" \| "secondary" \| "warning" \| "white"` | `'white'` |
 
 
 ----------------------------------------------
