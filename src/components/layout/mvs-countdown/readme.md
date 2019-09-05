@@ -19,16 +19,19 @@
 
 ## Dependencies
 
+### Used by
+
+ - [mvs-hero](../../mvs-hero)
+
 ### Depends on
 
-- [mvs-flexgrid](../mvs-flexgrid)
 - [mvs-title](../../typography/mvs-title)
 
 ### Graph
 ```mermaid
 graph TD;
-  mvs-countdown --> mvs-flexgrid
   mvs-countdown --> mvs-title
+  mvs-hero --> mvs-countdown
   style mvs-countdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

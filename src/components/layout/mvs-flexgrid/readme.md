@@ -24,15 +24,17 @@ Componente para criação de grids para layouts responsivos. Estabelece um `cont
 ### Used by
 
  - [mvs-about](../../sections/mvs-about)
+ - [mvs-big-number](../mvs-big-number)
  - [mvs-card-list](../../sections/mvs-card-list)
- - [mvs-countdown](../mvs-countdown)
+ - [mvs-hero](../../mvs-hero)
 
 ### Graph
 ```mermaid
 graph TD;
   mvs-about --> mvs-flexgrid
+  mvs-big-number --> mvs-flexgrid
   mvs-card-list --> mvs-flexgrid
-  mvs-countdown --> mvs-flexgrid
+  mvs-hero --> mvs-flexgrid
   style mvs-flexgrid fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

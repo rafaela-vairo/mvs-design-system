@@ -1,0 +1,369 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?skq138');
+  src:  url('fonts/icomoon.eot?skq138#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?skq138') format('truetype'),
+    url('fonts/icomoon.woff?skq138') format('woff'),
+    url('fonts/icomoon.svg?skq138#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-abelha:before {
+  content: "\e900";
+}
+.icon-acessibilidade:before {
+  content: "\e901";
+}
+.icon-animais:before {
+  content: "\e902";
+}
+.icon-arquivo2:before {
+  content: "\e903";
+}
+.icon-arquivos:before {
+  content: "\e904";
+}
+.icon-rvore:before {
+  content: "\e905";
+}
+.icon-aviao:before {
+  content: "\e906";
+}
+.icon-bandaid:before {
+  content: "\e907";
+}
+.icon-barco:before {
+  content: "\e908";
+}
+.icon-bateria:before {
+  content: "\e909";
+}
+.icon-bebe:before {
+  content: "\e90a";
+}
+.icon-biblioteca:before {
+  content: "\e90b";
+}
+.icon-bicicleta:before {
+  content: "\e90c";
+}
+.icon-bonde:before {
+  content: "\e90d";
+}
+.icon-brinquedo:before {
+  content: "\e90e";
+}
+.icon-bussula:before {
+  content: "\e90f";
+}
+.icon-cadeado:before {
+  content: "\e910";
+}
+.icon-cadeira:before {
+  content: "\e911";
+}
+.icon-cama:before {
+  content: "\e912";
+}
+.icon-camera:before {
+  content: "\e913";
+}
+.icon-camera2:before {
+  content: "\e914";
+}
+.icon-caminhada:before {
+  content: "\e915";
+}
+.icon-caminhao:before {
+  content: "\e916";
+}
+.icon-carro:before {
+  content: "\e917";
+}
+.icon-casa:before {
+  content: "\e918";
+}
+.icon-celular:before {
+  content: "\e919";
+}
+.icon-chave-de-fenda:before {
+  content: "\e91a";
+}
+.icon-chip:before {
+  content: "\e91b";
+}
+.icon-cidade:before {
+  content: "\e91c";
+}
+.icon-cigarro:before {
+  content: "\e91d";
+}
+.icon-circulo:before {
+  content: "\e91e";
+}
+.icon-compras:before {
+  content: "\e91f";
+}
+.icon-conta-gotas:before {
+  content: "\e920";
+}
+.icon-copyright:before {
+  content: "\e921";
+}
+.icon-coracao:before {
+  content: "\e922";
+}
+.icon-coracao-vazio:before {
+  content: "\e923";
+}
+.icon-corrida:before {
+  content: "\e924";
+}
+.icon-cubo:before {
+  content: "\e925";
+}
+.icon-digital:before {
+  content: "\e926";
+}
+.icon-dinheiro:before {
+  content: "\e927";
+}
+.icon-discoteca:before {
+  content: "\e928";
+}
+.icon-disquete:before {
+  content: "\e929";
+}
+.icon-download:before {
+  content: "\e92a";
+}
+.icon-ecologia:before {
+  content: "\e92b";
+}
+.icon-email:before {
+  content: "\e92c";
+}
+.icon-engrenagem:before {
+  content: "\e92d";
+}
+.icon-estrela:before {
+  content: "\e92e";
+}
+.icon-estrela2:before {
+  content: "\e92f";
+}
+.icon-euro:before {
+  content: "\e930";
+}
+.icon-fala:before {
+  content: "\e931";
+}
+.icon-feliz:before {
+  content: "\e932";
+}
+.icon-feliz2:before {
+  content: "\e933";
+}
+.icon-filme:before {
+  content: "\e934";
+}
+.icon-flor:before {
+  content: "\e935";
+}
+.icon-flor2:before {
+  content: "\e936";
+}
+.icon-foto:before {
+  content: "\e937";
+}
+.icon-gasolina:before {
+  content: "\e938";
+}
+.icon-gota:before {
+  content: "\e939";
+}
+.icon-graduacao:before {
+  content: "\e93a";
+}
+.icon-grafico:before {
+  content: "\e93b";
+}
+.icon-grafico2:before {
+  content: "\e93c";
+}
+.icon-gravida:before {
+  content: "\e93d";
+}
+.icon-hospital:before {
+  content: "\e93e";
+}
+.icon-internet:before {
+  content: "\e93f";
+}
+.icon-lampada:before {
+  content: "\e940";
+}
+.icon-lapis:before {
+  content: "\e941";
+}
+.icon-laptop:before {
+  content: "\e942";
+}
+.icon-linguas:before {
+  content: "\e943";
+}
+.icon-livro:before {
+  content: "\e944";
+}
+.icon-lixo:before {
+  content: "\e945";
+}
+.icon-localizacao:before {
+  content: "\e946";
+}
+.icon-loja:before {
+  content: "\e947";
+}
+.icon-lua:before {
+  content: "\e948";
+}
+.icon-lua2:before {
+  content: "\e949";
+}
+.icon-mao:before {
+  content: "\e94a";
+}
+.icon-metro:before {
+  content: "\e94b";
+}
+.icon-microfone:before {
+  content: "\e94c";
+}
+.icon-moleculas:before {
+  content: "\e94d";
+}
+.icon-montanha:before {
+  content: "\e94e";
+}
+.icon-moto:before {
+  content: "\e94f";
+}
+.icon-mundo:before {
+  content: "\e950";
+}
+.icon-museu:before {
+  content: "\e951";
+}
+.icon-musica:before {
+  content: "\e952";
+}
+.icon-natureza:before {
+  content: "\e953";
+}
+.icon-nuvem:before {
+  content: "\e954";
+}
+.icon-olho:before {
+  content: "\e955";
+}
+.icon-onibus:before {
+  content: "\e956";
+}
+.icon-ouvido:before {
+  content: "\e957";
+}
+.icon-paleta:before {
+  content: "\e958";
+}
+.icon-pasta:before {
+  content: "\e959";
+}
+.icon-pertence:before {
+  content: "\e95a";
+}
+.icon-pessoa:before {
+  content: "\e95b";
+}
+.icon-pessoa-abrao:before {
+  content: "\e95c";
+}
+.icon-pessoas:before {
+  content: "\e95d";
+}
+.icon-pincel:before {
+  content: "\e95e";
+}
+.icon-radio:before {
+  content: "\e95f";
+}
+.icon-raio:before {
+  content: "\e960";
+}
+.icon-relogio:before {
+  content: "\e961";
+}
+.icon-remo:before {
+  content: "\e962";
+}
+.icon-restaurante:before {
+  content: "\e963";
+}
+.icon-retrato:before {
+  content: "\e964";
+}
+.icon-rosto:before {
+  content: "\e965";
+}
+.icon-segurana:before {
+  content: "\e966";
+}
+.icon-seta:before {
+  content: "\e967";
+}
+.icon-tchau:before {
+  content: "\e968";
+}
+.icon-telefone:before {
+  content: "\e969";
+}
+.icon-transporte:before {
+  content: "\e96a";
+}
+.icon-trem:before {
+  content: "\e96b";
+}
+.icon-trofeu:before {
+  content: "\e96c";
+}
+.icon-tv:before {
+  content: "\e96d";
+}
+.icon-velocidade:before {
+  content: "\e96e";
+}
+.icon-video:before {
+  content: "\e96f";
+}
+.icon-video2:before {
+  content: "\e970";
+}
+.icon-voo:before {
+  content: "\e971";
+}
