@@ -5,19 +5,23 @@
         width: 100%;
     }
 
-    .content .element {
+    .content > .element {
+        
+        @include sm {
+            justify-content: center;
+        }
+    }
+
+    .content > .element > div {
         @include xl {
-            text-align: left;
             margin: $spacing-xl;
         }
     
         @include lg {
-            text-align: left;
             margin: $spacing-lg;
         }
     
         @include md {
-            text-align: left;
             margin: $spacing-lg;
         }
     
@@ -28,6 +32,8 @@
     }
 
     .icon {
+        color: $color-secondary-70;
+
         @include xl {
             height: 96px;
             width: 96px;
@@ -72,7 +78,7 @@
             line-height: 48px;
             font-size: 48px;
         }
-    
+
         @include sm {
             line-height: 40px;
             font-size: 40px;
@@ -80,6 +86,6 @@
     }
 
     .subtitle {
-        color: $text-dark;
+        color: $color-black;
     }
 }

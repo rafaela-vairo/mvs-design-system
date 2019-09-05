@@ -24,18 +24,19 @@ export class MvsBigNumber {
     render = () => (
         <div>
             <mvs-flexgrid container>
-                <mvs-flexgrid item md={2} lg={2} xl={2} />
-                <mvs-flexgrid item sm={12} md={8} lg={8} xl={8}>
+                <mvs-flexgrid item lg={2} xl={2} />
+                <mvs-flexgrid item sm={12} md={12} lg={8} xl={8}>
                     <mvs-flexgrid container class="content">
                         {
                             this.elements.map(element => (
-                                <mvs-flexgrid item md={3} lg={3} xl={3} key={element.id}>
-                                    <div class="element">
-                                        <img 
+                                <mvs-flexgrid item sm={12} md={3} lg={3} xl={3} key={element.id} class="element">
+                                    <div>
+                                        <svg xlinkHref={element.icon} fill="red" />
+                                        {/* <img 
                                             class="icon"
                                             src={element.icon}
                                             alt={element.title}
-                                        />
+                                        /> */}
                                         <mvs-paragraph>
                                             <mvs-strong>
                                                 <div class="title">
@@ -56,7 +57,7 @@ export class MvsBigNumber {
                         }
                     </mvs-flexgrid>
                 </mvs-flexgrid>
-                <mvs-flexgrid item md={2} lg={2} xl={2} />
+                <mvs-flexgrid item lg={2} xl={2} />
             </mvs-flexgrid>
         </div>
     );
