@@ -111,6 +111,12 @@ export namespace Components {
     */
     'xl': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
+  interface MvsHero {
+    'background': string;
+    'bgimg': string;
+    'button': string;
+    'herotitle': string;
+  }
   interface MvsIconbutton {
     'disabled': boolean;
     'type': string;
@@ -269,6 +275,12 @@ declare global {
     new (): HTMLMvsFlexgridElement;
   };
 
+  interface HTMLMvsHeroElement extends Components.MvsHero, HTMLStencilElement {}
+  var HTMLMvsHeroElement: {
+    prototype: HTMLMvsHeroElement;
+    new (): HTMLMvsHeroElement;
+  };
+
   interface HTMLMvsIconbuttonElement extends Components.MvsIconbutton, HTMLStencilElement {}
   var HTMLMvsIconbuttonElement: {
     prototype: HTMLMvsIconbuttonElement;
@@ -365,6 +377,7 @@ declare global {
     'mvs-figure': HTMLMvsFigureElement;
     'mvs-figure-caption': HTMLMvsFigureCaptionElement;
     'mvs-flexgrid': HTMLMvsFlexgridElement;
+    'mvs-hero': HTMLMvsHeroElement;
     'mvs-iconbutton': HTMLMvsIconbuttonElement;
     'mvs-mark': HTMLMvsMarkElement;
     'mvs-mob-button': HTMLMvsMobButtonElement;
@@ -485,6 +498,12 @@ declare namespace LocalJSX {
     */
     'xl'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
+  interface MvsHero extends JSXBase.HTMLAttributes<HTMLMvsHeroElement> {
+    'background'?: string;
+    'bgimg'?: string;
+    'button'?: string;
+    'herotitle'?: string;
+  }
   interface MvsIconbutton extends JSXBase.HTMLAttributes<HTMLMvsIconbuttonElement> {
     'disabled'?: boolean;
     'type'?: string;
@@ -580,6 +599,7 @@ declare namespace LocalJSX {
     'mvs-figure': MvsFigure;
     'mvs-figure-caption': MvsFigureCaption;
     'mvs-flexgrid': MvsFlexgrid;
+    'mvs-hero': MvsHero;
     'mvs-iconbutton': MvsIconbutton;
     'mvs-mark': MvsMark;
     'mvs-mob-button': MvsMobButton;

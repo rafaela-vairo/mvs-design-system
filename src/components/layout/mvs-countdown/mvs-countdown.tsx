@@ -56,10 +56,10 @@ export class MvsCountdown {
 
 		var posX = can.width / 2,
 			posY = can.height / 2,
-			circ = can.width / 3,
-			line = can.width / 30,
+			circ = can.width / 2.2,
+			line = can.width / 15,
 			oneProcent = 360 / 100,
-			result = oneProcent * ((d / 380) * 100)
+			result = oneProcent * ((d / 370) * 100)
 
 		c.lineCap = 'flat'
 
@@ -90,19 +90,15 @@ export class MvsCountdown {
 
 	render() {
 		return (
-			<mvs-flexgrid container xl={12} lg={12} md={12} sm={12}>
-				<mvs-flexgrid item block xl={12} lg={12} md={12} sm={12}>
-					<div class='root'>
-						<canvas class='canvas' width='800' height='800' />
-						<div class='tag'>
-							<div class='number'>{this.days}</div>
-							<mvs-title class='text' level='t4'>
-								DIAS
-							</mvs-title>
-						</div>
-					</div>
-				</mvs-flexgrid>
-			</mvs-flexgrid>
+			<div class='root'>
+				<canvas class='canvas' width='800' height='800' />
+				<div class='tag'>
+					<div class='number'>{this.days}</div>
+					<mvs-title class='text' level='t4' white>
+						DIAS
+					</mvs-title>
+				</div>
+			</div>
 		)
 	}
 }

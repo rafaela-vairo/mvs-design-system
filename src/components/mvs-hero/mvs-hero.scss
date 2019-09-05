@@ -1,0 +1,133 @@
+:host {
+	.image {
+		// width: 100vw;
+		height: 102vh;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+
+		@include xl {
+			mvs-title.hero {
+				margin-top: 150px;
+				font-size: 64px;
+				line-height: 72px;
+			}
+			mvs-countdown {
+				margin-top: 150px;
+			}
+			.hero {
+				margin-bottom: $spacing-xl;
+			}
+			.herotext {
+				margin-bottom: $spacing-xxl;
+			}
+		}
+		@include lg {
+			mvs-title.hero {
+				margin-top: 98px;
+				font-size: 56px;
+				line-height: 64px;
+			}
+			mvs-countdown {
+				margin-top: 98px;
+			}
+			.hero {
+				margin-bottom: $spacing-xl;
+			}
+			.herotext {
+				margin-bottom: $spacing-xxl;
+			}
+		}
+		@include md {
+			mvs-title.hero {
+				margin-top: 123px;
+				font-size: 48px;
+				line-height: 56px;
+			}
+			mvs-countdown {
+				margin-top: 123px;
+			}
+			.hero {
+				margin-bottom: $spacing-lg;
+			}
+			.herotext {
+				margin-bottom: $spacing-xl;
+			}
+			.spacer {
+				display: none !important;
+			}
+		}
+		@include sm {
+			mvs-title.hero {
+				margin-top: 0;
+				font-size: 40px;
+				line-height: 48px;
+			}
+			mvs-countdown {
+				margin-top: $spacing-xl;
+			}
+			.hero {
+				margin-bottom: $spacing-lg;
+			}
+			.herotext {
+				margin-bottom: $spacing-lg;
+			}
+			.hero {
+			}
+			.herotext {
+			}
+			.spacer {
+				display: none !important;
+			}
+			.countdown {
+				order: 1;
+			}
+			.content {
+				order: 2;
+			}
+		}
+		mvs-countdown {
+			width: 100%;
+			justify-content: center;
+			display: flex;
+		}
+		.text {
+			display: flex;
+			flex-direction: column;
+		}
+		.body {
+			// width: 100vw;
+			height: 102vh;
+			background-color: rgba($color: #000, $alpha: 0.7);
+			mvs-title > * {
+				color: $text-light;
+			}
+			mvs-title.hero {
+				font-family: $font-playfair-display;
+			}
+
+			mvs-button {
+				margin-left: 0px !important;
+			}
+
+			mvs-flexgrid.grid-container {
+				@include xl {
+					padding-top: calc(30px * 4);
+				}
+
+				@include lg {
+					padding-top: calc(27px * 4);
+				}
+
+				@include md {
+					padding-top: calc(25px * 4);
+				}
+
+				@include sm {
+					padding-top: calc(23px * 2);
+				}
+			}
+		}
+	}
+}
