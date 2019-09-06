@@ -1,5 +1,4 @@
 import { Component, h, Prop } from '@stencil/core';
-import '../../../icons/style.css';
 
 @Component({
     tag: 'mvs-big-number',

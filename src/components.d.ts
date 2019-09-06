@@ -114,6 +114,7 @@ export namespace Components {
     */
     'xl': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
+  interface MvsFooter {}
   interface MvsHero {
     'background': string;
     'bgimg': string;
@@ -284,6 +285,12 @@ declare global {
     new (): HTMLMvsFlexgridElement;
   };
 
+  interface HTMLMvsFooterElement extends Components.MvsFooter, HTMLStencilElement {}
+  var HTMLMvsFooterElement: {
+    prototype: HTMLMvsFooterElement;
+    new (): HTMLMvsFooterElement;
+  };
+
   interface HTMLMvsHeroElement extends Components.MvsHero, HTMLStencilElement {}
   var HTMLMvsHeroElement: {
     prototype: HTMLMvsHeroElement;
@@ -387,6 +394,7 @@ declare global {
     'mvs-figure': HTMLMvsFigureElement;
     'mvs-figure-caption': HTMLMvsFigureCaptionElement;
     'mvs-flexgrid': HTMLMvsFlexgridElement;
+    'mvs-footer': HTMLMvsFooterElement;
     'mvs-hero': HTMLMvsHeroElement;
     'mvs-iconbutton': HTMLMvsIconbuttonElement;
     'mvs-mark': HTMLMvsMarkElement;
@@ -511,6 +519,7 @@ declare namespace LocalJSX {
     */
     'xl'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
+  interface MvsFooter extends JSXBase.HTMLAttributes<HTMLMvsFooterElement> {}
   interface MvsHero extends JSXBase.HTMLAttributes<HTMLMvsHeroElement> {
     'background'?: string;
     'bgimg'?: string;
@@ -613,6 +622,7 @@ declare namespace LocalJSX {
     'mvs-figure': MvsFigure;
     'mvs-figure-caption': MvsFigureCaption;
     'mvs-flexgrid': MvsFlexgrid;
+    'mvs-footer': MvsFooter;
     'mvs-hero': MvsHero;
     'mvs-iconbutton': MvsIconbutton;
     'mvs-mark': MvsMark;
