@@ -35,23 +35,19 @@
         color: $color-secondary-70;
 
         @include xl {
-            height: 96px;
-            width: 96px;
+            font-size: 96px;
         }
     
         @include lg {
-            height: 72px;
-            width: 72px;
+            font-size: 72px;
         }
     
         @include md {
-            height: 64px;
-            width: 64px;
+            font-size: 64px;
         }
     
         @include sm {
-            height: 48px;
-            width: 48px;
+            font-size: 48px;
         }
     }
 

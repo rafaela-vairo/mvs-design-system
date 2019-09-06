@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import '../../../icons/style.css';
 
 @Component({
     tag: 'mvs-big-number',
@@ -9,16 +10,8 @@ import { Component, h, Prop } from '@stencil/core';
 export class MvsBigNumber {
 
     @Prop() elements: Array<any> = [
-        { 
-            id: 1, 
-            icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', 
-            title: 900, 
-            subtitle: 'subtitle' 
-        },
-        { id: 2, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },
-        { id: 3, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },
-        { id: 4, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },
-        { id: 5, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },
+        { id: 1, icon: 'relogio', title: 900, subtitle: 'subtitle' },
+        { id: 2, icon: 'abelha', title: 'title', subtitle: 'subtitle' },
     ];
 
     render = () => (
@@ -31,12 +24,7 @@ export class MvsBigNumber {
                             this.elements.map(element => (
                                 <mvs-flexgrid item sm={12} md={3} lg={3} xl={3} key={element.id} class="element">
                                     <div>
-                                        <svg xlinkHref={element.icon} fill="red" />
-                                        {/* <img 
-                                            class="icon"
-                                            src={element.icon}
-                                            alt={element.title}
-                                        /> */}
+                                        <span class={`icon icon-${element.icon}`}></span>
                                         <mvs-paragraph>
                                             <mvs-strong>
                                                 <div class="title">
