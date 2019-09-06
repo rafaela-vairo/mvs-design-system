@@ -19,7 +19,7 @@ export namespace Components {
   interface MvsBase {}
   interface MvsBg {}
   interface MvsBigNumber {
-    'elements': Array<any>;
+    'elements': any;
   }
   interface MvsButton {
     /**
@@ -114,7 +114,9 @@ export namespace Components {
     */
     'xl': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
-  interface MvsFooter {}
+  interface MvsFooter {
+    'icons': { rodape_logo: string; }[];
+  }
   interface MvsHero {
     'background': string;
     'bgimg': string;
@@ -169,6 +171,10 @@ export namespace Components {
     | 'error'
     | 'warning'
     | 'confirm';
+  }
+  interface MvsSinglePage {
+    'data': any;
+    'numbers': any;
   }
   interface MvsStrong {}
   interface MvsSubtitle {
@@ -357,6 +363,12 @@ declare global {
     new (): HTMLMvsShapeElement;
   };
 
+  interface HTMLMvsSinglePageElement extends Components.MvsSinglePage, HTMLStencilElement {}
+  var HTMLMvsSinglePageElement: {
+    prototype: HTMLMvsSinglePageElement;
+    new (): HTMLMvsSinglePageElement;
+  };
+
   interface HTMLMvsStrongElement extends Components.MvsStrong, HTMLStencilElement {}
   var HTMLMvsStrongElement: {
     prototype: HTMLMvsStrongElement;
@@ -406,6 +418,7 @@ declare global {
     'mvs-paragraph': HTMLMvsParagraphElement;
     'mvs-pre': HTMLMvsPreElement;
     'mvs-shape': HTMLMvsShapeElement;
+    'mvs-single-page': HTMLMvsSinglePageElement;
     'mvs-strong': HTMLMvsStrongElement;
     'mvs-subtitle': HTMLMvsSubtitleElement;
     'mvs-title': HTMLMvsTitleElement;
@@ -424,7 +437,7 @@ declare namespace LocalJSX {
   interface MvsBase extends JSXBase.HTMLAttributes<HTMLMvsBaseElement> {}
   interface MvsBg extends JSXBase.HTMLAttributes<HTMLMvsBgElement> {}
   interface MvsBigNumber extends JSXBase.HTMLAttributes<HTMLMvsBigNumberElement> {
-    'elements'?: Array<any>;
+    'elements'?: any;
   }
   interface MvsButton extends JSXBase.HTMLAttributes<HTMLMvsButtonElement> {
     /**
@@ -519,7 +532,9 @@ declare namespace LocalJSX {
     */
     'xl'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
-  interface MvsFooter extends JSXBase.HTMLAttributes<HTMLMvsFooterElement> {}
+  interface MvsFooter extends JSXBase.HTMLAttributes<HTMLMvsFooterElement> {
+    'icons'?: { rodape_logo: string; }[];
+  }
   interface MvsHero extends JSXBase.HTMLAttributes<HTMLMvsHeroElement> {
     'background'?: string;
     'bgimg'?: string;
@@ -574,6 +589,10 @@ declare namespace LocalJSX {
     | 'error'
     | 'warning'
     | 'confirm';
+  }
+  interface MvsSinglePage extends JSXBase.HTMLAttributes<HTMLMvsSinglePageElement> {
+    'data'?: any;
+    'numbers'?: any;
   }
   interface MvsStrong extends JSXBase.HTMLAttributes<HTMLMvsStrongElement> {}
   interface MvsSubtitle extends JSXBase.HTMLAttributes<HTMLMvsSubtitleElement> {
@@ -634,6 +653,7 @@ declare namespace LocalJSX {
     'mvs-paragraph': MvsParagraph;
     'mvs-pre': MvsPre;
     'mvs-shape': MvsShape;
+    'mvs-single-page': MvsSinglePage;
     'mvs-strong': MvsStrong;
     'mvs-subtitle': MvsSubtitle;
     'mvs-title': MvsTitle;

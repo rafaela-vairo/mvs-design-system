@@ -20,6 +20,7 @@
  - [mvs-about](../../sections/mvs-about)
  - [mvs-big-number](../../layout/mvs-big-number)
  - [mvs-card](../../layout/mvs-card)
+ - [mvs-footer](../../sections/mvs-footer)
 
 ### Graph
 ```mermaid
@@ -27,6 +28,7 @@ graph TD;
   mvs-about --> mvs-paragraph
   mvs-big-number --> mvs-paragraph
   mvs-card --> mvs-paragraph
+  mvs-footer --> mvs-paragraph
   style mvs-paragraph fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

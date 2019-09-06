@@ -26,6 +26,7 @@ Componente para criação de grids para layouts responsivos. Estabelece um `cont
  - [mvs-about](../../sections/mvs-about)
  - [mvs-big-number](../mvs-big-number)
  - [mvs-card-list](../../sections/mvs-card-list)
+ - [mvs-footer](../../sections/mvs-footer)
  - [mvs-hero](../../mvs-hero)
 
 ### Graph
@@ -34,6 +35,7 @@ graph TD;
   mvs-about --> mvs-flexgrid
   mvs-big-number --> mvs-flexgrid
   mvs-card-list --> mvs-flexgrid
+  mvs-footer --> mvs-flexgrid
   mvs-hero --> mvs-flexgrid
   style mvs-flexgrid fill:#f9f,stroke:#333,stroke-width:4px
 ```

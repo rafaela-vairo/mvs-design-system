@@ -10,7 +10,7 @@ export class mvshero {
 	@Prop() herotitle: string
 	@Prop() button: string
 	@Prop() bgimg: string =
-		'https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+		'https://admin.100anos.ufrj.br/wp-content/uploads/sites/3/2019/09/100anos.png'
 
 	render() {
 		let setBgImg = `url('${this.bgimg}')`

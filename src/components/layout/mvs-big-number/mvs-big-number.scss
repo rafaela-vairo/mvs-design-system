@@ -1,87 +1,85 @@
-:host {
+mvs-big-number {
+	.content {
+		padding: 0;
+		width: 100%;
+	}
 
-    .content {
-        padding: 0;
-        width: 100%;
-    }
+	.content > .element {
+		@include sm {
+			justify-content: center;
+		}
+	}
 
-    .content > .element {
-        
-        @include sm {
-            justify-content: center;
-        }
-    }
+	.content > .element > div {
+		@include xl {
+			margin: $spacing-xl / 2;
+		}
 
-    .content > .element > div {
-        @include xl {
-            margin: $spacing-xl;
-        }
-    
-        @include lg {
-            margin: $spacing-lg;
-        }
-    
-        @include md {
-            margin: $spacing-lg;
-        }
-    
-        @include sm {
-            text-align: center;
-            margin: $spacing-lg;
-        }
-    }
+		@include lg {
+			margin: $spacing-lg / 2;
+		}
 
-    .icon {
-        color: $color-secondary-70;
+		@include md {
+			margin: $spacing-lg / 2;
+		}
 
-        @include xl {
-            font-size: 96px;
-        }
-    
-        @include lg {
-            font-size: 72px;
-        }
-    
-        @include md {
-            font-size: 64px;
-        }
-    
-        @include sm {
-            font-size: 48px;
-        }
-    }
+		@include sm {
+			text-align: center;
+			margin: $spacing-lg / 2;
+		}
+	}
 
-    .title {
-        margin-top: $spacing-xs;
-        margin-bottom: $spacing-sm;
-        font-family: $font-alegreya-sans;
-        font-weight: $font-bold;
-        color: $text-primary;
-        line-height: 64px;
-        font-size: 64px;
+	.icon {
+		color: $color-secondary-70;
 
-        @include xl {
-            line-height: 64px;
-            font-size: 64px;
-        }
-    
-        @include lg {
-            line-height: 56px;
-            font-size: 56px;
-        }
-    
-        @include md {
-            line-height: 48px;
-            font-size: 48px;
-        }
+		@include xl {
+			font-size: 96px;
+		}
 
-        @include sm {
-            line-height: 40px;
-            font-size: 40px;
-        }
-    }
+		@include lg {
+			font-size: 72px;
+		}
 
-    .subtitle {
-        color: $color-black;
-    }
+		@include md {
+			font-size: 64px;
+		}
+
+		@include sm {
+			font-size: 48px;
+		}
+	}
+
+	.title {
+		margin-top: -$spacing-xs;
+		margin-bottom: $spacing-sm;
+		font-family: $font-alegreya-sans;
+		font-weight: $font-bold;
+		color: $text-primary;
+		line-height: 64px;
+		font-size: 64px;
+
+		@include xl {
+			line-height: 64px;
+			font-size: 64px;
+		}
+
+		@include lg {
+			line-height: 56px;
+			font-size: 56px;
+		}
+
+		@include md {
+			line-height: 48px;
+			font-size: 48px;
+		}
+
+		@include sm {
+			line-height: 40px;
+			font-size: 40px;
+		}
+	}
+
+	.subtitle {
+		color: $color-black;
+	}
 }

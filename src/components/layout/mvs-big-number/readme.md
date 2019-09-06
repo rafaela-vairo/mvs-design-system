@@ -7,16 +7,21 @@
 
 ## Properties
 
-| Property   | Attribute | Description | Type    | Default                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ---------- | --------- | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `elements` | --        |             | `any[]` | `[         {              id: 1,              icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg',              title: 900,              subtitle: 'subtitle'          },         { id: 2, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },         { id: 3, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },         { id: 4, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },         { id: 5, icon: 'https://taiga.tic.ufrj.br/media/attachments/2/e/f/4/6cf57a32197e232ecd7f71e2b67125eff36ee525739e5bf1b0d15275ef48/relogio.svg', title: 'title', subtitle: 'subtitle' },     ]` |
+| Property   | Attribute  | Description | Type  | Default     |
+| ---------- | ---------- | ----------- | ----- | ----------- |
+| `elements` | `elements` |             | `any` | `undefined` |
 
 
 ## Dependencies
 
+### Used by
+
+ - [mvs-single-page](../../pages/mvs-single-page)
+
 ### Depends on
 
 - [mvs-flexgrid](../mvs-flexgrid)
+- [mvs-title](../../typography/mvs-title)
 - [mvs-paragraph](../../typography/mvs-paragraph)
 - [mvs-strong](../../typography/mvs-strong)
 
@@ -24,8 +29,10 @@
 ```mermaid
 graph TD;
   mvs-big-number --> mvs-flexgrid
+  mvs-big-number --> mvs-title
   mvs-big-number --> mvs-paragraph
   mvs-big-number --> mvs-strong
+  mvs-single-page --> mvs-big-number
   style mvs-big-number fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -48,18 +48,21 @@ mvs-mob-drawer {
 .link-brand {
 	transition: height $transition-cubic-03;
 	@include xl {
-		height: 140px;
+		height: 120px;
 		padding: 19.5px;
 	}
 	@include lg {
-		height: 128px;
+		height: 110px;
 		padding: 17.5px;
 	}
 	@include md {
+		height: 80px;
 		padding: 16.5px;
 	}
 	@include sm {
+		height: 80px;
 		padding: 15px;
+		margin-top: -60px;
 	}
 }
 
@@ -76,17 +79,21 @@ mvs-mob-drawer {
 	box-shadow: 0 3px 5px rgba($color-black, 0.3);
 	img.link-brand {
 		@include xl {
-			height: 60px;
+			height: 80px;
 			padding-left: 21px;
 		}
 		@include lg {
+			height: 80px;
 			padding: 17.5px;
 		}
 		@include md {
+			height: 80px;
 			padding: 16.5px;
 		}
 		@include sm {
+			height: 80px;
 			padding: 15px;
+			margin: 0;
 		}
 	}
 }

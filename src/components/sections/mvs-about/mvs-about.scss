@@ -1,12 +1,13 @@
 :host {
- 
-    .content {
-        margin-top: calc(2 * $spacing-xxl);
-        margin-bottom: calc(2 * $spacing-xxl) + $spacing-xl;
-    }
+	.content {
+		margin-top: calc(2 * $spacing-xxl);
+		margin-bottom: calc(2 * $spacing-xxl) + $spacing-xl;
+		& > div {
+			margin-bottom: $spacing-md !important;
+		}
+	}
 
-    .title {
-        margin-bottom: $spacing-xl;
-    }
-
+	.title {
+		margin-bottom: $spacing-xl;
+	}
 }

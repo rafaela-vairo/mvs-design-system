@@ -18,6 +18,7 @@
 ### Used by
 
  - [mvs-about](../../sections/mvs-about)
+ - [mvs-big-number](../../layout/mvs-big-number)
  - [mvs-card](../../layout/mvs-card)
  - [mvs-countdown](../../layout/mvs-countdown)
  - [mvs-hero](../../mvs-hero)
@@ -26,6 +27,7 @@
 ```mermaid
 graph TD;
   mvs-about --> mvs-title
+  mvs-big-number --> mvs-title
   mvs-card --> mvs-title
   mvs-countdown --> mvs-title
   mvs-hero --> mvs-title
