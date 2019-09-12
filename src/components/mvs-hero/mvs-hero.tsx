@@ -17,7 +17,7 @@ export class mvshero {
 		return (
 			<div class='image' style={{ backgroundImage: setBgImg }}>
 				<div class='body'>
-					<mvs-flexgrid container>
+					<mvs-flexgrid container style={{ margin: '0px !important' }}>
 						<mvs-flexgrid
 							item
 							lg={2}

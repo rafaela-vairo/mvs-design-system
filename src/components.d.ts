@@ -16,6 +16,7 @@ export namespace Components {
   interface MvsAnchor {
     'href': string;
   }
+  interface MvsBarraGoverno {}
   interface MvsBase {}
   interface MvsBg {}
   interface MvsBigNumber {
@@ -225,6 +226,12 @@ declare global {
     new (): HTMLMvsAnchorElement;
   };
 
+  interface HTMLMvsBarraGovernoElement extends Components.MvsBarraGoverno, HTMLStencilElement {}
+  var HTMLMvsBarraGovernoElement: {
+    prototype: HTMLMvsBarraGovernoElement;
+    new (): HTMLMvsBarraGovernoElement;
+  };
+
   interface HTMLMvsBaseElement extends Components.MvsBase, HTMLStencilElement {}
   var HTMLMvsBaseElement: {
     prototype: HTMLMvsBaseElement;
@@ -395,6 +402,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'mvs-about': HTMLMvsAboutElement;
     'mvs-anchor': HTMLMvsAnchorElement;
+    'mvs-barra-governo': HTMLMvsBarraGovernoElement;
     'mvs-base': HTMLMvsBaseElement;
     'mvs-bg': HTMLMvsBgElement;
     'mvs-big-number': HTMLMvsBigNumberElement;
@@ -434,6 +442,7 @@ declare namespace LocalJSX {
   interface MvsAnchor extends JSXBase.HTMLAttributes<HTMLMvsAnchorElement> {
     'href'?: string;
   }
+  interface MvsBarraGoverno extends JSXBase.HTMLAttributes<HTMLMvsBarraGovernoElement> {}
   interface MvsBase extends JSXBase.HTMLAttributes<HTMLMvsBaseElement> {}
   interface MvsBg extends JSXBase.HTMLAttributes<HTMLMvsBgElement> {}
   interface MvsBigNumber extends JSXBase.HTMLAttributes<HTMLMvsBigNumberElement> {
@@ -630,6 +639,7 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'mvs-about': MvsAbout;
     'mvs-anchor': MvsAnchor;
+    'mvs-barra-governo': MvsBarraGoverno;
     'mvs-base': MvsBase;
     'mvs-bg': MvsBg;
     'mvs-big-number': MvsBigNumber;

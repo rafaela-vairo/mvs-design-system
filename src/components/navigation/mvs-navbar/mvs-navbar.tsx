@@ -31,12 +31,14 @@ export class MvsNavbar {
 	@Prop() lastScrollY: number = 0
 
 	@Listen('scroll', { target: 'window' })
-	scrollEvent(ev) {
-		this.lastScrollY = ev.pageY
+	scrollEvent() {
+		this.lastScrollY = pageYOffset
 		if (this.lastScrollY > window.innerHeight / 4) {
 			this.setClass = 'slideUp'
+			console.log(this.lastScrollY)
 		} else {
 			this.setClass = 'slideDown'
+			console.log(this.lastScrollY)
 		}
 	}
 
