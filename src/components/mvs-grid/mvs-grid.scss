@@ -1,0 +1,37 @@
+:host {
+	--container-padding: 0 24px;
+	--grid-columns: 1fr 1fr;
+
+	@include sm {
+		--grid-columns: repeat(2, 1fr);
+		--container-padding: 0 24px;
+	}
+	@include md {
+		--grid-columns: repeat(4, 1fr);
+		--container-padding: 0 48px;
+	}
+	@include lg {
+		--grid-columns: repeat(6, 1fr);
+		--container-padding: 0 104px;
+	}
+	@include xl {
+		--grid-columns: repeat(6, 1fr);
+		--container-padding: 0 120px;
+	}
+}
+
+.container {
+	display: grid;
+	margin: 0;
+	padding: var(--container-padding);
+	grid-template-columns: [start] var(--grid-columns) [end];
+	grid-auto-flow: row;
+}
+
+::slotted(*) {
+	font-family: monospace;
+	background-color: cyan;
+	border: 1px solid white;
+	padding: 0.5rem;
+	min-height: 100px;
+}

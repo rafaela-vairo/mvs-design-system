@@ -118,6 +118,7 @@ export namespace Components {
   interface MvsFooter {
     'icons': { rodape_logo: string; }[];
   }
+  interface MvsGrid {}
   interface MvsHero {
     'background': string;
     'bgimg': string;
@@ -304,6 +305,12 @@ declare global {
     new (): HTMLMvsFooterElement;
   };
 
+  interface HTMLMvsGridElement extends Components.MvsGrid, HTMLStencilElement {}
+  var HTMLMvsGridElement: {
+    prototype: HTMLMvsGridElement;
+    new (): HTMLMvsGridElement;
+  };
+
   interface HTMLMvsHeroElement extends Components.MvsHero, HTMLStencilElement {}
   var HTMLMvsHeroElement: {
     prototype: HTMLMvsHeroElement;
@@ -415,6 +422,7 @@ declare global {
     'mvs-figure-caption': HTMLMvsFigureCaptionElement;
     'mvs-flexgrid': HTMLMvsFlexgridElement;
     'mvs-footer': HTMLMvsFooterElement;
+    'mvs-grid': HTMLMvsGridElement;
     'mvs-hero': HTMLMvsHeroElement;
     'mvs-iconbutton': HTMLMvsIconbuttonElement;
     'mvs-mark': HTMLMvsMarkElement;
@@ -544,6 +552,7 @@ declare namespace LocalJSX {
   interface MvsFooter extends JSXBase.HTMLAttributes<HTMLMvsFooterElement> {
     'icons'?: { rodape_logo: string; }[];
   }
+  interface MvsGrid extends JSXBase.HTMLAttributes<HTMLMvsGridElement> {}
   interface MvsHero extends JSXBase.HTMLAttributes<HTMLMvsHeroElement> {
     'background'?: string;
     'bgimg'?: string;
@@ -652,6 +661,7 @@ declare namespace LocalJSX {
     'mvs-figure-caption': MvsFigureCaption;
     'mvs-flexgrid': MvsFlexgrid;
     'mvs-footer': MvsFooter;
+    'mvs-grid': MvsGrid;
     'mvs-hero': MvsHero;
     'mvs-iconbutton': MvsIconbutton;
     'mvs-mark': MvsMark;
