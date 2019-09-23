@@ -1,3 +1,12 @@
 :host {
-    /* Component styles go here */
+	.container {
+		margin: 10px;
+		grid-column-start: start;
+		grid-column-end: end;
+	}
+	mvs-card {
+		//flex-direction: row;
+		//grid-column-start: start;
+		grid-column-end: span 2;
+	}
 }

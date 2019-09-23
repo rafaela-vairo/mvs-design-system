@@ -81,6 +81,40 @@ export namespace Components {
     'italictext': boolean;
     'src': string;
   }
+  interface MvsFlex {
+    /**
+    * Altera visualização de flex para block.
+    */
+    'block': boolean;
+    /**
+    * Caso `true`, o componente se comportará como `container` capaz de receber `items`.
+    */
+    'container': boolean;
+    /**
+    * Caso `true`, o componente se comportará como `item`, contido em um `container`.
+    */
+    'item': boolean;
+    /**
+    * Largura do componente no breakpoint Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'lg': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Medium, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'md': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Small, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'sm': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Define espaçamento entre componentes do tipo `item`. Usando somente em componentes tipo `container`.
+    */
+    'spacing': string;
+    /**
+    * Largura do componente no breakpoint Extra Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'xl': true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  }
   interface MvsFlexgrid {
     /**
     * Altera visualização de flex para block.
@@ -293,6 +327,12 @@ declare global {
     new (): HTMLMvsFigureCaptionElement;
   };
 
+  interface HTMLMvsFlexElement extends Components.MvsFlex, HTMLStencilElement {}
+  var HTMLMvsFlexElement: {
+    prototype: HTMLMvsFlexElement;
+    new (): HTMLMvsFlexElement;
+  };
+
   interface HTMLMvsFlexgridElement extends Components.MvsFlexgrid, HTMLStencilElement {}
   var HTMLMvsFlexgridElement: {
     prototype: HTMLMvsFlexgridElement;
@@ -420,6 +460,7 @@ declare global {
     'mvs-divider': HTMLMvsDividerElement;
     'mvs-figure': HTMLMvsFigureElement;
     'mvs-figure-caption': HTMLMvsFigureCaptionElement;
+    'mvs-flex': HTMLMvsFlexElement;
     'mvs-flexgrid': HTMLMvsFlexgridElement;
     'mvs-footer': HTMLMvsFooterElement;
     'mvs-grid': HTMLMvsGridElement;
@@ -514,6 +555,40 @@ declare namespace LocalJSX {
     'italicspotlight'?: boolean;
     'italictext'?: boolean;
     'src'?: string;
+  }
+  interface MvsFlex extends JSXBase.HTMLAttributes<HTMLMvsFlexElement> {
+    /**
+    * Altera visualização de flex para block.
+    */
+    'block'?: boolean;
+    /**
+    * Caso `true`, o componente se comportará como `container` capaz de receber `items`.
+    */
+    'container'?: boolean;
+    /**
+    * Caso `true`, o componente se comportará como `item`, contido em um `container`.
+    */
+    'item'?: boolean;
+    /**
+    * Largura do componente no breakpoint Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'lg'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Medium, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'md'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Largura do componente no breakpoint Small, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'sm'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    /**
+    * Define espaçamento entre componentes do tipo `item`. Usando somente em componentes tipo `container`.
+    */
+    'spacing'?: string;
+    /**
+    * Largura do componente no breakpoint Extra Large, entre 1 e 12. Quando omitido, ocupa o espaço restante automaticamente.
+    */
+    'xl'?: true | false | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   }
   interface MvsFlexgrid extends JSXBase.HTMLAttributes<HTMLMvsFlexgridElement> {
     /**
@@ -659,6 +734,7 @@ declare namespace LocalJSX {
     'mvs-divider': MvsDivider;
     'mvs-figure': MvsFigure;
     'mvs-figure-caption': MvsFigureCaption;
+    'mvs-flex': MvsFlex;
     'mvs-flexgrid': MvsFlexgrid;
     'mvs-footer': MvsFooter;
     'mvs-grid': MvsGrid;

@@ -29,10 +29,18 @@
 		width: 100%;
 		object-fit: cover;
 	}
+	.main {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: calc(100% - 264px + #{$spacing-sm});
+	}
 	.root {
 		background-color: $color-white;
 		overflow: hidden;
 		min-height: 200px;
+		box-sizing: border-box;
+		height: calc(100% - #{$spacing-sm});
 		position: relative;
 		margin-top: $spacing-sm;
 		padding: $inset-sm;

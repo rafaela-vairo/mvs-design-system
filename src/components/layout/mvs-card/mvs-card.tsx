@@ -24,14 +24,15 @@ export class MvsCard {
 				<div class='media-container'>
 					<img class='media' src={this.media} alt={this.alt} />
 				</div>
-
-				<div class='text'>
-					<mvs-overline>{this.overline}</mvs-overline>
-					<mvs-title level='t5'>
-						<a href={this.link}>{this.cardtitle}</a>
-					</mvs-title>
-					<mvs-subtitle type='two'>{this.subtitle}</mvs-subtitle>
-					<mvs-paragraph bodytwo>{this.text}</mvs-paragraph>
+				<div class='main'>
+					<div class='text'>
+						<mvs-overline>{this.overline}</mvs-overline>
+						<mvs-title level='t5'>
+							<a href={this.link}>{this.cardtitle}</a>
+						</mvs-title>
+						<mvs-subtitle type='two'>{this.subtitle}</mvs-subtitle>
+						<mvs-paragraph bodytwo>{this.text}</mvs-paragraph>
+					</div>
 					<div class='buttons'>
 						<mvs-button>{this.button}</mvs-button>
 					</div>

@@ -6,8 +6,7 @@ const cards = [
 		title: 'Ipsum dolor sit amet',
 		subtitle:
 			'Numquam et dolor sit nam adipisci doloremque voluptatum quia quo.',
-		text:
-			'Impedit consequatur laboriosam in et velit quasi mollitia sunt ex. In ipsum eius porro maiores voluptas eos nam a. Assumenda quasi a velit et vitae laudantium distinctio quod.',
+		text: 'Impedit consequatur laboriosam in et velit quasi distinctio quod.',
 		button: 'ação',
 		link: '',
 	},
@@ -16,8 +15,7 @@ const cards = [
 		title: 'Ipsum dolor sit amet',
 		subtitle:
 			'Numquam et dolor sit nam adipisci doloremque voluptatum quia quo.',
-		text:
-			'Impedit consequatur laboriosam in et velit quasi mollitia sunt ex. In ipsum eius porro maiores voluptas eos nam a. Assumenda quasi a velit et vitae laudantium distinctio quod.',
+		text: 'Impedite laudantium distinctio quod.',
 		button: 'ação',
 		link: '',
 	},
@@ -37,7 +35,7 @@ const cards = [
 		subtitle:
 			'Numquam et dolor sit nam adipisci doloremque voluptatum quia quo.',
 		text:
-			'Aliquid voluptas neque vitae sed repellat explicabo voluptatem veritatis. Inventore modi delectus consequuntur et sed est. Molestias qui debitis placeat suscipit dolor corrupti. Molestiae et dolor ut numquam.',
+			'Aliquid voluptas neque vitae sed repellat explicabo corrupti. Molestiae et dolor ut numquam.',
 		button: 'ação',
 		link: '',
 	},
@@ -62,9 +60,9 @@ export class MvsCardList {
 	@Prop() data = cards
 	render() {
 		return (
-			<mvs-flexgrid container>
-				{this.data.map(cards => (
-					<mvs-flexgrid xl={6} lg={6} md={6} sm={6} item>
+			<div class='container'>
+				<mvs-grid>
+					{this.data.map(cards => (
 						<mvs-card
 							overline={cards.overline}
 							cardtitle={cards.title}
@@ -73,9 +71,9 @@ export class MvsCardList {
 							button={cards.button}
 							link={cards.link}
 						/>
-					</mvs-flexgrid>
-				))}
-			</mvs-flexgrid>
+					))}
+				</mvs-grid>
+			</div>
 		)
 	}
 }
