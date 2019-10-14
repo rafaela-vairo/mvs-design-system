@@ -1,26 +1,26 @@
 :host {
-	--container-padding: 0 24px;
+	--container-padding: 24px;
 	--grid-columns: 1fr 1fr;
 	--grid-gap: 16px;
 
 	@include sm {
 		--grid-columns: repeat(2, 1fr);
-		--container-padding: 0 24px;
+		--container-padding: 24px;
 		--grid-gap: 16px;
 	}
 	@include md {
 		--grid-columns: repeat(4, 1fr);
-		--container-padding: 0 48px;
+		--container-padding: 48px;
 		--grid-gap: 24px;
 	}
 	@include lg {
 		--grid-columns: repeat(6, 1fr);
-		--container-padding: 0 104px;
+		--container-padding: 104px;
 		--grid-gap: 24px;
 	}
 	@include xl {
 		--grid-columns: repeat(6, 1fr);
-		--container-padding: 0 120px;
+		--container-padding: 120px;
 		--grid-gap: 32px;
 	}
 }
@@ -28,7 +28,7 @@
 .container {
 	display: grid;
 	margin: 0;
-	padding: var(--container-padding);
+	padding: 0 var(--container-padding);
 	grid-template-columns: [start] var(--grid-columns) [end];
 	grid-auto-flow: row;
 	grid-gap: var(--grid-gap);
