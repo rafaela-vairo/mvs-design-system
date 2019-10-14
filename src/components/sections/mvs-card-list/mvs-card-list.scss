@@ -1,8 +1,13 @@
 :host {
 	.container {
-		margin: 10px;
+		margin: 100px;
 		grid-column-start: start;
 		grid-column-end: end;
+		//columns: 3 auto;
+		//column-gap: $spacing-md;
+		//column-fill: balance;
+		//height: 200vh;
+		//overflow: hidden;
 	}
 	mvs-card {
 		//flex-direction: row;

@@ -43,7 +43,6 @@
 		box-sizing: border-box;
 		//height: calc(100% - #{$spacing-sm});
 		position: relative;
-		//margin-top: $spacing-sm;
 		margin-bottom: $spacing-md;
 		padding: $inset-sm;
 		border-radius: 3px;
@@ -54,13 +53,10 @@
 			background-color: rgba($color-primary, 0.15);
 		}
 		&:focus {
-			height: 800px;
 			background-color: rgba($color-primary, 0.25);
 		}
 		&:hover {
 			box-shadow: $shadow-regular-hover;
-			//margin-bottom: $spacing-sm;
-			//margin-top: 0;
 		}
 	}
 	.text {
@@ -92,6 +88,15 @@
 				padding-right: calc(2 * #{$spacing-sm} + #{$spacing-xs});
 			}
 		}
+	}
+
+	.open {
+		display: flex;
+		height: 300px;
+	}
+	.closed {
+		display: none;
+		height: 0px;
 	}
 
 	@include xl {

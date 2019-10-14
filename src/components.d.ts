@@ -55,6 +55,18 @@ export namespace Components {
     'text': string;
     'width': number;
   }
+  interface MvsCardExpander {
+    'alt': string;
+    'button': string;
+    'cardtitle': string;
+    'link': string;
+    'media': string;
+    'open': 'open' | 'closed';
+    'overline': any;
+    'subtitle': string;
+    'text': string;
+    'width': number;
+  }
   interface MvsCardList {
     'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
   }
@@ -297,6 +309,12 @@ declare global {
     new (): HTMLMvsCardElement;
   };
 
+  interface HTMLMvsCardExpanderElement extends Components.MvsCardExpander, HTMLStencilElement {}
+  var HTMLMvsCardExpanderElement: {
+    prototype: HTMLMvsCardExpanderElement;
+    new (): HTMLMvsCardExpanderElement;
+  };
+
   interface HTMLMvsCardListElement extends Components.MvsCardList, HTMLStencilElement {}
   var HTMLMvsCardListElement: {
     prototype: HTMLMvsCardListElement;
@@ -455,6 +473,7 @@ declare global {
     'mvs-big-number': HTMLMvsBigNumberElement;
     'mvs-button': HTMLMvsButtonElement;
     'mvs-card': HTMLMvsCardElement;
+    'mvs-card-expander': HTMLMvsCardExpanderElement;
     'mvs-card-list': HTMLMvsCardListElement;
     'mvs-countdown': HTMLMvsCountdownElement;
     'mvs-divider': HTMLMvsDividerElement;
@@ -525,6 +544,18 @@ declare namespace LocalJSX {
     'cardtitle'?: string;
     'link'?: string;
     'media'?: string;
+    'overline'?: any;
+    'subtitle'?: string;
+    'text'?: string;
+    'width'?: number;
+  }
+  interface MvsCardExpander extends JSXBase.HTMLAttributes<HTMLMvsCardExpanderElement> {
+    'alt'?: string;
+    'button'?: string;
+    'cardtitle'?: string;
+    'link'?: string;
+    'media'?: string;
+    'open'?: 'open' | 'closed';
     'overline'?: any;
     'subtitle'?: string;
     'text'?: string;
@@ -729,6 +760,7 @@ declare namespace LocalJSX {
     'mvs-big-number': MvsBigNumber;
     'mvs-button': MvsButton;
     'mvs-card': MvsCard;
+    'mvs-card-expander': MvsCardExpander;
     'mvs-card-list': MvsCardList;
     'mvs-countdown': MvsCountdown;
     'mvs-divider': MvsDivider;
