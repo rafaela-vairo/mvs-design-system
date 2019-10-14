@@ -117,7 +117,6 @@ export class MvsCardList {
 							cardtitle={cards.title}
 							subtitle={cards.subtitle}
 							text={cards.text}
-							button={cards.button}
 							link={cards.link}
 						>
 							{cards.text}

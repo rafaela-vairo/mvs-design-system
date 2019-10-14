@@ -57,15 +57,12 @@ export namespace Components {
   }
   interface MvsCardExpander {
     'alt': string;
-    'button': string;
     'cardtitle': string;
     'link': string;
     'media': string;
-    'open': 'open' | 'closed';
     'overline': any;
     'subtitle': string;
     'text': string;
-    'width': number;
   }
   interface MvsCardList {
     'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
@@ -561,15 +558,12 @@ declare namespace LocalJSX {
   }
   interface MvsCardExpander extends JSXBase.HTMLAttributes<HTMLMvsCardExpanderElement> {
     'alt'?: string;
-    'button'?: string;
     'cardtitle'?: string;
     'link'?: string;
     'media'?: string;
-    'open'?: 'open' | 'closed';
     'overline'?: any;
     'subtitle'?: string;
     'text'?: string;
-    'width'?: number;
   }
   interface MvsCardList extends JSXBase.HTMLAttributes<HTMLMvsCardListElement> {
     'data'?: { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];

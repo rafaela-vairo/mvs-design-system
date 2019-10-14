@@ -1,148 +1,49 @@
 :host {
-	width: 100%;
-	cursor: pointer;
-	a {
-		text-decoration: none;
-		color: inherit;
-		&:focus {
-			color: $color-primary;
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
+	--container-margin: calc(var(--grid-gap) / 2);
+	*:focus {
+		outline: none;
 	}
-	.media-container {
-		margin-left: -$inset-sm;
-		margin-right: -$inset-sm;
-		margin-top: -$inset-sm;
-	}
-	.media {
-		display: block;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
+}
+
+[class^='item'] {
+	//border: 1px solid red;
+	margin: 0.5rem;
+	height: 200px;
+	border-radius: 5px;
+	transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+	.cover {
+		//border: 1px solid red;
+		border-radius: 5px;
+		background-color: cyan;
+		height: 200px;
 		width: 100%;
-		object-fit: cover;
 	}
-	.main {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		//height: calc(100% - 264px + #{$spacing-sm});
-	}
-	.root {
-		background-color: $color-white;
+	.content {
+		//border: 1px solid red;
+		position: absolute;
+		left: 0;
+		margin-top: var(--container-margin);
 		overflow: hidden;
-		min-height: 200px;
+		height: 0;
+		width: 100%;
+		transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+		> div {
+			margin: 0 var(--container-padding);
+		}
+		p {
+			padding: 30px;
+			background-color: lightgrey;
+			margin: 0 0.5rem;
+			opacity: 0.95;
+			height: 156px;
+		}
+	}
+	&:active,
+	&:focus {
 		height: 400px;
-		box-sizing: border-box;
-		//height: calc(100% - #{$spacing-sm});
-		position: relative;
-		margin-bottom: $spacing-md;
-		padding: $inset-sm;
-		border-radius: 3px;
-		box-sizing: border-box;
-		box-shadow: $shadow-regular;
-		transition: all $transition-cubic-03;
-		&:active {
-			background-color: rgba($color-primary, 0.15);
-		}
-		&:focus {
-			background-color: rgba($color-primary, 0.25);
-		}
-		&:hover {
-			box-shadow: $shadow-regular-hover;
-		}
-	}
-	.text {
-		padding: $inset-strech-md;
-		display: flex;
-		flex-direction: column;
-		& > *:not(:last-child) {
-			padding-bottom: $spacing-lg;
-		}
-		mvs-paragraph {
-			margin-top: $spacing-lg;
-		}
-		mvs-paragraph::before {
-			content: '';
-			margin-top: -$spacing-lg;
-			position: absolute;
-			display: inline-block;
-			width: calc(100% - 2 * (#{$inset-sm} + #{$inset-md}));
-			height: 2px;
-			background-color: rgba($color-black, 0.3);
-		}
-		mvs-button {
-			z-index: 5;
-			margin: -$spacing-sm;
-		}
-		.buttons {
-			display: flex;
-			& > * {
-				padding-right: calc(2 * #{$spacing-sm} + #{$spacing-xs});
-			}
-		}
-	}
-
-	.open {
-		display: flex;
-		height: 300px;
-	}
-	.closed {
-		display: none;
-		height: 0px;
-	}
-
-	@include xl {
-		.media {
-			height: 264px;
-		}
-	}
-
-	@include lg {
-		.media {
-			height: 216px;
-		}
-	}
-
-	@include md {
-		.media {
-			height: 184px;
-		}
-		.text > *:not(:last-child) {
-			padding-bottom: $spacing-md;
-			mvs-paragraph {
-				margin-top: $spacing-md;
-			}
-			mvs-paragraph::before {
-				margin-top: -$spacing-md;
-				width: calc(100% - 2 * (#{$inset-sm} + #{$inset-md}));
-			}
-		}
-	}
-
-	@include sm {
-		.media {
-			height: 144px;
-		}
-		.text {
-			padding: $inset-strech-sm;
-			& > *:not(:last-child) {
-				padding-bottom: $spacing-sm;
-			}
-			mvs-paragraph {
-				margin-top: $spacing-sm;
-			}
-			mvs-paragraph::before {
-				margin-top: -$spacing-sm;
-				width: calc(100% - 4 * #{$inset-sm});
-			}
+		.content {
+			height: 218px;
+			//min-height: 200px;
 		}
 	}
 }
