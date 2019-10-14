@@ -21,7 +21,7 @@
 
 ### Used by
 
- - [mvs-hero](../../mvs-hero)
+ - [mvs-hero](../mvs-hero)
 
 ### Depends on
 

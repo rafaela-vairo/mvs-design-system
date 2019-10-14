@@ -1,0 +1,70 @@
+:host {
+
+    .col {
+
+        @include sm { 
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        
+        @include md { 
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        
+        @include lg { 
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+        
+        @include xl { 
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+
+        label {
+            display: block;
+            margin-top: $spacing-xl;
+            margin-bottom: $spacing-sm;
+            color: $text-dark-70;
+            font-family: $font-alegreya-sans;
+        }
+
+        input,
+        select, 
+        textarea {
+            border: 0;
+            border-bottom: 1px solid $text-dark-30;
+            padding-bottom: $spacing-xs;
+            width: 100%;
+            resize: none;
+            background-color: transparent;
+            color: $text-dark-70;
+            font-family: $font-alegreya-sans;
+        }
+
+        input::placeholder,
+        select::placeholder, 
+        textarea::placeholder {
+            color: $text-dark-30;
+        }
+
+        input:hover,
+        select:hover, 
+        textarea:hover {
+            border-bottom: 2px solid $text-dark-70;
+        }
+
+        input:focus,
+        select:focus, 
+        textarea:focus {
+            border-bottom: 2px solid $color-primary;
+            outline: 0;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+    }
+}

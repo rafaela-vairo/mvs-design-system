@@ -164,6 +164,9 @@ export namespace Components {
   interface MvsFooter {
     'icons': { rodape_logo: string; }[];
   }
+  interface MvsFormulario {
+    'newProp': any;
+  }
   interface MvsGrid {}
   interface MvsHero {
     'background': string;
@@ -363,6 +366,12 @@ declare global {
     new (): HTMLMvsFooterElement;
   };
 
+  interface HTMLMvsFormularioElement extends Components.MvsFormulario, HTMLStencilElement {}
+  var HTMLMvsFormularioElement: {
+    prototype: HTMLMvsFormularioElement;
+    new (): HTMLMvsFormularioElement;
+  };
+
   interface HTMLMvsGridElement extends Components.MvsGrid, HTMLStencilElement {}
   var HTMLMvsGridElement: {
     prototype: HTMLMvsGridElement;
@@ -482,6 +491,7 @@ declare global {
     'mvs-flex': HTMLMvsFlexElement;
     'mvs-flexgrid': HTMLMvsFlexgridElement;
     'mvs-footer': HTMLMvsFooterElement;
+    'mvs-formulario': HTMLMvsFormularioElement;
     'mvs-grid': HTMLMvsGridElement;
     'mvs-hero': HTMLMvsHeroElement;
     'mvs-iconbutton': HTMLMvsIconbuttonElement;
@@ -658,6 +668,9 @@ declare namespace LocalJSX {
   interface MvsFooter extends JSXBase.HTMLAttributes<HTMLMvsFooterElement> {
     'icons'?: { rodape_logo: string; }[];
   }
+  interface MvsFormulario extends JSXBase.HTMLAttributes<HTMLMvsFormularioElement> {
+    'newProp'?: any;
+  }
   interface MvsGrid extends JSXBase.HTMLAttributes<HTMLMvsGridElement> {}
   interface MvsHero extends JSXBase.HTMLAttributes<HTMLMvsHeroElement> {
     'background'?: string;
@@ -769,6 +782,7 @@ declare namespace LocalJSX {
     'mvs-flex': MvsFlex;
     'mvs-flexgrid': MvsFlexgrid;
     'mvs-footer': MvsFooter;
+    'mvs-formulario': MvsFormulario;
     'mvs-grid': MvsGrid;
     'mvs-hero': MvsHero;
     'mvs-iconbutton': MvsIconbutton;

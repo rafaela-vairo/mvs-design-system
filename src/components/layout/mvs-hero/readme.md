@@ -19,14 +19,14 @@
 
 ### Used by
 
- - [mvs-single-page](../pages/mvs-single-page)
+ - [mvs-single-page](../../pages/mvs-single-page)
 
 ### Depends on
 
-- [mvs-flexgrid](../layout/mvs-flexgrid)
-- [mvs-title](../typography/mvs-title)
-- [mvs-button](../inputs/mvs-button)
-- [mvs-countdown](../layout/mvs-countdown)
+- [mvs-flexgrid](../mvs-flexgrid)
+- [mvs-title](../../typography/mvs-title)
+- [mvs-button](../../inputs/mvs-button)
+- [mvs-countdown](../mvs-countdown)
 
 ### Graph
 ```mermaid

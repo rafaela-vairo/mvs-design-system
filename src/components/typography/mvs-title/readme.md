@@ -20,8 +20,9 @@
  - [mvs-about](../../sections/mvs-about)
  - [mvs-big-number](../../layout/mvs-big-number)
  - [mvs-card](../../layout/mvs-card)
+ - [mvs-card-expander](../../mvs-card-expander)
  - [mvs-countdown](../../layout/mvs-countdown)
- - [mvs-hero](../../mvs-hero)
+ - [mvs-hero](../../layout/mvs-hero)
 
 ### Graph
 ```mermaid
@@ -29,6 +30,7 @@ graph TD;
   mvs-about --> mvs-title
   mvs-big-number --> mvs-title
   mvs-card --> mvs-title
+  mvs-card-expander --> mvs-title
   mvs-countdown --> mvs-title
   mvs-hero --> mvs-title
   style mvs-title fill:#f9f,stroke:#333,stroke-width:4px

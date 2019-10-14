@@ -19,7 +19,7 @@
 
 - [mvs-base](../../layout/mvs-base)
 - [mvs-navbar](../../navigation/mvs-navbar)
-- [mvs-hero](../../mvs-hero)
+- [mvs-hero](../../layout/mvs-hero)
 - [mvs-bg](../../layout/mvs-bg)
 - [mvs-about](../../sections/mvs-about)
 - [mvs-big-number](../../layout/mvs-big-number)

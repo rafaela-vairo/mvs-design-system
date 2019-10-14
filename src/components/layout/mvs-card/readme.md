@@ -22,10 +22,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [mvs-card-list](../../sections/mvs-card-list)
-
 ### Depends on
 
 - [mvs-overline](../../typography/mvs-overline)
@@ -42,7 +38,6 @@ graph TD;
   mvs-card --> mvs-subtitle
   mvs-card --> mvs-paragraph
   mvs-card --> mvs-button
-  mvs-card-list --> mvs-card
   style mvs-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

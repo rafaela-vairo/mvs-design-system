@@ -16,19 +16,19 @@
 
 ### Depends on
 
-- [mvs-flexgrid](../../layout/mvs-flexgrid)
-- [mvs-card](../../layout/mvs-card)
+- [mvs-grid](../../layout/mvs-grid)
+- [mvs-card-expander](../../mvs-card-expander)
 
 ### Graph
 ```mermaid
 graph TD;
-  mvs-card-list --> mvs-flexgrid
-  mvs-card-list --> mvs-card
-  mvs-card --> mvs-overline
-  mvs-card --> mvs-title
-  mvs-card --> mvs-subtitle
-  mvs-card --> mvs-paragraph
-  mvs-card --> mvs-button
+  mvs-card-list --> mvs-grid
+  mvs-card-list --> mvs-card-expander
+  mvs-card-expander --> mvs-overline
+  mvs-card-expander --> mvs-title
+  mvs-card-expander --> mvs-subtitle
+  mvs-card-expander --> mvs-paragraph
+  mvs-card-expander --> mvs-button
   style mvs-card-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
