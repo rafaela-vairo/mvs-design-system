@@ -161,9 +161,7 @@ export namespace Components {
   interface MvsFooter {
     'icons': { rodape_logo: string; }[];
   }
-  interface MvsFormulario {
-    'newProp': any;
-  }
+  interface MvsFormulario {}
   interface MvsGrid {}
   interface MvsHero {
     'background': string;
@@ -662,9 +660,7 @@ declare namespace LocalJSX {
   interface MvsFooter extends JSXBase.HTMLAttributes<HTMLMvsFooterElement> {
     'icons'?: { rodape_logo: string; }[];
   }
-  interface MvsFormulario extends JSXBase.HTMLAttributes<HTMLMvsFormularioElement> {
-    'newProp'?: any;
-  }
+  interface MvsFormulario extends JSXBase.HTMLAttributes<HTMLMvsFormularioElement> {}
   interface MvsGrid extends JSXBase.HTMLAttributes<HTMLMvsGridElement> {}
   interface MvsHero extends JSXBase.HTMLAttributes<HTMLMvsHeroElement> {
     'background'?: string;
