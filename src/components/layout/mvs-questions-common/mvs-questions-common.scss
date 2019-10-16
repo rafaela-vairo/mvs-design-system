@@ -1,0 +1,76 @@
+:host {
+
+    .theme {
+        @include sm {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        @include md {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        @include lg {
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+
+        @include xl {
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+
+        margin-top: $spacing-xl + $spacing-lg;
+        margin-bottom: $spacing-xl + $spacing-lg;
+    }
+
+    .title {
+        margin-bottom: $spacing-lg;
+    }
+
+    .question {
+        border-top: 1px solid #000;
+    }
+
+    .question:last-child {
+        border-bottom: 1px solid #000;
+    }
+
+    .accordion {
+        background-color: transparent;
+        color: #444;
+        cursor: pointer;
+        padding: $spacing-md 0;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        position: relative;
+    }
+
+    .accordion > mvs-subtitle {
+        height: 100%;
+    }
+
+    .accordion:after {
+        content: '\2304';
+        font-size: $spacing-md;
+        position: absolute;
+        top: 14px;
+        right: 0;
+    }
+      
+    .active:after {
+        content: "\2303";
+        top: 33px;
+    }
+
+    .panel {
+        display: none;
+        margin-bottom: $spacing-lg;
+    }
+
+}

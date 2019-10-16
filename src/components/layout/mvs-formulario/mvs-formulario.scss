@@ -1,5 +1,5 @@
 :host {
-
+    
     .col {
 
         @include sm { 
@@ -66,5 +66,11 @@
         input[type="checkbox"] {
             width: auto;
         }
+    }
+
+    .col:last-child {
+        margin-top: $spacing-xl;
+        grid-column-start: 4;
+        text-align: right;
     }
 }

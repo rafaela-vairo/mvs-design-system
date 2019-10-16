@@ -67,6 +67,7 @@ export namespace Components {
   interface MvsCardList {
     'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
   }
+  interface MvsContactList {}
   interface MvsCountdown {
     'deadline': string;
     'endMessage': string;
@@ -206,6 +207,7 @@ export namespace Components {
     'capitular': boolean;
   }
   interface MvsPre {}
+  interface MvsQuestionsCommon {}
   interface MvsShape {
     'bg': | 'primary'
     | 'secondary'
@@ -317,6 +319,12 @@ declare global {
   var HTMLMvsCardListElement: {
     prototype: HTMLMvsCardListElement;
     new (): HTMLMvsCardListElement;
+  };
+
+  interface HTMLMvsContactListElement extends Components.MvsContactList, HTMLStencilElement {}
+  var HTMLMvsContactListElement: {
+    prototype: HTMLMvsContactListElement;
+    new (): HTMLMvsContactListElement;
   };
 
   interface HTMLMvsCountdownElement extends Components.MvsCountdown, HTMLStencilElement {}
@@ -433,6 +441,12 @@ declare global {
     new (): HTMLMvsPreElement;
   };
 
+  interface HTMLMvsQuestionsCommonElement extends Components.MvsQuestionsCommon, HTMLStencilElement {}
+  var HTMLMvsQuestionsCommonElement: {
+    prototype: HTMLMvsQuestionsCommonElement;
+    new (): HTMLMvsQuestionsCommonElement;
+  };
+
   interface HTMLMvsShapeElement extends Components.MvsShape, HTMLStencilElement {}
   var HTMLMvsShapeElement: {
     prototype: HTMLMvsShapeElement;
@@ -479,6 +493,7 @@ declare global {
     'mvs-card': HTMLMvsCardElement;
     'mvs-card-expander': HTMLMvsCardExpanderElement;
     'mvs-card-list': HTMLMvsCardListElement;
+    'mvs-contact-list': HTMLMvsContactListElement;
     'mvs-countdown': HTMLMvsCountdownElement;
     'mvs-divider': HTMLMvsDividerElement;
     'mvs-figure': HTMLMvsFigureElement;
@@ -498,6 +513,7 @@ declare global {
     'mvs-overline': HTMLMvsOverlineElement;
     'mvs-paragraph': HTMLMvsParagraphElement;
     'mvs-pre': HTMLMvsPreElement;
+    'mvs-questions-common': HTMLMvsQuestionsCommonElement;
     'mvs-shape': HTMLMvsShapeElement;
     'mvs-single-page': HTMLMvsSinglePageElement;
     'mvs-strong': HTMLMvsStrongElement;
@@ -566,6 +582,7 @@ declare namespace LocalJSX {
   interface MvsCardList extends JSXBase.HTMLAttributes<HTMLMvsCardListElement> {
     'data'?: { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
   }
+  interface MvsContactList extends JSXBase.HTMLAttributes<HTMLMvsContactListElement> {}
   interface MvsCountdown extends JSXBase.HTMLAttributes<HTMLMvsCountdownElement> {
     'deadline'?: string;
     'endMessage'?: string;
@@ -705,6 +722,7 @@ declare namespace LocalJSX {
     'capitular'?: boolean;
   }
   interface MvsPre extends JSXBase.HTMLAttributes<HTMLMvsPreElement> {}
+  interface MvsQuestionsCommon extends JSXBase.HTMLAttributes<HTMLMvsQuestionsCommonElement> {}
   interface MvsShape extends JSXBase.HTMLAttributes<HTMLMvsShapeElement> {
     'bg'?: | 'primary'
     | 'secondary'
@@ -765,6 +783,7 @@ declare namespace LocalJSX {
     'mvs-card': MvsCard;
     'mvs-card-expander': MvsCardExpander;
     'mvs-card-list': MvsCardList;
+    'mvs-contact-list': MvsContactList;
     'mvs-countdown': MvsCountdown;
     'mvs-divider': MvsDivider;
     'mvs-figure': MvsFigure;
@@ -784,6 +803,7 @@ declare namespace LocalJSX {
     'mvs-overline': MvsOverline;
     'mvs-paragraph': MvsParagraph;
     'mvs-pre': MvsPre;
+    'mvs-questions-common': MvsQuestionsCommon;
     'mvs-shape': MvsShape;
     'mvs-single-page': MvsSinglePage;
     'mvs-strong': MvsStrong;
