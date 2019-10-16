@@ -1,76 +1,83 @@
 :host {
-    
-    .col {
+	.col {
+		@include sm {
+			grid-column-start: 1;
+			grid-column-end: 3;
+			label {
+				font: $subtitle1-sm;
+			}
+		}
 
-        @include sm { 
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-        
-        @include md { 
-            grid-column-start: 1;
-            grid-column-end: 5;
-        }
-        
-        @include lg { 
-            grid-column-start: 2;
-            grid-column-end: 6;
-        }
-        
-        @include xl { 
-            grid-column-start: 2;
-            grid-column-end: 6;
-        }
+		@include md {
+			grid-column-start: 1;
+			grid-column-end: 5;
+			label {
+				font: $subtitle1-md;
+			}
+		}
 
-        label {
-            display: block;
-            margin-top: $spacing-xl;
-            margin-bottom: $spacing-sm;
-            color: $text-dark-70;
-            font-family: $font-alegreya-sans;
-        }
+		@include lg {
+			grid-column-start: 2;
+			grid-column-end: 6;
+			label {
+				font: $subtitle1-lg;
+			}
+		}
 
-        input,
-        select, 
-        textarea {
-            border: 0;
-            border-bottom: 1px solid $text-dark-30;
-            padding-bottom: $spacing-xs;
-            width: 100%;
-            resize: none;
-            background-color: transparent;
-            color: $text-dark-70;
-            font-family: $font-alegreya-sans;
-        }
+		@include xl {
+			grid-column-start: 2;
+			grid-column-end: 6;
+			label {
+				font: $subtitle1-xl;
+			}
+		}
 
-        input::placeholder,
-        select::placeholder, 
-        textarea::placeholder {
-            color: $text-dark-30;
-        }
+		label {
+			display: block;
+			margin-top: $spacing-xl;
+			margin-bottom: $spacing-xs;
+			color: $text-dark-70;
+			font-family: $font-alegreya-sans;
+		}
 
-        input:hover,
-        select:hover, 
-        textarea:hover {
-            border-bottom: 2px solid $text-dark-70;
-        }
+		input:not([type='checkbox']):not([type='radio']),
+		select,
+		textarea {
+			border: 0;
+			//border-bottom: 1px solid $text-dark-30;
+			box-shadow: 0 1px 0 0 $text-dark-30;
+			padding-bottom: $spacing-xs;
+			width: 100%;
+			resize: none;
+			background-color: transparent;
+			color: $text-dark-70;
+			font-family: $font-alegreya-sans;
+		}
 
-        input:focus,
-        select:focus, 
-        textarea:focus {
-            border-bottom: 2px solid $color-primary;
-            outline: 0;
-        }
+		input:not([type='checkbox']):not([type='radio'])::placeholder,
+		select::placeholder,
+		textarea::placeholder {
+			color: $text-dark-30;
+		}
 
-        input[type="radio"],
-        input[type="checkbox"] {
-            width: auto;
-        }
-    }
+		input:not([type='checkbox']):not([type='radio']):hover,
+		select:hover,
+		textarea:hover {
+			box-shadow: 0 2px 0 0 $text-dark-70;
+			//border-bottom: 2px solid $text-dark-70;
+		}
 
-    .col:last-child {
-        margin-top: $spacing-xl;
-        grid-column-start: 4;
-        text-align: right;
-    }
+		input:not([type='checkbox']):not([type='radio']):focus,
+		select:focus,
+		textarea:focus {
+			box-shadow: 0 2px 0 0 $color-primary;
+			//border-bottom: 2px solid $color-primary;
+			outline: 0;
+		}
+
+		input[type='radio'],
+		input[type='checkbox'] {
+			width: auto;
+		}
+	}
 }
