@@ -16,13 +16,14 @@ export class MvsQuestionsCommon {
     // }
 
     showResponse(e) {
-        // e.target.toggle("active");
-        const panel = e.target.parentElement.parentElement.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
+        e.target.classList.toggle("active");
+        const panel = e.target.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
         } else {
-            panel.style.display = "block";
+            panel.style.maxHeight = panel.scrollHeight + 'px';
         }
+        panel.classList.toggle('show')
     }
 
     render() {
@@ -31,18 +32,14 @@ export class MvsQuestionsCommon {
             <mvs-grid>
                 <div class="theme">
                     <div class="title">
-                        <mvs-title
-                            level="t3"
-                        >
+                        <mvs-title level="t3">
                             Vestibular
                         </mvs-title>
                     </div>
                     <div class="question">
-                        <div class="accordion" onClick={this.showResponse}>
-                            <mvs-subtitle type="one">
-                                Quando será o vestibula?
-                            </mvs-subtitle>
-                        </div>
+                        <button class="accordion" onClick={this.showResponse}>
+                            Quando será o vestibular?
+                        </button>
                         <div class="panel">
                             <mvs-paragraph bodytwo>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar turpis arcu, et iaculis lacus imperdiet sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc rutrum orci sed ligula volutpat condimentum. Cras blandit suscipit euismod. Donec et malesuada magna, eu dignissim felis. Aliquam suscipit massa sed ante interdum vestibulum. Quisque at dolor ipsum.
