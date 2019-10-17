@@ -1,6 +1,36 @@
 :host {
     .content {
-        grid-column-start: 2;
-        grid-row-end: 6;
+
+        @include sm { 
+            grid-column-start: 1;
+            grid-row-end: 3;
+        }
+        
+        @include md { 
+            grid-column-start: 1;
+            grid-row-end: 5;
+        }
+
+        @include lg { 
+            grid-column-start: 2;
+            grid-row-end: 6;
+        }
+        
+        @include xl { 
+            grid-column-start: 2;
+            grid-row-end: 6;
+        }
+    }
+
+    .contact {
+
+        div {
+            display: inline-block;
+        }
+
+        div:first-child {
+            vertical-align: top;
+            // margin-top: 10px;
+        }
     }
 }

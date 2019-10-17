@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, State, Prop } from '@stencil/core';
 
 
 @Component({
@@ -6,9 +6,11 @@ import { Component, h, State } from '@stencil/core';
     styleUrl: 'mvs-contact-list.scss',
     shadow: true,
 })
+
 export class MvsContactList {
 
     @State() contacts: Array<any> = [];
+    @Prop() teste: any = "";
 
     // Obtém todos os contatos ao carregar o componente []
     // async componentDidLoad() { 
@@ -26,13 +28,29 @@ export class MvsContactList {
     render() {
         return (
             <mvs-grid>
-                {/* <div class="content">
-                    {
+                <div class="content">
+                    {/* {
                         this.contacts.map(contact => (
                             <div />
                         ))
-                    }
-                </div> */}
+                    } */}
+                    <div class="section">
+                        <mvs-title level="t5">Divisão de Adminissão</mvs-title>
+                        <div class="contact">
+                            <div>
+                                <mvs-subtitle>
+                                    A
+                                </mvs-subtitle>
+                            </div>
+                            <div>
+                                <mvs-subtitle type="one">Ana Maria Costa Couto</mvs-subtitle>
+                                <mvs-subtitle type="one">Gerente</mvs-subtitle>
+                                <mvs-subtitle type="one">rejanebarros@pr4.ufrj.br</mvs-subtitle>
+                                <mvs-subtitle type="one">(21) 3938-0613</mvs-subtitle>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mvs-grid>
         );
     }
