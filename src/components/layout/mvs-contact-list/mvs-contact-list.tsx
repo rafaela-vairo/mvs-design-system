@@ -35,18 +35,27 @@ export class MvsContactList {
                         ))
                     } */}
                     <div class="section">
-                        <mvs-title level="t5">Divisão de Adminissão</mvs-title>
+                        <div>
+                            <mvs-title level="t5">Divisão de Adminissão</mvs-title>
+                        </div>
                         <div class="contact">
-                            <div>
-                                <mvs-subtitle>
-                                    A
-                                </mvs-subtitle>
+                            <div class="data">
+                                <div>
+                                    <mvs-subtitle type="one">
+                                        A
+                                    </mvs-subtitle>
+                                </div>
+                                <div>
+                                    <div>
+                                        <mvs-subtitle type="one">Ana Maria Costa Couto</mvs-subtitle>
+                                    </div>
+                                    <mvs-subtitle type="one">Gerente</mvs-subtitle>
+                                    <mvs-subtitle type="one">rejanebarros@pr4.ufrj.br</mvs-subtitle>
+                                    <mvs-subtitle type="one">(21) 3938-0613</mvs-subtitle>
+                                </div>
                             </div>
-                            <div>
-                                <mvs-subtitle type="one">Ana Maria Costa Couto</mvs-subtitle>
-                                <mvs-subtitle type="one">Gerente</mvs-subtitle>
-                                <mvs-subtitle type="one">rejanebarros@pr4.ufrj.br</mvs-subtitle>
-                                <mvs-subtitle type="one">(21) 3938-0613</mvs-subtitle>
+                            <div class="divider">
+                                <mvs-divider />
                             </div>
                         </div>
                     </div>

@@ -1,36 +1,107 @@
 :host {
     .content {
-
+        
         @include sm { 
             grid-column-start: 1;
-            grid-row-end: 3;
+            grid-column-end: 3;
         }
         
         @include md { 
             grid-column-start: 1;
-            grid-row-end: 5;
+            grid-column-end: 5;
         }
 
         @include lg { 
             grid-column-start: 2;
-            grid-row-end: 6;
+            grid-column-end: 4;
         }
         
         @include xl { 
             grid-column-start: 2;
-            grid-row-end: 6;
+            grid-column-end: 4;
         }
+    }
+
+    // .section > div:first-child *{
+    //     color: $text-dark;
+    // }
+
+    .section {
+        margin-top: $spacing-xxl;
     }
 
     .contact {
 
-        div {
-            display: inline-block;
+        @include sm {
+            margin-top: $spacing-lg;
         }
 
-        div:first-child {
+        @include md {
+            margin-top: $spacing-lg;
+        }
+
+        @include lg {
+            margin-top: $spacing-xl;
+        }
+
+        @include xl {
+            margin-top: $spacing-xl;
+        }
+
+        .data > div > div span {
+            color: $text-primary;
+        }
+
+        .data {
+            display: flex;
+
+            span {
+                color: $text-dark-70;
+
+                @include sm {
+                    margin-bottom: $spacing-md;
+                }
+
+                @include md {
+                    margin-bottom: $spacing-md;
+                }
+
+                @include lg {
+                    margin-bottom: $spacing-lg;
+                }
+
+                @include xl {
+                    margin-bottom: $spacing-xl;
+                }
+            }
+        }
+
+        .data > div:first-child {
             vertical-align: top;
-            // margin-top: 10px;
+            
+            @include sm {
+                margin-right: $spacing-md;
+            }
+
+            @include md {
+                margin-right: $spacing-md;
+            }
+
+            @include lg {
+                margin-right: $spacing-lg;
+            }
+
+            @include xl {
+                margin-right: $spacing-xl;
+            }
+
+            span {
+                color: $text-primary;
+            }
+        }
+
+        .divider {
+            margin: $spacing-md 0;
         }
     }
 }
