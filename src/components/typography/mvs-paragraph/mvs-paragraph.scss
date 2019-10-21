@@ -1,56 +1,59 @@
 :host {
 	font-family: $font-alegreya-sans;
 	.capitular::first-letter {
-		font-family: $font-playfair-display;
 		float: left;
 		@include xl {
-			font-size: 90px;
-			line-height: 54px;
+			font: $capitular-sm;
 			margin: -12px 7.5px 7.5px 0;
 		}
 		@include lg {
-			font-size: 81px;
-			line-height: 48px;
+			font: $capitular-md;
 			margin: -10.2px 6.5px 6.5px 0;
 		}
 		@include md {
-			font-size: 75px;
-			line-height: 44px;
+			font: $capitular-lg;
 			margin: -9.3px 6px 6px 0;
 		}
 		@include sm {
-			font-size: 69px;
-			line-height: 40px;
+			font: $capitular-xl;
 			margin: -8.5px 5.5px 5.5px 0;
 		}
 	}
 }
 
+.primary {
+	color: $text-primary;
+}
+
+.secondary {
+	color: $text-secondary;
+}
+
+.white {
+	color: $text-light;
+}
+
 .bodyone {
 	@include xl {
-		font-size: 33px;
-		line-height: 40px;
+		font: $body1-sm;
 		letter-spacing: 0.6px;
 		margin-top: calc(21px - 30px);
 		margin-bottom: calc((21px - 30px) * 0.8);
 	}
 	@include lg {
-		font-size: 26px;
-		line-height: 32px;
+		font: $body1-md;
 		letter-spacing: 0.5px;
 		margin-top: calc(19px - 27px);
 		margin-bottom: calc((19px - 27px) * 0.8);
 	}
 	@include md {
-		font-size: 24px;
-		line-height: 32px;
+		font: $body1-lg;
 		letter-spacing: 0.4px;
 		margin-top: calc(17px - 25px);
 		margin-bottom: calc((17px - 25px) * 0.8);
 	}
 	@include sm {
-		font-size: 20px;
-		line-height: 24px;
+		font: $body1-xl;
 		letter-spacing: 0px;
 		margin-top: calc(16px - 23px);
 		margin-bottom: calc((16px - 23px) * 0.8);
@@ -60,29 +63,25 @@
 	margin-block-start: 0;
 	margin-block-end: 0;
 	@include xl {
-		font-size: 29px;
-		line-height: 32px;
+		font: $body2-sm;
 		letter-spacing: 0.5px;
 		margin-top: calc(20px - 30px);
 		margin-bottom: calc((20px - 30px) * 0.8);
 	}
 	@include lg {
-		font-size: 24px;
-		line-height: 32px;
+		font: $body2-md;
 		letter-spacing: 0.4px;
 		margin-top: calc(18px - 27px);
 		margin-bottom: calc((18px - 27px) * 0.8);
 	}
 	@include md {
-		font-size: 23px;
-		line-height: 24px;
+		font: $body2-lg;
 		letter-spacing: 0.3px;
 		margin-top: calc(16px - 25px);
 		margin-bottom: calc((16px - 25px) * 0.8);
 	}
 	@include sm {
-		font-size: 19px;
-		line-height: 24px;
+		font: $body2-xl;
 		letter-spacing: 0px;
 		margin-top: calc(15px - 23px);
 		margin-bottom: calc((15px - 23px) * 0.8);

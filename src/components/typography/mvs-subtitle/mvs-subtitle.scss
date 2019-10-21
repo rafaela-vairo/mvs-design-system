@@ -1,51 +1,58 @@
+:host {
+	display: block;
+	box-sizing: border-box;
+}
+
+:host,
 :host > * {
-	font-family: 'Alegreya Sans';
+	//font-family: 'Alegreya Sans';
+	margin-block-start: 0;
+	margin-block-end: 0;
+
 	span {
 		display: block;
 	}
 	.one {
-		font-weight: 700;
 		@include xl {
-			font-size: 23px;
-			line-height: 30px;
+			font: $subtitle1-xl;
 			letter-spacing: 0.3px;
+			margin-top: calc(16px - 25px);
+			margin-bottom: calc((16px - 25px) * 0.8);
 		}
 		@include lg {
-			font-size: 21px;
-			line-height: 27px;
+			font: $subtitle1-lg;
 			letter-spacing: 0.3px;
+			margin-top: calc(16px - 23px);
+			margin-bottom: calc((16px - 23px) * 0.8);
 		}
 		@include md {
-			font-size: 19px;
-			line-height: 25px;
+			font: $subtitle1-md;
 			letter-spacing: 0.3px;
+			margin-top: calc(15px - 23px);
+			margin-bottom: calc((15px - 23px) * 0.8);
 		}
 		@include sm {
-			font-size: 18px;
-			line-height: 23px;
+			font: $subtitle1-sm;
 			letter-spacing: 0.2px;
+			margin-top: calc(15px - 23px);
+			margin-bottom: calc((15px - 23px) * 0.8);
 		}
 	}
 	.two {
-		font-weight: 500;
 		@include xl {
-			font-size: 23px;
-			line-height: 30px;
+			font: $subtitle2-xl;
 			letter-spacing: 0.3px;
 		}
 		@include lg {
-			font-size: 21px;
-			line-height: 27px;
+			font: $subtitle2-xl;
 			letter-spacing: 0.3px;
 		}
 		@include md {
-			font-size: 19px;
-			line-height: 25px;
+			font: $subtitle2-xl;
 			letter-spacing: 0.3px;
 		}
 		@include sm {
-			font-size: 18px;
-			line-height: 23px;
+			font: $subtitle2-xl;
 			letter-spacing: 0.2px;
 		}
 	}

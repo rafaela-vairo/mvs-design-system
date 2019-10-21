@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core'
+import { Component, h, Prop } from '@stencil/core'
 
 @Component({
 	tag: 'mvs-grid',
@@ -6,9 +6,12 @@ import { Component, h } from '@stencil/core'
 	shadow: true,
 })
 export class MvsGrid {
+	@Prop() marginzero: boolean
 	render() {
+		let setmargin = this.marginzero ? ' margin-zero' : ''
+		let setclass = 'container' + setmargin
 		return (
-			<div class='container'>
+			<div class={setclass}>
 				<slot />
 			</div>
 		)

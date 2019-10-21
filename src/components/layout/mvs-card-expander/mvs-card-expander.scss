@@ -1,0 +1,89 @@
+:host {
+	--container-margin: var(--grid-gap);
+	--local-padding: var(--container-padding);
+	--shape-height: 23vw;
+	*:focus {
+		outline: none;
+	}
+}
+
+[class^='item'] {
+	//border: 1px solid red;
+	//margin: 0.5rem;
+	height: var(--shape-height);
+	border-radius: $border-radius;
+	transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+	.cover {
+		//border: 1px solid red;
+		border-radius: $border-radius;
+		background-color: $color-primary;
+		height: var(--shape-height);
+
+		img {
+			height: var(--shape-height);
+			border-radius: $border-radius;
+			display: block;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+	.container {
+		//border: 1px solid red;
+		position: absolute;
+		left: 0;
+		margin-top: var(--container-margin);
+		overflow: hidden;
+		height: 0;
+		width: 100%;
+		transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+	}
+	.content {
+		mvs-grid {
+			height: 100% !important;
+		}
+		margin: 0 var(--local-padding);
+		padding: 30px;
+		background-color: lightgrey;
+		opacity: 0.95;
+		height: calc(var(--shape-height) - calc(var(--container-margin)));
+		border-radius: $border-radius;
+	}
+	@include xl {
+		.heading {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		.cargo {
+			font: $smallcaps-xl;
+			color: $text-primary;
+			margin-top: $spacing-xl;
+		}
+		.contato,
+		.links {
+			margin-top: $spacing-sm;
+		}
+		.links {
+			color: $text-primary;
+		}
+		.main-text {
+			//padding-top: calc(#{$spacing-xl} + #{$spacing-lg});
+			padding-top: 10px;
+			padding-bottom: $spacing-xl;
+			grid-column-start: 3;
+			grid-column-end: end;
+		}
+	}
+
+	&:active,
+	&:focus {
+		height: calc(var(--shape-height) * 2 + var(--grid-gap));
+		.container {
+			height: var(--shape-height);
+			//min-height: 200px;
+		}
+	}
+}
