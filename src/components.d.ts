@@ -162,8 +162,10 @@ export namespace Components {
   interface MvsFooter {
     'icons': { rodape_logo: string; }[];
   }
-  interface MvsFormulario {}
-  interface MvsGrid {}
+  interface MvsForm {}
+  interface MvsGrid {
+    'marginzero': boolean;
+  }
   interface MvsHero {
     'background': string;
     'bgimg': string;
@@ -205,6 +207,10 @@ export namespace Components {
     * Ativa ou desativa estilização de capitular.
     */
     'capitular': boolean;
+    /**
+    * Altera a cor do texto.
+    */
+    'color': 'primary' | 'secondary' | 'white';
   }
   interface MvsPre {}
   interface MvsQuestionsCommon {}
@@ -369,10 +375,10 @@ declare global {
     new (): HTMLMvsFooterElement;
   };
 
-  interface HTMLMvsFormularioElement extends Components.MvsFormulario, HTMLStencilElement {}
-  var HTMLMvsFormularioElement: {
-    prototype: HTMLMvsFormularioElement;
-    new (): HTMLMvsFormularioElement;
+  interface HTMLMvsFormElement extends Components.MvsForm, HTMLStencilElement {}
+  var HTMLMvsFormElement: {
+    prototype: HTMLMvsFormElement;
+    new (): HTMLMvsFormElement;
   };
 
   interface HTMLMvsGridElement extends Components.MvsGrid, HTMLStencilElement {}
@@ -501,7 +507,7 @@ declare global {
     'mvs-flex': HTMLMvsFlexElement;
     'mvs-flexgrid': HTMLMvsFlexgridElement;
     'mvs-footer': HTMLMvsFooterElement;
-    'mvs-formulario': HTMLMvsFormularioElement;
+    'mvs-form': HTMLMvsFormElement;
     'mvs-grid': HTMLMvsGridElement;
     'mvs-hero': HTMLMvsHeroElement;
     'mvs-iconbutton': HTMLMvsIconbuttonElement;
@@ -677,8 +683,10 @@ declare namespace LocalJSX {
   interface MvsFooter extends JSXBase.HTMLAttributes<HTMLMvsFooterElement> {
     'icons'?: { rodape_logo: string; }[];
   }
-  interface MvsFormulario extends JSXBase.HTMLAttributes<HTMLMvsFormularioElement> {}
-  interface MvsGrid extends JSXBase.HTMLAttributes<HTMLMvsGridElement> {}
+  interface MvsForm extends JSXBase.HTMLAttributes<HTMLMvsFormElement> {}
+  interface MvsGrid extends JSXBase.HTMLAttributes<HTMLMvsGridElement> {
+    'marginzero'?: boolean;
+  }
   interface MvsHero extends JSXBase.HTMLAttributes<HTMLMvsHeroElement> {
     'background'?: string;
     'bgimg'?: string;
@@ -720,6 +728,10 @@ declare namespace LocalJSX {
     * Ativa ou desativa estilização de capitular.
     */
     'capitular'?: boolean;
+    /**
+    * Altera a cor do texto.
+    */
+    'color'?: 'primary' | 'secondary' | 'white';
   }
   interface MvsPre extends JSXBase.HTMLAttributes<HTMLMvsPreElement> {}
   interface MvsQuestionsCommon extends JSXBase.HTMLAttributes<HTMLMvsQuestionsCommonElement> {}
@@ -791,7 +803,7 @@ declare namespace LocalJSX {
     'mvs-flex': MvsFlex;
     'mvs-flexgrid': MvsFlexgrid;
     'mvs-footer': MvsFooter;
-    'mvs-formulario': MvsFormulario;
+    'mvs-form': MvsForm;
     'mvs-grid': MvsGrid;
     'mvs-hero': MvsHero;
     'mvs-iconbutton': MvsIconbutton;

@@ -1,3 +1,9 @@
+// Shape
+
+$border-radius: 3px;
+
+// Spacing
+
 $screen-sm-max: 750px;
 $screen-md-min: 751px;
 $screen-md-max: 1400px;
@@ -29,6 +35,19 @@ $inset-strech-md: 24px 16px;
 $inset-strech-lg: 32px 24px;
 $inset-strech-xl: 48px 32px;
 $inset-strech-xxl: 64px 32px;
+
+// Grid
+$grid-gap-sm: 16px;
+$grid-gap-md: 24px;
+$grid-gap-lg: 24px;
+$grid-gap-xl: 32px;
+
+$grid-margin-sm: 24px;
+$grid-margin-md: 48px;
+$grid-margin-lg: 104px;
+$grid-margin-xl: 120px;
+
+// Color
 
 $color-primary: rgba(0, 51, 153, 1);
 $color-primary-light: rgba(57, 79, 219, 1);
@@ -69,6 +88,8 @@ $color-confirm-dark: rgba(50, 212, 148, 1);
 $text-confirm: rgba(117, 1, 15, 0.9);
 $text-error: rgba(1, 72, 39, 0.9);
 
+// Fonts
+
 $font-alegreya-sans: 'Alegreya Sans', sans-serif;
 $font-alegreya-sans-sc: 'Alegreya Sans SC', sans-serif;
 $font-playfair-display: 'Playfair Display', serif;
@@ -79,9 +100,13 @@ $font-bold: 700;
 $font-semibold: 600;
 $font-emphasis: italic;
 
+// Animation
+
 $transition-cubic-03: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 $transition-cubic-02: 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 $transition-cubic-01: 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// Shadows
 
 $shadow-regular-hover: 0 14px 28px rgba($color-black, 0.2),
 	0 10px 10px rgba($color-black, 0.1);
@@ -93,16 +118,124 @@ $shadow-dark-hover: 0 8px 10px rgba($color-deep-black, 0.2),
 $shadow-dark: 0 3px 6px rgba($color-deep-black, 0.2),
 	0 3px 6px rgba($color-deep-black, 0.1);
 
-// Typography variables
+// Typography
+
+// Hero - Serif
+$hero-sm: 700 40px/48px 'Playfair Display', serif;
+$hero-md: 700 48px/56px 'Playfair Display', serif;
+$hero-lg: 700 56px/64px 'Playfair Display', serif;
+$hero-xl: 700 64px/72px 'Playfair Display', serif;
+
+// Hero - Sans Serif
+$hero-sans-sm: 600 40px/48px 'Proza Libre', sans-serif;
+$hero-sans-md: 600 48px/56px 'Proza Libre', sans-serif;
+$hero-sans-lg: 600 56px/64px 'Proza Libre', sans-serif;
+$hero-sans-xl: 600 64px/72px 'Proza Libre', sans-serif;
+
+// T1 - Serif
+$t1-sm: 700 32px/40px 'Playfair Display', serif;
+$t1-md: 700 40px/48px 'Playfair Display', serif;
+$t1-lg: 700 48px/56px 'Playfair Display', serif;
+$t1-xl: 700 56px/64px 'Playfair Display', serif;
+
+// T1 - Sans Serif
+$t1-sans-sm: 600 32px/40px 'Proza Libre', sans-serif;
+$t1-sans-md: 600 40px/48px 'Proza Libre', sans-serif;
+$t1-sans-lg: 600 48px/56px 'Proza Libre', sans-serif;
+$t1-sans-xl: 600 56px/64px 'Proza Libre', sans-serif;
+
+// T2
+$t2-sm: 32px/40px 'Alegreya Sans', sans-serif;
+$t2-md: 40px/48px 'Alegreya Sans', sans-serif;
+$t2-lg: 48px/56px 'Alegreya Sans', sans-serif;
+$t2-xl: 56px/64px 'Alegreya Sans', sans-serif;
+
+// T3
+$t3-sm: 700 25px/32px 'Alegreya Sans', sans-serif;
+$t3-md: 700 30px/32px 'Alegreya Sans', sans-serif;
+$t3-lg: 700 35px/40px 'Alegreya Sans', sans-serif;
+$t3-xl: 700 42px/48px 'Alegreya Sans', sans-serif;
+
+// T4
+$t4-sm: 25px/32px 'Alegreya Sans', sans-serif;
+$t4-md: 30px/40px 'Alegreya Sans', sans-serif;
+$t4-lg: 35px/48px 'Alegreya Sans', sans-serif;
+$t4-xl: 42px/56px 'Alegreya Sans', sans-serif;
+
+// T5
+$t5-sm: 700 23px/24px 'Alegreya Sans', sans-serif;
+$t5-md: 700 27px/32px 'Alegreya Sans', sans-serif;
+$t5-lg: 700 30px/40px 'Alegreya Sans', sans-serif;
+$t5-xl: 700 36px/40px 'Alegreya Sans', sans-serif;
+
+// T6
+$t6-sm: 23px/32px 'Alegreya Sans', sans-serif;
+$t6-md: 27px/32px 'Alegreya Sans', sans-serif;
+$t6-lg: 30px/40px 'Alegreya Sans', sans-serif;
+$t6-xl: 36px/48px 'Alegreya Sans', sans-serif;
 
 // Subtitle 1
 $subtitle1-sm: 700 18px/24px 'Alegreya Sans', sans-serif;
 $subtitle1-md: 700 22px/24px 'Alegreya Sans', sans-serif;
-$subtitle1-lg: 700 24px/32px 'Alegreya Sans', sans-serif;
+$subtitle1-lg: 700 24px/24px 'Alegreya Sans', sans-serif;
 $subtitle1-xl: 700 28px/32px 'Alegreya Sans', sans-serif;
 
-//Subtitle 2
+// Subtitle 2
 $subtitle2-sm: 17px/24px 'Alegreya Sans', sans-serif;
 $subtitle2-md: 19px/24px 'Alegreya Sans', sans-serif;
 $subtitle2-lg: 20px/24px 'Alegreya Sans', sans-serif;
 $subtitle2-xl: 25px/32px 'Alegreya Sans', sans-serif;
+
+// body 1
+$body1-sm: 18px/24px 'Alegreya Sans', sans-serif;
+$body1-md: 22px/32px 'Alegreya Sans', sans-serif;
+$body1-lg: 24px/32px 'Alegreya Sans', sans-serif;
+$body1-xl: 28px/40px 'Alegreya Sans', sans-serif;
+
+// body 2
+$body2-sm: 17px/24px 'Alegreya Sans', sans-serif;
+$body2-md: 19px/24px 'Alegreya Sans', sans-serif;
+$body2-lg: 20px/24px 'Alegreya Sans', sans-serif;
+$body2-xl: 25px/32px 'Alegreya Sans', sans-serif;
+
+// body serif
+$body-serif-sm: 18px/24px 'PT Serif', serif;
+$body-serif-md: 22px/32px 'PT Serif', serif;
+$body-serif-lg: 23px/32px 'PT Serif', serif;
+$body-serif-xl: 29px/40px 'PT Serif', serif;
+
+// smallcaps
+$smallcaps-sm: 17px/24px 'Alegreya Sans SC', sans-serif;
+$smallcaps-md: 19px/24px 'Alegreya Sans SC', sans-serif;
+$smallcaps-lg: 24px/32px 'Alegreya Sans SC', sans-serif;
+$smallcaps-xl: 27px/32px 'Alegreya Sans SC', sans-serif;
+
+// caption
+$caption-sm: 17px/24px 'Alegreya Sans', sans-serif;
+$caption-md: 19px/24px 'Alegreya Sans', sans-serif;
+$caption-lg: 24px/32px 'Alegreya Sans', sans-serif;
+$caption-xl: 27px/32px 'Alegreya Sans', sans-serif;
+
+// citação
+$citacao-sm: italic 24px/32px 'Playfair Display', serif;
+$citacao-md: italic 28px/40px 'Playfair Display', serif;
+$citacao-lg: italic 30px/40px 'Playfair Display', serif;
+$citacao-xl: italic 38px/42px 'Playfair Display', serif;
+
+// olho de texto
+$olho-sm: $citacao-sm;
+$olho-md: $citacao-md;
+$olho-lg: $citacao-lg;
+$olho-xl: $citacao-xl;
+
+// capitular
+$capitular-sm: 700 72px/72px 'Playfair Display', serif;
+$capitular-md: 700 88px/88px 'Playfair Display', serif;
+$capitular-lg: 700 96px/96px 'Playfair Display', serif;
+$capitular-xl: 700 112px/112px 'Playfair Display', serif;
+
+// big number
+$bignum-sm: 700 40px/40px 'Alegreya Sans', sans-serif;
+$bignum-md: 700 48px/48px 'Alegreya Sans', sans-serif;
+$bignum-lg: 700 56px/56px 'Alegreya Sans', sans-serif;
+$bignum-xl: 700 64px/64px 'Alegreya Sans', sans-serif;

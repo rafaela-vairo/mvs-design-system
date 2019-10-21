@@ -10,7 +10,7 @@ export class MvsTitle {
 	/**
 	 * Propriedade interna que define automaticamente a tag H a ser usada.
 	 */
-	@Prop() rank: number
+	@Prop() rank: number = 6
 	/**
 	 * Sobreescreve o tag html definido automaticamente.
 	 */

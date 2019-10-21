@@ -1,27 +1,27 @@
 :host {
 	--container-padding: 24px;
 	--grid-columns: 1fr 1fr;
-	--grid-gap: 16px;
+	--grid-gap: #{$grid-gap-sm};
 
 	@include sm {
 		--grid-columns: repeat(2, 1fr);
-		--container-padding: 24px;
-		--grid-gap: 16px;
+		--container-padding: #{$grid-margin-sm};
+		--grid-gap: #{$grid-gap-sm};
 	}
 	@include md {
 		--grid-columns: repeat(4, 1fr);
-		--container-padding: 48px;
-		--grid-gap: 24px;
+		--container-padding: #{$grid-margin-md};
+		--grid-gap: #{$grid-gap-md};
 	}
 	@include lg {
 		--grid-columns: repeat(6, 1fr);
-		--container-padding: 104px;
-		--grid-gap: 24px;
+		--container-padding: #{$grid-margin-lg};
+		--grid-gap: #{$grid-gap-lg};
 	}
 	@include xl {
 		--grid-columns: repeat(6, 1fr);
-		--container-padding: 120px;
-		--grid-gap: 32px;
+		--container-padding: #{$grid-margin-xl};
+		--grid-gap: #{$grid-gap-xl};
 	}
 }
 
@@ -32,6 +32,10 @@
 	grid-template-columns: [start] var(--grid-columns) [end];
 	grid-auto-flow: row;
 	grid-gap: var(--grid-gap);
+}
+
+.margin-zero {
+	padding: 0 !important;
 }
 
 ::slotted(*) {

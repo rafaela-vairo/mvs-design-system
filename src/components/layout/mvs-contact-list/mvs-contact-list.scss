@@ -1,107 +1,109 @@
 :host {
-    .content {
-        
-        @include sm { 
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-        
-        @include md { 
-            grid-column-start: 1;
-            grid-column-end: 5;
-        }
+	.content {
+		@include sm {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
 
-        @include lg { 
-            grid-column-start: 2;
-            grid-column-end: 4;
-        }
-        
-        @include xl { 
-            grid-column-start: 2;
-            grid-column-end: 4;
-        }
-    }
+		@include md {
+			grid-column-start: 1;
+			grid-column-end: 5;
+		}
 
-    // .section > div:first-child *{
-    //     color: $text-dark;
-    // }
+		@include lg {
+			grid-column-start: 2;
+			grid-column-end: 4;
+		}
 
-    .section {
-        margin-top: $spacing-xxl;
-    }
+		@include xl {
+			grid-column-start: 2;
+			grid-column-end: 4;
+		}
+	}
 
-    .contact {
+	// .section > div:first-child *{
+	//     color: $text-dark;
+	// }
 
-        @include sm {
-            margin-top: $spacing-lg;
-        }
+	.section {
+		margin-top: $spacing-xxl;
+	}
 
-        @include md {
-            margin-top: $spacing-lg;
-        }
+	.contact {
+		@include sm {
+			margin-top: $spacing-lg;
+		}
 
-        @include lg {
-            margin-top: $spacing-xl;
-        }
+		@include md {
+			margin-top: $spacing-lg;
+		}
 
-        @include xl {
-            margin-top: $spacing-xl;
-        }
+		@include lg {
+			margin-top: $spacing-xl;
+		}
 
-        .data > div > div span {
-            color: $text-primary;
-        }
+		@include xl {
+			margin-top: $spacing-xl;
+		}
 
-        .data {
-            display: flex;
+		.data {
+			.letter,
+			.name {
+				color: $text-primary;
+				mvs-paragraph {
+					color: $text-primary;
+				}
+			}
+		}
 
-            span {
-                color: $text-dark-70;
+		.data {
+			display: flex;
 
-                @include sm {
-                    margin-bottom: $spacing-md;
-                }
+			color: $text-dark-70;
 
-                @include md {
-                    margin-bottom: $spacing-md;
-                }
+			@include sm {
+				margin-bottom: $spacing-md;
+			}
 
-                @include lg {
-                    margin-bottom: $spacing-lg;
-                }
+			@include md {
+				margin-bottom: $spacing-md;
+			}
 
-                @include xl {
-                    margin-bottom: $spacing-xl;
-                }
-            }
-        }
+			@include lg {
+				margin-bottom: $spacing-lg;
+			}
 
-        .data > div:first-child {
-            vertical-align: top;
-            
-            @include sm {
-                margin-right: $spacing-md;
-            }
+			@include xl {
+				margin-bottom: $spacing-xl;
+			}
+		}
 
-            @include md {
-                margin-right: $spacing-md;
-            }
+		.data > *:first-child {
+			vertical-align: top;
 
-            @include lg {
-                margin-right: $spacing-lg;
-            }
+			@include sm {
+				margin-right: $spacing-md;
+			}
 
-            @include xl {
-                margin-right: $spacing-xl;
-            }
+			@include md {
+				margin-right: $spacing-md;
+			}
 
-            span {
-                color: $text-primary;
-            }
-        }
+			@include lg {
+				margin-right: $spacing-lg;
+			}
 
-        .divider {
-            margin: $spacing-md 0;
-        }
-    }
+			@include xl {
+				margin-right: $spacing-xl;
+			}
+
+			mvs-paragraph {
+				color: $text-primary;
+			}
+		}
+
+		.divider {
+			margin: $spacing-md 0;
+		}
+	}
 }
