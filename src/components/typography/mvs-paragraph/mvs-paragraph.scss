@@ -35,25 +35,25 @@
 
 .bodyone {
 	@include xl {
-		font: $body1-sm;
+		font: $body1-xl;
 		letter-spacing: 0.6px;
 		margin-top: calc(21px - 30px);
 		margin-bottom: calc((21px - 30px) * 0.8);
 	}
 	@include lg {
-		font: $body1-md;
+		font: $body1-lg;
 		letter-spacing: 0.5px;
 		margin-top: calc(19px - 27px);
 		margin-bottom: calc((19px - 27px) * 0.8);
 	}
 	@include md {
-		font: $body1-lg;
+		font: $body1-md;
 		letter-spacing: 0.4px;
 		margin-top: calc(17px - 25px);
 		margin-bottom: calc((17px - 25px) * 0.8);
 	}
 	@include sm {
-		font: $body1-xl;
+		font: $body1-sm;
 		letter-spacing: 0px;
 		margin-top: calc(16px - 23px);
 		margin-bottom: calc((16px - 23px) * 0.8);
@@ -63,25 +63,25 @@
 	margin-block-start: 0;
 	margin-block-end: 0;
 	@include xl {
-		font: $body2-sm;
+		font: $body2-xl;
 		letter-spacing: 0.5px;
 		margin-top: calc(20px - 30px);
 		margin-bottom: calc((20px - 30px) * 0.8);
 	}
 	@include lg {
-		font: $body2-md;
+		font: $body2-lg;
 		letter-spacing: 0.4px;
 		margin-top: calc(18px - 27px);
 		margin-bottom: calc((18px - 27px) * 0.8);
 	}
 	@include md {
-		font: $body2-lg;
+		font: $body2-md;
 		letter-spacing: 0.3px;
 		margin-top: calc(16px - 25px);
 		margin-bottom: calc((16px - 25px) * 0.8);
 	}
 	@include sm {
-		font: $body2-xl;
+		font: $body2-sm;
 		letter-spacing: 0px;
 		margin-top: calc(15px - 23px);
 		margin-bottom: calc((15px - 23px) * 0.8);

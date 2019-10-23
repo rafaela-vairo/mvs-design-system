@@ -1,4 +1,4 @@
-import { Component, h, Prop, Element } from '@stencil/core'
+import { Component, h, Prop } from '@stencil/core'
 
 @Component({
 	tag: 'mvs-card-expander',
@@ -14,30 +14,6 @@ export class MvsCardExpander {
 	@Prop() media: string =
 		'https://material-ui.com/static/images/cards/contemplative-reptile.jpg'
 	@Prop() alt: string = 'Texto alternativo em falta, favor entrar em contato'
-	@Element() el: HTMLElement
-	/* @Event() transitioned: EventEmitter
-	transitionedEmit(transition) {
-		this.transitioned.emit(transition)
-	}
-	
-	@Listen('')
-	transitionedListen() {
-		() => this.animateToNextState()) this.animateToNextState()
-	} */
-
-	currentState = 0
-	states = [
-		() => (this.el.style.transform = 'translate(0px, 0px)'),
-		() => (this.el.style.transform = 'translate(100px, 0px)'),
-		() => (this.el.style.transform = 'translate(100px, 100px)'),
-		() => (this.el.style.transform = 'translate(0px, 100px)'),
-	]
-
-	animateToNextState = () => {
-		requestAnimationFrame(() => {
-			this.states[++this.currentState % this.states.length]()
-		})
-	}
 
 	render() {
 		return (
