@@ -16,7 +16,7 @@ export class MvsContactList {
     async componentDidLoad() { 
         const contacts = {};
         const res = await findContacts();
-        for(const contact of res.acf.secoes[2].contato_conteudo) {
+        for(const contact of res[0].contato_conteudo) {
             if (contacts[contact.contato_categoria.name] === undefined) {
                 contacts[contact.contato_categoria.name] = [];
             }

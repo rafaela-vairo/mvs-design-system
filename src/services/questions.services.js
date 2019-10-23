@@ -1,8 +1,8 @@
 import Api from './api';
 
-export const findContacts = async () => {
+export const findQuestions = async () => {
   // const res = await Api.get('/wp-json/contact-form-7/v1/contact-forms');
-  const res ={
+   const res = {
    "acf":{
       "apresentacao":{
          "":null,
@@ -630,6 +630,6 @@ export const findContacts = async () => {
             ]
          }
       ]
-   }}
-   return res.acf.secoes.filter(sec => sec.acf_fc_layout === 'secao_contatos');
+   }};
+   return res.acf.secoes.filter(sec => sec.acf_fc_layout === 'secao_faq');
 }

@@ -1,4 +1,5 @@
 import { Component, h, State } from '@stencil/core';
+import { findQuestions } from '../../../services/questions.services';
 
 @Component({
     tag: 'mvs-questions-common',
@@ -8,12 +9,13 @@ import { Component, h, State } from '@stencil/core';
 
 export class MvsQuestionsCommon {
     
-    @State() questions: Array<any> = [];
+    @State() sections: Array<any> = [];
 
     // Obtém todas as perguntas comuns []
-    // async componentWillLoad() {
-         
-    // }
+    async componentWillLoad() {
+        const res = await findQuestions();
+        this.sections = res;
+    }
 
     showResponse(e) {
         e.target.classList.toggle("active");
@@ -30,23 +32,29 @@ export class MvsQuestionsCommon {
 
         return (
             <mvs-grid>
-                <div class="theme">
-                    <div class="title">
-                        <mvs-title level="t3">
-                            Vestibular
-                        </mvs-title>
-                    </div>
-                    <div class="question">
-                        <button class="accordion" onClick={this.showResponse}>
-                            Quando será o vestibular?
-                        </button>
-                        <div class="panel">
-                            <mvs-paragraph bodytwo>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar turpis arcu, et iaculis lacus imperdiet sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc rutrum orci sed ligula volutpat condimentum. Cras blandit suscipit euismod. Donec et malesuada magna, eu dignissim felis. Aliquam suscipit massa sed ante interdum vestibulum. Quisque at dolor ipsum.
-                            </mvs-paragraph>
+                {
+                    this.sections.map(section => (
+                        <div class="theme" key={section.secao_titulo}>
+                            <div class="title">
+                                <mvs-title level="t3">
+                                    {section.secao_titulo}
+                                </mvs-title>
+                            </div>
+                            {
+                                section.faq_conteudo.map(question => (
+                                    <div class="question" key={question.ID}>
+                                        <button class="accordion" onClick={this.showResponse}>
+                                            {question.faq_pergunta}
+                                        </button>
+                                        <div class="panel">
+                                            <mvs-paragraph bodytwo>{question.faq_resposta}</mvs-paragraph>
+                                        </div>
+                                    </div>
+                                ))
+                            }
                         </div>
-                    </div>
-                </div>
+                    ))
+                }
             </mvs-grid>
         );
     }
