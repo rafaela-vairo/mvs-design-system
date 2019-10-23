@@ -94,11 +94,13 @@
     .panel {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.2s ease-in-out;
+        transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
     }
 
     .panel.show {
         padding: $spacing-md 0;
+        transition: padding 0.2s ease-in-out;
+
     }
 
 }

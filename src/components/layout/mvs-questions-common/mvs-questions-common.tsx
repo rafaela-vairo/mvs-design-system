@@ -22,8 +22,12 @@ export class MvsQuestionsCommon {
         const panel = e.target.nextElementSibling;
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
+            // panel.style.paddingTop = null;
+            // panel.style.paddingBottom = null;
         } else {
             panel.style.maxHeight = panel.scrollHeight + 'px';
+            // panel.style.paddingTop = '24px';
+            // panel.style.paddingBottom = '24px';
         }
         panel.classList.toggle('show')
     }
