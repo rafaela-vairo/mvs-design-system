@@ -77,18 +77,23 @@
         outline: none;
     }
 
-    .accordion > i {
-        float: right;
-    }
+    // .accordion > i {
+    //     float: right;
+    //     font-size: $spacing-md;
+    // }
 
     .accordion:after {
-        content: 'chevron_down';
+        content: 'expand_more';
+        font-family: 'Material Icons';
         font-size: $spacing-md;
         float: right;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
     }
       
     .active:after {
-        content: 'chevron_up';
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
     }
 
     .panel {
