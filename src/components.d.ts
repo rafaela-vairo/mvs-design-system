@@ -65,7 +65,7 @@ export namespace Components {
     'text': string;
   }
   interface MvsCardList {
-    'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
+    'data': { overline: string; title: string; subtitle: string; text: string; button: string; link: string; media: string; }[];
   }
   interface MvsContactList {}
   interface MvsCountdown {
@@ -586,7 +586,7 @@ declare namespace LocalJSX {
     'text'?: string;
   }
   interface MvsCardList extends JSXBase.HTMLAttributes<HTMLMvsCardListElement> {
-    'data'?: { overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[];
+    'data'?: { overline: string; title: string; subtitle: string; text: string; button: string; link: string; media: string; }[];
   }
   interface MvsContactList extends JSXBase.HTMLAttributes<HTMLMvsContactListElement> {}
   interface MvsCountdown extends JSXBase.HTMLAttributes<HTMLMvsCountdownElement> {

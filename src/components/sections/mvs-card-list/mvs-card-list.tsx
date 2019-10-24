@@ -9,6 +9,7 @@ const cards = [
 		text: 'Impedit consequatur laboriosam in et velit quasi distinctio quod.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=10',
 	},
 	{
 		overline: 'Lorem ipsum 2',
@@ -18,6 +19,7 @@ const cards = [
 		text: 'Impedite laudantium distinctio quod.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=9',
 	},
 	{
 		overline: 'Lorem ipsum 3',
@@ -28,6 +30,7 @@ const cards = [
 			'Accusantium consectetur suscipit et itaque iure corrupti. Explicabo dolorum qui quos ut. Odit repellat nobis. Esse nam rerum illum eaque distinctio.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=8',
 	},
 	{
 		overline: 'Lorem ipsum 4',
@@ -38,6 +41,7 @@ const cards = [
 			'Aliquid voluptas neque vitae sed repellat explicabo corrupti. Molestiae et dolor ut numquam.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=7',
 	},
 	{
 		overline: 'Lorem ipsum 5',
@@ -48,6 +52,7 @@ const cards = [
 			'Ea nulla impedit repudiandae possimus porro unde. Iste et totam. Et quod iusto delectus possimus vel sint in velit dolor. Eveniet quam ab facilis. Perferendis perspiciatis voluptas quo sint fugiat ipsum veritatis dolores non.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=6',
 	},
 	{
 		overline: 'Lorem ipsum 6',
@@ -57,6 +62,7 @@ const cards = [
 		text: 'Impedite laudantium distinctio quod.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=5',
 	},
 	{
 		overline: 'Lorem ipsum 7',
@@ -67,6 +73,7 @@ const cards = [
 			'Accusantium consectetur suscipit et itaque iure corrupti. Explicabo dolorum qui quos ut. Odit repellat nobis. Esse nam rerum illum eaque distinctio.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=4',
 	},
 	{
 		overline: 'Lorem ipsum 8',
@@ -77,6 +84,7 @@ const cards = [
 			'Aliquid voluptas neque vitae sed repellat explicabo corrupti. Molestiae et dolor ut numquam.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=3',
 	},
 	{
 		overline: 'Lorem ipsum 9',
@@ -86,6 +94,7 @@ const cards = [
 		text: 'Impedite laudantium distinctio quod.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=2',
 	},
 	{
 		overline: 'Lorem ipsum 10',
@@ -96,6 +105,7 @@ const cards = [
 			'Accusantium consectetur suscipit et itaque iure corrupti. Explicabo dolorum qui quos ut. Odit repellat nobis. Esse nam rerum illum eaque distinctio.',
 		button: 'ação',
 		link: '',
+		media: 'https://i.pravatar.cc/500?img=1',
 	},
 ]
 
@@ -118,6 +128,7 @@ export class MvsCardList {
 							subtitle={cards.subtitle}
 							text={cards.text}
 							link={cards.link}
+							media={cards.media}
 						>
 							{cards.text}
 						</mvs-card-expander>
