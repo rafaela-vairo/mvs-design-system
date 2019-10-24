@@ -11,8 +11,7 @@ export class MvsCardExpander {
 	@Prop() subtitle: string
 	@Prop() text: string
 	@Prop() link: string = 'http://google.com'
-	@Prop() media: string =
-		'https://material-ui.com/static/images/cards/contemplative-reptile.jpg'
+	@Prop() media: string
 	@Prop() alt: string = 'Texto alternativo em falta, favor entrar em contato'
 
 	render() {

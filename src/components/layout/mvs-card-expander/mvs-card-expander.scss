@@ -101,6 +101,24 @@
 			grid-column-start: 3;
 			grid-column-end: end;
 		}
+
+		.container {
+			margin-top: var(--grid-gap);
+		}
+		.content {
+			margin: 0 var(--local-padding);
+			padding: 30px;
+			height: 368px;
+			border-radius: $border-radius;
+		}
+
+		&:active,
+		&:focus {
+			height: calc(var(--shape-height) + 490px - var(--grid-gap));
+			.container {
+				height: calc(640px - var(--grid-gap) * 2);
+			}
+		}
 	}
 
 	@include lg {
@@ -127,17 +145,37 @@
 			grid-column-start: 3;
 			grid-column-end: end;
 		}
+
+		.container {
+			margin-top: var(--grid-gap);
+		}
+		.content {
+			margin: 0 var(--local-padding);
+			padding: 30px;
+			height: 348px;
+			border-radius: $border-radius;
+		}
+
+		&:active,
+		&:focus {
+			height: calc(var(--shape-height) + 455px - var(--grid-gap));
+			.container {
+				height: calc(640px - var(--grid-gap) * 2);
+			}
+		}
 	}
 
 	@include md {
-		.heading {
+		.heading,
+		.cargo,
+		.main-text {
 			grid-column-start: 1;
-			grid-column-end: 3;
+			grid-column-end: span 4;
 		}
 		.cargo {
-			font: $smallcaps-xl;
+			font: $smallcaps-sm;
 			color: $text-primary;
-			margin-top: $spacing-lg;
+			margin-top: 0;
 		}
 		.contato,
 		.links {
@@ -148,10 +186,26 @@
 		}
 		.main-text {
 			//padding-top: calc(#{$spacing-xl} + #{$spacing-lg});
-			padding-top: 10px;
+			padding-top: $spacing-md;
 			padding-bottom: $spacing-xl;
-			grid-column-start: 3;
-			grid-column-end: end;
+		}
+
+		.container {
+			margin-top: var(--grid-gap);
+		}
+		.content {
+			margin: 0 var(--local-padding);
+			padding: 30px;
+			height: 448px;
+			border-radius: $border-radius;
+		}
+
+		&:active,
+		&:focus {
+			height: calc(var(--shape-height) + 560px - var(--grid-gap));
+			.container {
+				height: calc(640px - var(--grid-gap) * 2);
+			}
 		}
 	}
 
