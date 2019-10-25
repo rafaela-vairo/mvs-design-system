@@ -21,14 +21,14 @@
 ### Used by
 
  - [mvs-card](../../layout/mvs-card)
- - [mvs-card-expander](../../mvs-card-expander)
+ - [mvs-form](../../layout/mvs-form)
  - [mvs-hero](../../layout/mvs-hero)
 
 ### Graph
 ```mermaid
 graph TD;
   mvs-card --> mvs-button
-  mvs-card-expander --> mvs-button
+  mvs-form --> mvs-button
   mvs-hero --> mvs-button
   style mvs-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
