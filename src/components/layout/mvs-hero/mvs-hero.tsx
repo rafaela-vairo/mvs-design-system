@@ -27,11 +27,11 @@ export class mvshero {
 						/>
 						<mvs-flexgrid item sm={12} md={6} lg={4} xl={4} class='content'>
 							<div class='text'>
-								<mvs-title class='hero' white>
+								<mvs-title class='hero' color="light">
 									{this.herotitle}
 								</mvs-title>
 								<br />
-								<mvs-title class='herotext' white level='t4'>
+								<mvs-title class='herotext' color="light" level='t4'>
 									<slot />
 								</mvs-title>
 								<br />

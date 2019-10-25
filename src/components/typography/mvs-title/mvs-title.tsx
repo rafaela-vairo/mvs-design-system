@@ -22,7 +22,7 @@ export class MvsTitle {
 	/**
 	 * Define texto de cor branca, para fundos escuros.
 	 */
-	@Prop() white: boolean
+	@Prop() color: 'light' | 'dark' | 'primary' | 'secondary';
 
 	depth(parent, child, ignored) {
 		let depth = 0
@@ -54,12 +54,12 @@ export class MvsTitle {
 	}
 
 	render() {
-		let white = this.white ? 'white' : null
+		let color = this.color && this.color;
 		let styling =
 			this.level === 't1' || 't2' || 't3' || 't4' || 't5' || 't6'
 				? this.level
 				: null
-		let setClass = `${styling ? styling : ''} ${white ? white : ''}`
+		let setClass = `${styling ? styling : ''} ${color ? color : ''}`
 
 		if (this.override) {
 			let Tag = `h${this.override}`
