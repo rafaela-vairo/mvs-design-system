@@ -8,12 +8,20 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class MvsModal {
 
-    @Prop() id: String;
+    @Prop() show: Boolean;
+
+    hide(e) {
+        e.target.classList.remove('show');
+    }
 
     render() {
         return (
-            <div class="background">
-                <div class="modal"></div>
+            <div class="dialog show" onClick={this.hide.bind(this)}>
+                <div class="modal open">
+                    <div class="header">
+                        <button id="close"></button>
+                    </div>
+                </div>
             </div>
         );
     }

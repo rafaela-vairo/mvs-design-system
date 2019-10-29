@@ -184,7 +184,7 @@ export namespace Components {
     'open': boolean;
   }
   interface MvsModal {
-    'id': String;
+    'show': Boolean;
   }
   interface MvsNavbar {
     'color': 'inherit' | 'primary' | 'secondary' | 'default';
@@ -715,7 +715,7 @@ declare namespace LocalJSX {
     'open'?: boolean;
   }
   interface MvsModal extends JSXBase.HTMLAttributes<HTMLMvsModalElement> {
-    'id'?: String;
+    'show'?: Boolean;
   }
   interface MvsNavbar extends JSXBase.HTMLAttributes<HTMLMvsNavbarElement> {
     'color'?: 'inherit' | 'primary' | 'secondary' | 'default';
