@@ -1,13 +1,16 @@
 a {
-    color: inherit;
-    text-decoration: underline $color-primary-light;
-    &:hover, &:active {
-        color: $color-primary-light;
-    }
-    &:visited {
-        color: lighten($text-dark, 50%);
-        &:hover, &:active {
-            color: $color-primary-light;
-        }
-    }
+	color: inherit;
+	//text-decoration: underline $color-primary-light;
+	text-decoration: underline;
+	&:hover,
+	&:active {
+		color: $color-primary-light;
+	}
+	&:visited {
+		color: lighten($text-dark, 50%);
+		&:hover,
+		&:active {
+			color: $color-primary-light;
+		}
+	}
 }
