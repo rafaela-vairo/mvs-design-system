@@ -22,8 +22,10 @@ export class MvsCardExpander {
 					style={{ '--background-image': `url('${this.media}')` }}
 				>
 					<div class='cover-text'>
-						<mvs-overline color='primary'>Coordenadora</mvs-overline>
-						<mvs-title level='t5'>Profa Dra Marta Mendonça</mvs-title>
+						<mvs-overline color='light'>coordenadora</mvs-overline>
+						<mvs-title level='t5' color='light'>
+							Profa Dra Marta Mendonça
+						</mvs-title>
 						<mvs-anchor href='mailto:martamendonca@gmail.com'>
 							martamendonca@gmail.com
 						</mvs-anchor>

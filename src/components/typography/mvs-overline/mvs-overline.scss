@@ -8,15 +8,14 @@ $font-size-sm: 18px;
 $line-height-sm: 23px;
 
 :host > * {
-	--color-primary: $text-primary;
-	--color-secondary: $text-secondary;
-	--color-dark: $text-dark;
-	--color-light: $text-light;
-
-	--theme-color: var();
+	--color-primary: #{$text-primary};
+	--color-secondary: #{$text-secondary};
+	--color-dark: #{$text-dark};
+	--color-light: #{$text-light};
+	--theme-color: var(--color-light);
 
 	font-family: $font-alegreya-sans-sc;
-	color: var(--color-dark);
+	color: var(--theme-color);
 	letter-spacing: 0;
 	@include xl {
 		font: $smallcaps-xl;

@@ -43,21 +43,21 @@
 	border-radius: $border-radius;
 	transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 	.cover {
+		display: flex;
+		align-items: flex-end;
+		padding: $spacing-lg;
+		color: $text-light;
 		box-sizing: border-box;
 		border-radius: $border-radius;
-		background-image: var(--background-image);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
+		background: center / cover no-repeat var(--background-image);
 		height: var(--shape-height);
 		width: 100%;
-		/* transition: all $transition-cubic-03;
-		box-shadow: $shadow-regular;
-		&:hover {
-			box-shadow: $shadow-regular-hover;
-		} */
+		transition: all $transition-cubic-03;
 		object-fit: cover;
 		overflow: hidden;
+		&:hover {
+			filter: opacity(0.2);
+		}
 	}
 	.container {
 		//border: 1px solid red;

@@ -198,6 +198,7 @@ export namespace Components {
     'type': string;
   }
   interface MvsOverline {
+    'blah': 1 | 2 | 34 | null | 'string';
     'color': 'light' | 'dark' | 'primary' | 'secondary';
   }
   interface MvsParagraph {
@@ -721,6 +722,7 @@ declare namespace LocalJSX {
     'type'?: string;
   }
   interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {
+    'blah'?: 1 | 2 | 34 | null | 'string';
     'color'?: 'light' | 'dark' | 'primary' | 'secondary';
   }
   interface MvsParagraph extends JSXBase.HTMLAttributes<HTMLMvsParagraphElement> {
