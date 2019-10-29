@@ -17,18 +17,17 @@
 ### Depends on
 
 - [mvs-grid](../../layout/mvs-grid)
-- [mvs-card-expander](../../mvs-card-expander)
+- [mvs-card-expander](../../layout/mvs-card-expander)
 
 ### Graph
 ```mermaid
 graph TD;
   mvs-card-list --> mvs-grid
   mvs-card-list --> mvs-card-expander
-  mvs-card-expander --> mvs-overline
-  mvs-card-expander --> mvs-title
-  mvs-card-expander --> mvs-subtitle
+  mvs-card-expander --> mvs-grid
   mvs-card-expander --> mvs-paragraph
-  mvs-card-expander --> mvs-button
+  mvs-card-expander --> mvs-title
+  mvs-card-expander --> mvs-anchor
   style mvs-card-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

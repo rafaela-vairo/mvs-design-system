@@ -94,7 +94,7 @@ export class MvsCountdown {
 				<canvas class='canvas' width='800' height='800' />
 				<div class='tag'>
 					<div class='number'>{this.days}</div>
-					<mvs-title class='text' level='t4' white>
+					<mvs-title class='text' level='t4' color="light">
 						DIAS
 					</mvs-title>
 				</div>

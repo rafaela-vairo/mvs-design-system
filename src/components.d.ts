@@ -239,6 +239,10 @@ export namespace Components {
   }
   interface MvsTitle {
     /**
+    * Define texto de cor branca, para fundos escuros.
+    */
+    'color': 'light' | 'dark' | 'primary' | 'secondary';
+    /**
     * Define estilo de título a ser usado pelo componente.
     */
     'level': true | false | 't1' | 't2' | 't3' | 't4' | 't5' | 't6';
@@ -250,10 +254,6 @@ export namespace Components {
     * Propriedade interna que define automaticamente a tag H a ser usada.
     */
     'rank': number;
-    /**
-    * Define texto de cor branca, para fundos escuros.
-    */
-    'white': boolean;
   }
   interface MvsTooltip {
     /**
@@ -770,6 +770,10 @@ declare namespace LocalJSX {
   }
   interface MvsTitle extends JSXBase.HTMLAttributes<HTMLMvsTitleElement> {
     /**
+    * Define texto de cor branca, para fundos escuros.
+    */
+    'color'?: 'light' | 'dark' | 'primary' | 'secondary';
+    /**
     * Define estilo de título a ser usado pelo componente.
     */
     'level'?: true | false | 't1' | 't2' | 't3' | 't4' | 't5' | 't6';
@@ -781,10 +785,6 @@ declare namespace LocalJSX {
     * Propriedade interna que define automaticamente a tag H a ser usada.
     */
     'rank'?: number;
-    /**
-    * Define texto de cor branca, para fundos escuros.
-    */
-    'white'?: boolean;
   }
   interface MvsTooltip extends JSXBase.HTMLAttributes<HTMLMvsTooltipElement> {
     /**
