@@ -36,7 +36,7 @@ export class MvsQuestionsCommon {
 				{this.sections.map(section => (
 					<div class='theme' key={section.secao_titulo}>
 						<div class='title'>
-							<mvs-title level='t3'>{section.secao_titulo}</mvs-title>
+							<mvs-title level='t3' color="primary">{section.secao_titulo}</mvs-title>
 						</div>
 						{section.faq_conteudo.map(question => (
 							<div class='question' key={question.ID}>

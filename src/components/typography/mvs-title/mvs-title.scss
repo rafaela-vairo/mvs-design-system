@@ -7,9 +7,10 @@
 	font-size: 1em;
 }
 
-.white {
-	color: $text-light;
-}
+.light { color: $text-light; }
+.dark { color: $text-dark; }
+.primary { color: $text-primary; }
+.secondary { color: $text-secondary; }
 
 .t1,
 .t2,
