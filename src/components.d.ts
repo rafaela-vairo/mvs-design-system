@@ -197,7 +197,9 @@ export namespace Components {
     'disabled': boolean;
     'type': string;
   }
-  interface MvsOverline {}
+  interface MvsOverline {
+    'color': 'light' | 'dark' | 'primary' | 'secondary';
+  }
   interface MvsParagraph {
     /**
     * Altera o parágrafo para tamanho reduzido (body 2).
@@ -718,7 +720,9 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'type'?: string;
   }
-  interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {}
+  interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {
+    'color'?: 'light' | 'dark' | 'primary' | 'secondary';
+  }
   interface MvsParagraph extends JSXBase.HTMLAttributes<HTMLMvsParagraphElement> {
     /**
     * Altera o parágrafo para tamanho reduzido (body 2).

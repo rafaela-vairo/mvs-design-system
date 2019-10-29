@@ -3,6 +3,7 @@
 	--local-padding: var(--container-padding);
 	--shape-height: 80vw;
 	--multiplier: 4;
+	--background-image: url('https://mdn.mozillademos.org/files/7693/catfront.png');
 
 	@include xl {
 		--shape-height: 23vw;
@@ -26,34 +27,37 @@
 	}
 }
 
+.classe {
+	color: red;
+	&:hover {
+		color: blue;
+	}
+}
+
+.classe:hover {
+	color: blue;
+}
+
 [class^='item'] {
-	//border: 1px solid red;
-	//margin: 0.5rem;
 	height: var(--shape-height);
 	border-radius: $border-radius;
 	transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 	.cover {
-		//border: 1px solid red;
+		box-sizing: border-box;
 		border-radius: $border-radius;
-		background-color: $color-primary;
+		background-image: var(--background-image);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 		height: var(--shape-height);
+		width: 100%;
 		/* transition: all $transition-cubic-03;
 		box-shadow: $shadow-regular;
 		&:hover {
 			box-shadow: $shadow-regular-hover;
 		} */
-
-		img {
-			height: var(--shape-height);
-			border-radius: $border-radius;
-			display: block;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			width: 100%;
-			object-fit: cover;
-			overflow: hidden;
-		}
+		object-fit: cover;
+		overflow: hidden;
 	}
 	.container {
 		//border: 1px solid red;
@@ -173,7 +177,7 @@
 			grid-column-end: span 4;
 		}
 		.cargo {
-			font: $smallcaps-sm;
+			font: $smallcaps-md;
 			color: $text-primary;
 			margin-top: 0;
 		}

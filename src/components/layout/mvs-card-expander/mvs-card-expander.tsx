@@ -17,13 +17,22 @@ export class MvsCardExpander {
 	render() {
 		return (
 			<div class='item' tabindex='0'>
-				<div class='cover'>
-					<img src={this.media} />
+				<div
+					class='cover'
+					style={{ '--background-image': `url('${this.media}')` }}
+				>
+					<div class='cover-text'>
+						<mvs-overline color='primary'>Coordenadora</mvs-overline>
+						<mvs-title level='t5'>Profa Dra Marta Mendonça</mvs-title>
+						<mvs-anchor href='mailto:martamendonca@gmail.com'>
+							martamendonca@gmail.com
+						</mvs-anchor>
+					</div>
 				</div>
 				<div class='container'>
 					<div class='content'>
 						<mvs-grid marginzero>
-							<div class='cargo'>coordenadora</div>
+							<div class='cargo'>Coordenadora</div>
 							<mvs-paragraph bodytwo class='heading'>
 								<div class='nome'>
 									<mvs-title level='t5'>Profa Dra Marta Mendonça</mvs-title>
