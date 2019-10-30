@@ -8,22 +8,23 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class MvsModal {
 
-    @Prop() show: Boolean = false;
+    @Prop({ reflect: true, reflectToAttr: true }) name: string;
+    @Prop() show: boolean;
 
     hide(e) {
+        if (e.target.offsetParent.id === this.name) {
+            e.target.offsetParent.classList.remove('show');
+            return;
+        }
         e.target.classList.remove('show');
-    }
-
-    componentDidLoad() {
-        console.log(this.show)
     }
 
     render() {
         return (
-            <div class={'dialog ' + (this.show ? 'show' : '')} onClick={this.hide.bind(this)}>
+            <div id={this.name} class={'dialog ' + (this.show ? 'show' : '')} onClick={this.hide.bind(this)}>
                 <div class="modal open">
                     <div class="header">
-                        <button id="close"></button>
+                        <button id="close" onClick={this.hide.bind(this)}></button>
                     </div>
                 </div>
             </div>
