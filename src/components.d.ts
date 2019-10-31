@@ -183,6 +183,10 @@ export namespace Components {
   interface MvsMobDrawer {
     'open': boolean;
   }
+  interface MvsModal {
+    'name': string;
+    'show': boolean;
+  }
   interface MvsNavbar {
     'color': 'inherit' | 'primary' | 'secondary' | 'default';
     'lastScrollY': number;
@@ -420,6 +424,12 @@ declare global {
     new (): HTMLMvsMobDrawerElement;
   };
 
+  interface HTMLMvsModalElement extends Components.MvsModal, HTMLStencilElement {}
+  var HTMLMvsModalElement: {
+    prototype: HTMLMvsModalElement;
+    new (): HTMLMvsModalElement;
+  };
+
   interface HTMLMvsNavbarElement extends Components.MvsNavbar, HTMLStencilElement {}
   var HTMLMvsNavbarElement: {
     prototype: HTMLMvsNavbarElement;
@@ -517,6 +527,7 @@ declare global {
     'mvs-mark': HTMLMvsMarkElement;
     'mvs-mob-button': HTMLMvsMobButtonElement;
     'mvs-mob-drawer': HTMLMvsMobDrawerElement;
+    'mvs-modal': HTMLMvsModalElement;
     'mvs-navbar': HTMLMvsNavbarElement;
     'mvs-navbutton': HTMLMvsNavbuttonElement;
     'mvs-overline': HTMLMvsOverlineElement;
@@ -707,6 +718,10 @@ declare namespace LocalJSX {
   interface MvsMobDrawer extends JSXBase.HTMLAttributes<HTMLMvsMobDrawerElement> {
     'open'?: boolean;
   }
+  interface MvsModal extends JSXBase.HTMLAttributes<HTMLMvsModalElement> {
+    'name'?: string;
+    'show'?: boolean;
+  }
   interface MvsNavbar extends JSXBase.HTMLAttributes<HTMLMvsNavbarElement> {
     'color'?: 'inherit' | 'primary' | 'secondary' | 'default';
     'lastScrollY'?: number;
@@ -816,6 +831,7 @@ declare namespace LocalJSX {
     'mvs-mark': MvsMark;
     'mvs-mob-button': MvsMobButton;
     'mvs-mob-drawer': MvsMobDrawer;
+    'mvs-modal': MvsModal;
     'mvs-navbar': MvsNavbar;
     'mvs-navbutton': MvsNavbutton;
     'mvs-overline': MvsOverline;
