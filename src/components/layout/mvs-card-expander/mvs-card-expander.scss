@@ -204,7 +204,7 @@
 
 		&:active,
 		&:focus {
-			height: calc(var(--shape-height) + 455px - var(--grid-gap));
+			height: calc(var(--shape-height) + 485px - var(--grid-gap));
 			.container {
 				height: calc(640px - var(--grid-gap) * 2);
 			}

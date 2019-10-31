@@ -31,6 +31,7 @@ export namespace Components {
     * Caso `true`, botão terá largura 100%.
     */
     'full': boolean;
+    'id': string;
     /**
     * Caso `true`, botão terá tema light/night mode.
     */
@@ -566,6 +567,7 @@ declare namespace LocalJSX {
     * Caso `true`, botão terá largura 100%.
     */
     'full'?: boolean;
+    'id'?: string;
     /**
     * Caso `true`, botão terá tema light/night mode.
     */
