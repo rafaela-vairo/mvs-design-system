@@ -35,6 +35,7 @@ export namespace Components {
     * Caso `true`, botão terá tema light/night mode.
     */
     'light': boolean;
+    'modal': string;
     /**
     * Define o tipo do botão.
     */
@@ -570,6 +571,8 @@ declare namespace LocalJSX {
     * Caso `true`, botão terá tema light/night mode.
     */
     'light'?: boolean;
+    'modal'?: string;
+    'onOnShowModal'?: (event: CustomEvent<any>) => void;
     /**
     * Define o tipo do botão.
     */

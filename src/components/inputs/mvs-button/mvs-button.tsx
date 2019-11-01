@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core'
+import { Component, Prop, h, Event, EventEmitter } from '@stencil/core'
 
 @Component({
 	tag: 'mvs-button',
@@ -26,11 +26,19 @@ export class MvsButton {
 	 * Caso `true`, botão terá tema light/night mode.
 	 */
 	@Prop() light: boolean = false
+	@Prop() modal: string;
+
+	@Event() onShowModal: EventEmitter;
+	showModal() {
+		// console.log('Teste');
+		this.onShowModal.emit({ visible: true, modal: this.modal });
+	}
+
 	render() {
 		let light = this.light ? 'light ' : ''
 		let genClass = this.variant + ' ' + light
 		return (
-			<button class={genClass} type={this.type} disabled={this.disabled}>
+			<button class={genClass} type={this.type} disabled={this.disabled} onClick={this.showModal.bind(this)}>
 				<slot />
 			</button>
 		)
