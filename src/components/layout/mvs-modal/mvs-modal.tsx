@@ -10,11 +10,6 @@ export class MvsModal {
 	@Prop({ reflect: true, reflectToAttr: true }) name: string
 	@Prop() show: boolean
 
-	// @Listen('showModal', { capture: true })
-	// showModal(ev) {
-	// 	console.log(ev);
-	// }
-
 	@Listen('onShowModal', { target: 'document' })
 	showModal(event) {
 		if (event.detail.modal === this.name) this.show = event.detail.visible;
@@ -26,6 +21,7 @@ export class MvsModal {
 		} else if (e.target.id === 'close') {
 			e.target.offsetParent.classList.remove('show')
 		}
+		this.show = false;
 	}
 
 	render() {
@@ -33,7 +29,7 @@ export class MvsModal {
 			<div
 				id={this.name}
 				class={'dialog ' + (this.show ? 'show' : '')}
-				onClick={e => this.hide(e)}
+				onClick={this.hide.bind(this)}
 			>
 				<div class='modal open'>
 					<div class='header'>

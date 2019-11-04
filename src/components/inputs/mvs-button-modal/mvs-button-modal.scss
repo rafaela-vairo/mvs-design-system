@@ -1,0 +1,203 @@
+button {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	color: $color-primary;
+	text-transform: lowercase;
+	background-color: rgba(0, 0, 0, 0);
+	font-family: $font-alegreya-sans-sc;
+	font-weight: 700;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	border: none;
+	vertical-align: middle;
+	transition: all $transition-cubic-03;
+	padding: $inset-sm;
+	margin: $spacing-xs 0 0 0;
+	&.ghost,
+	&.contained {
+		&:hover:not([disabled]) {
+			margin: 0 0 $spacing-xs 0;
+		}
+	}
+	@include xl {
+		min-width: 90px;
+		min-height: 22px;
+		@include smallcaps-xl;
+	}
+	@include lg {
+		min-width: 81px;
+		min-height: 20px;
+		@include smallcaps-lg;
+	}
+	@include md {
+		min-width: 75px;
+		min-height: 15px;
+		@include smallcaps-md;
+	}
+	@include sm {
+		min-width: 69px;
+		min-height: 15px;
+		@include smallcaps-sm;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+	}
+	&:disabled,
+	&:disabled > *,
+	&:disabled:hover,
+	&:disabled:active {
+		cursor: default;
+		color: rgba($color-black, 0.4);
+	}
+
+	&.flat {
+		background-color: rgba(0, 0, 0, 0);
+		box-shadow: none;
+		&:hover:not([disabled]) {
+			color: $color-secondary;
+		}
+		&:focus:not([disabled]) {
+			color: $color-primary;
+			background-color: rgba($color-primary, 0.25);
+		}
+		&:active:not([disabled]) {
+			color: $color-primary;
+			background-color: rgba($color-primary, 0.15);
+		}
+	}
+
+	&.ghost {
+		background-color: rgba(0, 0, 0, 0);
+		border: 2px solid $color-primary-dark;
+		box-shadow: none;
+		&:disabled,
+		&:disabled > *,
+		&:disabled:hover,
+		&:disabled:active {
+			cursor: default;
+			border-color: rgba($color-black, 0.25);
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			outline: none;
+		}
+		&:hover,
+		&:focus:not([disabled]) {
+			border: 2px solid $color-secondary;
+		}
+		&:active:not([disabled]) {
+			border: 2px solid $color-primary-dark;
+			background-color: rgba($color-primary, 0.15);
+		}
+	}
+
+	&.contained {
+		background-color: $color-primary;
+		color: $text-light;
+		border: 2px solid $color-primary;
+		box-shadow: $shadow-regular;
+		&:disabled,
+		&:disabled > *,
+		&:disabled:hover,
+		&:disabled:active {
+			cursor: default;
+			color: rgba($text-light, 0.4);
+			background-color: rgba($color-black, 0.25);
+			border-color: rgba($color-black, 0);
+			box-shadow: none;
+		}
+		&:hover,
+		&:focus {
+			background-color: $color-primary-light;
+			border-color: $color-primary-light;
+		}
+		&:hover {
+			box-shadow: $shadow-regular-hover;
+		}
+		&:focus {
+			outline: none;
+			color: $text-light-70;
+		}
+		&:active {
+			background-color: $color-primary-dark;
+			border-color: $color-primary-dark;
+		}
+	}
+
+	&.light {
+		&.flat {
+			background-color: rgba(0, 0, 0, 0);
+			color: $color-secondary-light;
+			&:disabled,
+			&:disabled > *,
+			&:disabled:hover,
+			&:disabled:active {
+				color: rgba($color-white, 0.4);
+			}
+			&:hover:not([disabled]) {
+				color: $text-light;
+			}
+			&:focus:not([disabled]) {
+				color: $color-secondary-light;
+				background-color: rgba($color-primary, 0.25);
+			}
+			&:active:not([disabled]) {
+				color: $color-primary;
+				background-color: rgba($color-primary, 0.15);
+			}
+		}
+
+		&.ghost {
+			background-color: rgba(0, 0, 0, 0);
+			border: 2px solid $color-secondary;
+			color: $text-light;
+			&:disabled,
+			&:disabled > *,
+			&:disabled:hover,
+			&:disabled:active {
+				border-color: rgba($color-white, 0.4);
+				color: rgba($color-white, 0.4);
+			}
+			&:hover,
+			&:focus:not([disabled]) {
+				border: 2px solid $color-secondary-light;
+			}
+			&:active:not([disabled]) {
+				border: 2px solid $color-secondary-light;
+				background-color: rgba($color-secondary-light, 0.25);
+			}
+		}
+
+		&.contained {
+			background-color: $color-secondary;
+			border: 2px solid $color-secondary;
+			box-shadow: $shadow-dark;
+			&:disabled,
+			&:disabled > *,
+			&:disabled:hover,
+			&:disabled:active {
+				color: rgba($color-light, 0.4);
+				background-color: rgba($color-white, 0.2);
+				border-color: rgba($color-white, 0);
+				box-shadow: none;
+			}
+			&:hover,
+			&:focus {
+				background-color: $color-secondary-light;
+				border-color: $color-secondary-light;
+			}
+			&:hover {
+				box-shadow: $shadow-dark-hover;
+			}
+			&:active {
+				background-color: $color-secondary-dark;
+				border-color: $color-secondary-dark;
+			}
+		}
+	}
+}

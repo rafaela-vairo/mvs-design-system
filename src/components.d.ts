@@ -36,6 +36,29 @@ export namespace Components {
     * Caso `true`, botão terá tema light/night mode.
     */
     'light': boolean;
+    /**
+    * Define o tipo do botão.
+    */
+    'type': 'button' | 'submit' | 'reset';
+    /**
+    * Define estilo do botão.
+    */
+    'variant': 'flat' | 'ghost' | 'contained';
+  }
+  interface MvsButtonModal {
+    /**
+    * Caso `true`, desabilita o botão.
+    */
+    'disabled': boolean;
+    /**
+    * Caso `true`, botão terá largura 100%.
+    */
+    'full': boolean;
+    'id': string;
+    /**
+    * Caso `true`, botão terá tema light/night mode.
+    */
+    'light': boolean;
     'modal': string;
     /**
     * Define o tipo do botão.
@@ -318,6 +341,12 @@ declare global {
     new (): HTMLMvsButtonElement;
   };
 
+  interface HTMLMvsButtonModalElement extends Components.MvsButtonModal, HTMLStencilElement {}
+  var HTMLMvsButtonModalElement: {
+    prototype: HTMLMvsButtonModalElement;
+    new (): HTMLMvsButtonModalElement;
+  };
+
   interface HTMLMvsCardElement extends Components.MvsCard, HTMLStencilElement {}
   var HTMLMvsCardElement: {
     prototype: HTMLMvsCardElement;
@@ -511,6 +540,7 @@ declare global {
     'mvs-bg': HTMLMvsBgElement;
     'mvs-big-number': HTMLMvsBigNumberElement;
     'mvs-button': HTMLMvsButtonElement;
+    'mvs-button-modal': HTMLMvsButtonModalElement;
     'mvs-card': HTMLMvsCardElement;
     'mvs-card-expander': HTMLMvsCardExpanderElement;
     'mvs-card-list': HTMLMvsCardListElement;
@@ -560,6 +590,29 @@ declare namespace LocalJSX {
     'elements'?: any;
   }
   interface MvsButton extends JSXBase.HTMLAttributes<HTMLMvsButtonElement> {
+    /**
+    * Caso `true`, desabilita o botão.
+    */
+    'disabled'?: boolean;
+    /**
+    * Caso `true`, botão terá largura 100%.
+    */
+    'full'?: boolean;
+    'id'?: string;
+    /**
+    * Caso `true`, botão terá tema light/night mode.
+    */
+    'light'?: boolean;
+    /**
+    * Define o tipo do botão.
+    */
+    'type'?: 'button' | 'submit' | 'reset';
+    /**
+    * Define estilo do botão.
+    */
+    'variant'?: 'flat' | 'ghost' | 'contained';
+  }
+  interface MvsButtonModal extends JSXBase.HTMLAttributes<HTMLMvsButtonModalElement> {
     /**
     * Caso `true`, desabilita o botão.
     */
@@ -818,6 +871,7 @@ declare namespace LocalJSX {
     'mvs-bg': MvsBg;
     'mvs-big-number': MvsBigNumber;
     'mvs-button': MvsButton;
+    'mvs-button-modal': MvsButtonModal;
     'mvs-card': MvsCard;
     'mvs-card-expander': MvsCardExpander;
     'mvs-card-list': MvsCardList;
