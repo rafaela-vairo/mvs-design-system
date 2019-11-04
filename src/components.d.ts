@@ -23,6 +23,7 @@ export namespace Components {
     'elements': any;
   }
   interface MvsButton {
+    'bid': string;
     /**
     * Caso `true`, desabilita o botão.
     */
@@ -31,7 +32,6 @@ export namespace Components {
     * Caso `true`, botão terá largura 100%.
     */
     'full': boolean;
-    'id': string;
     /**
     * Caso `true`, botão terá tema light/night mode.
     */
@@ -46,6 +46,7 @@ export namespace Components {
     'variant': 'flat' | 'ghost' | 'contained';
   }
   interface MvsButtonModal {
+    'bid': string;
     /**
     * Caso `true`, desabilita o botão.
     */
@@ -54,7 +55,6 @@ export namespace Components {
     * Caso `true`, botão terá largura 100%.
     */
     'full': boolean;
-    'id': string;
     /**
     * Caso `true`, botão terá tema light/night mode.
     */
@@ -590,6 +590,7 @@ declare namespace LocalJSX {
     'elements'?: any;
   }
   interface MvsButton extends JSXBase.HTMLAttributes<HTMLMvsButtonElement> {
+    'bid'?: string;
     /**
     * Caso `true`, desabilita o botão.
     */
@@ -598,7 +599,6 @@ declare namespace LocalJSX {
     * Caso `true`, botão terá largura 100%.
     */
     'full'?: boolean;
-    'id'?: string;
     /**
     * Caso `true`, botão terá tema light/night mode.
     */
@@ -613,6 +613,7 @@ declare namespace LocalJSX {
     'variant'?: 'flat' | 'ghost' | 'contained';
   }
   interface MvsButtonModal extends JSXBase.HTMLAttributes<HTMLMvsButtonModalElement> {
+    'bid'?: string;
     /**
     * Caso `true`, desabilita o botão.
     */
@@ -621,7 +622,6 @@ declare namespace LocalJSX {
     * Caso `true`, botão terá largura 100%.
     */
     'full'?: boolean;
-    'id'?: string;
     /**
     * Caso `true`, botão terá tema light/night mode.
     */

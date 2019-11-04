@@ -36,8 +36,8 @@ export class MvsModal {
 				<div class='modal open'>
 					<div class='header'>
 						<mvs-button
+							bid='close'
 							variant='contained'
-							id='close'
 							class='icon'
 							onClick={this.hide.bind(this)}
 						>

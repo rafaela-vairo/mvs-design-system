@@ -8,7 +8,7 @@ import { Component, Prop, h, Event, EventEmitter } from '@stencil/core'
 
 export class MvsButtonModal {
     
-    @Prop({ reflect: true }) id: string
+    @Prop({ reflect: true }) bid: string
 	/**
 	 * Caso `true`, desabilita o botão.
 	 */
@@ -41,7 +41,7 @@ export class MvsButtonModal {
 		let genClass = this.variant + ' ' + light
 		return (
 			<button
-				id={this.id}
+				id={this.bid}
 				class={genClass}
 				type={this.type}
 				disabled={this.disabled}

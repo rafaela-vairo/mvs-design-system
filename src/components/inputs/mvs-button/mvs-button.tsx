@@ -6,7 +6,7 @@ import { Component, Prop, h } from '@stencil/core'
 	//shadow: true,
 })
 export class MvsButton {
-	@Prop({ reflect: true }) id: string
+	@Prop({ reflect: true }) bid: string
 	/**
 	 * Caso `true`, desabilita o botão.
 	 */
@@ -33,7 +33,7 @@ export class MvsButton {
 		let genClass = this.variant + ' ' + light
 		return (
 			<button
-				id={this.id}
+				id={this.bid}
 				class={genClass}
 				type={this.type}
 				disabled={this.disabled}
