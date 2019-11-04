@@ -16,12 +16,14 @@ export class MvsModal {
 	}
 
 	hide(e) {
+		console.log(e.target.id)
 		if (e.target.offsetParent === null) {
 			e.target.classList.remove('show')
+			this.show = false;
 		} else if (e.target.id === 'close') {
 			e.target.offsetParent.classList.remove('show')
+			this.show = false;
 		}
-		this.show = false;
 	}
 
 	render() {
