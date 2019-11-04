@@ -1,4 +1,4 @@
-# mvs-button
+# mvs-button-modal
 
 
 
@@ -13,28 +13,17 @@
 | `full`     | `full`     | Caso `true`, botão terá largura 100%.          | `boolean`                          | `false`     |
 | `id`       | `id`       |                                                | `string`                           | `undefined` |
 | `light`    | `light`    | Caso `true`, botão terá tema light/night mode. | `boolean`                          | `false`     |
+| `modal`    | `modal`    |                                                | `string`                           | `undefined` |
 | `type`     | `type`     | Define o tipo do botão.                        | `"button" \| "reset" \| "submit"`  | `'button'`  |
 | `variant`  | `variant`  | Define estilo do botão.                        | `"contained" \| "flat" \| "ghost"` | `'flat'`    |
 
 
-## Dependencies
+## Events
 
-### Used by
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `onShowModal` |             | `CustomEvent<any>` |
 
- - [mvs-card](../../layout/mvs-card)
- - [mvs-form](../../layout/mvs-form)
- - [mvs-hero](../../layout/mvs-hero)
- - [mvs-modal](../../layout/mvs-modal)
-
-### Graph
-```mermaid
-graph TD;
-  mvs-card --> mvs-button
-  mvs-form --> mvs-button
-  mvs-hero --> mvs-button
-  mvs-modal --> mvs-button
-  style mvs-button fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

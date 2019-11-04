@@ -3,27 +3,86 @@
 	.content {
 		margin-top: $spacing-xxl;
 		margin-bottom: $spacing-xxl;
-		columns: 2;
 		column-gap: $spacing-lg;
 
 		@include sm {
 			grid-column-start: 1;
 			grid-column-end: 3;
+			columns: 1;
+			.category {
+				margin-bottom: $spacing-md;
+			}
+			.data > *:first-child {
+				margin-right: $spacing-md;
+			}
+			.contact {
+				padding-bottom: $spacing-md;
+				&:not(:last-child) {
+					.main-text {
+						padding-bottom: $spacing-md;
+					}
+				}
+			}
 		}
 
 		@include md {
 			grid-column-start: 1;
 			grid-column-end: 5;
+			columns: 2;
+			.category {
+				margin-bottom: $spacing-md;
+			}
+			.data > *:first-child {
+				margin-right: $spacing-md;
+			}
+			.contact {
+				padding-bottom: $spacing-md;
+				&:not(:last-child) {
+					.main-text {
+						padding-bottom: $spacing-md;
+					}
+				}
+			}
 		}
 
 		@include lg {
-			grid-column-start: 2;
-			grid-column-end: 4;
+			grid-column-start: 1;
+			grid-column-end: 7;
+			columns: 3;
+			.category {
+				margin-bottom: $spacing-lg;
+			}
+			.data > *:first-child {
+				margin-right: $spacing-lg;
+			}
+			.contact {
+				padding-bottom: $spacing-md;
+				&:not(:last-child) {
+					.main-text {
+						padding-bottom: $spacing-md;
+					}
+				}
+			}
 		}
 
 		@include xl {
-			grid-column-start: 2;
-			grid-column-end: 6;
+			grid-column-start: 1;
+			grid-column-end: 7;
+			columns: 3;
+			.category {
+				margin-bottom: $spacing-xl;
+			}
+			.data > *:first-child {
+				margin-right: $spacing-xl;
+			}
+			.contact {
+				padding-bottom: $spacing-md;
+				&:not(:last-child) {
+					.main-text {
+						padding-bottom: $spacing-md;
+					}
+				}
+			}
 		}
 	}
 
@@ -38,32 +97,12 @@
 		}
 	}
 
-	.category {
-		@include sm {
-			margin-bottom: $spacing-md;
-		}
-
-		@include md {
-			margin-bottom: $spacing-md;
-		}
-
-		@include lg {
-			margin-bottom: $spacing-lg;
-		}
-
-		@include xl {
-			margin-bottom: $spacing-xl;
-		}
-	}
-
 	.contact {
-		width: 50%;
+		width: 75%;
 
 		&:not(:last-child) {
 			.main-text {
-				box-shadow: 0 2px 0 0 rgba($text-dark, 0.2);
-				padding-bottom: $spacing-md;
-				margin-bottom: $spacing-md;
+				border-bottom: 2px solid rgba($text-dark, 0.2);
 			}
 		}
 
@@ -83,7 +122,7 @@
 		}
 
 		.data {
-			margin-left: calc(var(--letter-gap) * -1);
+			//margin-left: calc(var(--letter-gap) * -1);
 			display: grid;
 			grid-auto-flow: column;
 			grid-template-columns: var(--letter-gap) 1fr;
@@ -92,22 +131,6 @@
 
 		.data > *:first-child {
 			//vertical-align: top;
-
-			@include sm {
-				margin-right: $spacing-md;
-			}
-
-			@include md {
-				margin-right: $spacing-md;
-			}
-
-			@include lg {
-				margin-right: $spacing-lg;
-			}
-
-			@include xl {
-				margin-right: $spacing-xl;
-			}
 
 			mvs-paragraph {
 				color: $text-primary;

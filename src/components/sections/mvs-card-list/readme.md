@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                                                                                   | Default |
-| -------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------ | ------- |
-| `data`   | --        |             | `{ overline: string; title: string; subtitle: string; text: string; button: string; link: string; }[]` | `cards` |
+| Property | Attribute | Description | Type                                                                                                                  | Default |
+| -------- | --------- | ----------- | --------------------------------------------------------------------------------------------------------------------- | ------- |
+| `data`   | --        |             | `{ overline: string; title: string; subtitle: string; text: string; button: string; link: string; media: string; }[]` | `cards` |
 
 
 ## Dependencies
@@ -24,10 +24,11 @@
 graph TD;
   mvs-card-list --> mvs-grid
   mvs-card-list --> mvs-card-expander
-  mvs-card-expander --> mvs-grid
-  mvs-card-expander --> mvs-paragraph
+  mvs-card-expander --> mvs-overline
   mvs-card-expander --> mvs-title
   mvs-card-expander --> mvs-anchor
+  mvs-card-expander --> mvs-grid
+  mvs-card-expander --> mvs-paragraph
   style mvs-card-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

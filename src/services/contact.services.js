@@ -123,7 +123,7 @@ export const findContacts = async () => {
                   "post_date":"2019-10-10 11:52:02",
                   "post_date_gmt":"2019-10-10 14:52:02",
                   "post_content":"",
-                  "post_title":"Ana",
+                  "post_title":"Ana Carolina Montez Ferreira",
                   "post_excerpt":"",
                   "post_status":"publish",
                   "comment_status":"closed",
@@ -154,7 +154,7 @@ export const findContacts = async () => {
                      "count":3,
                      "filter":"raw"
                   },
-                  "contato_nome":"Ana",
+                  "contato_nome":"Ana Carolina Montez Ferreira",
                   "contato_logradouro":"",
                   "contato_numero":"",
                   "contato_complemento":"",
@@ -307,7 +307,7 @@ export const findContacts = async () => {
                      "count":4,
                      "filter":"raw"
                   },
-                  "contato_nome":"Claudia",
+                  "contato_nome":"Claudia Mendes",
                   "contato_cargo":"",
                   "contato_logradouro":"",
                   "contato_numero":"",
@@ -316,9 +316,9 @@ export const findContacts = async () => {
                   "contato_cidade":"",
                   "contato_estado":"ba",
                   "contato_cep":"",
-                  "contato_telefone":"7777",
+                  "contato_telefone":"+55 (21) 1234-5678",
                   "contato_fax":"",
-                  "contato_email":"user7@mail.com",
+                  "contato_email":"emailsuperlongo@reitoria.ufrj.br",
                   "contato_chefia":false
                },
                {
