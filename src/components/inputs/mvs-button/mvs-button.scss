@@ -23,22 +23,22 @@ button {
 	@include xl {
 		min-width: 90px;
 		min-height: 22px;
-		@include smallcaps-xl;
+		font: $smallcaps-xl;
 	}
 	@include lg {
 		min-width: 81px;
 		min-height: 20px;
-		@include smallcaps-lg;
+		font: $smallcaps-lg;
 	}
 	@include md {
 		min-width: 75px;
 		min-height: 15px;
-		@include smallcaps-md;
+		font: $smallcaps-md;
 	}
 	@include sm {
 		min-width: 69px;
 		min-height: 15px;
-		@include smallcaps-sm;
+		font: $smallcaps-sm;
 	}
 
 	&:hover,

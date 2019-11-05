@@ -20,22 +20,3 @@
 		@content;
 	}
 }
-
-//Tipography
-
-@mixin smallcaps-xl {
-	font-size: 29px;
-	line-height: 40px;
-}
-@mixin smallcaps-lg {
-	font-size: 24px;
-	line-height: 32px;
-}
-@mixin smallcaps-md {
-	font-size: 23px;
-	line-height: 32px;
-}
-@mixin smallcaps-sm {
-	font-size: 19px;
-	line-height: 24px;
-}

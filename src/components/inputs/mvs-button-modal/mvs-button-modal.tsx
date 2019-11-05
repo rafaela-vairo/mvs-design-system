@@ -1,14 +1,11 @@
 import { Component, Prop, h, Event, EventEmitter } from '@stencil/core'
 
-
 @Component({
-    tag: 'mvs-button-modal',
-    styleUrl: 'mvs-button-modal.scss'
+	tag: 'mvs-button-modal',
+	styleUrl: 'mvs-button-modal.scss',
 })
-
 export class MvsButtonModal {
-    
-    @Prop({ reflect: true }) bid: string
+	@Prop({ reflect: true }) bid: string
 	/**
 	 * Caso `true`, desabilita o botão.
 	 */
@@ -20,7 +17,7 @@ export class MvsButtonModal {
 	/**
 	 * Define estilo do botão.
 	 */
-	@Prop() variant: 'flat' | 'ghost' | 'contained' = 'flat'
+	@Prop() variant: 'flat' | 'ghost' | 'contained' | 'close' = 'flat'
 	/**
 	 * Caso `true`, botão terá largura 100%.
 	 */
@@ -29,12 +26,20 @@ export class MvsButtonModal {
 	 * Caso `true`, botão terá tema light/night mode.
 	 */
 	@Prop() light: boolean = false
-	@Prop() modal: string;
+	@Prop() modal: string
 
-	@Event() onShowModal: EventEmitter;
+	@Event() onShowModal: EventEmitter
 	showModal() {
-		this.onShowModal.emit({ visible: true, modal: this.modal });
+		this.onShowModal.emit({ visible: true, modal: this.modal })
 	}
+
+	/* appendModal() {
+		var modal = document.createElement('div')
+		var content = document.createTextNode('lorem ipsum')
+		modal.appendChild(content)
+		modal.classList.add('modal-root')
+		document.body.prepend(modal)
+	} */
 
 	render() {
 		let light = this.light ? 'light ' : ''

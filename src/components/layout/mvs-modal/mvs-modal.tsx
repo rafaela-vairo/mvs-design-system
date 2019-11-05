@@ -1,6 +1,4 @@
-import { Component, h, Prop, Listen } from '@stencil/core';
-
-
+import { Component, h, Prop, Listen, Element } from '@stencil/core'
 @Component({
 	tag: 'mvs-modal',
 	styleUrl: 'mvs-modal.scss',
@@ -9,20 +7,24 @@ import { Component, h, Prop, Listen } from '@stencil/core';
 export class MvsModal {
 	@Prop({ reflect: true, reflectToAttr: true }) name: string
 	@Prop() show: boolean
+	@Prop() size: 'small' | 'medium' | 'large'
+	@Prop() closebtn: boolean = false
+	@Element() el: HTMLElement
 
 	@Listen('onShowModal', { target: 'document' })
 	showModal(event) {
-		if (event.detail.modal === this.name) this.show = event.detail.visible;
+		if (event.detail.modal === this.name) this.show = event.detail.visible
 	}
 
 	hide(e) {
 		console.log(e.target.id)
 		if (e.target.offsetParent === null) {
 			e.target.classList.remove('show')
-			this.show = false;
+			this.show = false
+			e.target.hidden = true
 		} else if (e.target.id === 'close') {
 			e.target.offsetParent.classList.remove('show')
-			this.show = false;
+			this.show = false
 		}
 	}
 
@@ -34,17 +36,21 @@ export class MvsModal {
 				onClick={this.hide.bind(this)}
 			>
 				<div class='modal open'>
-					<div class='header'>
-						<mvs-button
-							bid='close'
-							variant='contained'
-							class='icon'
-							onClick={this.hide.bind(this)}
-						>
-							close
-						</mvs-button>
-					</div>
 					<slot />
+					{this.closebtn ? (
+						<div class='header'>
+							<mvs-button-modal
+								bid='close'
+								class='icon'
+								variant='close'
+								onClick={this.hide.bind(this)}
+							>
+								close
+							</mvs-button-modal>
+						</div>
+					) : (
+						''
+					)}
 				</div>
 			</div>
 		)

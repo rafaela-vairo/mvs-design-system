@@ -11,21 +11,20 @@ export class MvsContactList {
 	@State() letter: string = ''
 
 	// Obtém todos os contatos ao carregar o componente []
-    async componentDidLoad() { 
-        const contacts = {};
-        const res = await findContacts();
-        for(const contact of res[0].contato_conteudo) {
-            if (contacts[contact.contato_categoria.name] === undefined) {
-                contacts[contact.contato_categoria.name] = [];
-            }
-            contacts[contact.contato_categoria.name] = [ 
-                ...contacts[contact.contato_categoria.name], 
-                contact,
-            ];
-            
-        }
-        this.contacts = contacts;
-    }
+	async componentDidLoad() {
+		const contacts = {}
+		const res = await findContacts()
+		for (const contact of res[0].contato_conteudo) {
+			if (contacts[contact.contato_categoria.name] === undefined) {
+				contacts[contact.contato_categoria.name] = []
+			}
+			contacts[contact.contato_categoria.name] = [
+				...contacts[contact.contato_categoria.name],
+				contact,
+			]
+		}
+		this.contacts = contacts
+	}
 
 	render() {
 		return (

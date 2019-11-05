@@ -13,32 +13,37 @@ button {
 	vertical-align: middle;
 	transition: all $transition-cubic-03;
 	padding: $inset-sm;
-	margin: $spacing-xs 0 0 0;
+	margin: 0;
 	&.ghost,
 	&.contained {
 		&:hover:not([disabled]) {
-			margin: 0 0 $spacing-xs 0;
+			box-shadow: $shadow-regular-hover;
 		}
 	}
 	@include xl {
 		min-width: 90px;
 		min-height: 22px;
-		@include smallcaps-xl;
+		font: $smallcaps-xl;
+		&.close {
+			min-width: 70px;
+			min-height: 70px;
+			margin: -32px -32px 0 0;
+		}
 	}
 	@include lg {
 		min-width: 81px;
 		min-height: 20px;
-		@include smallcaps-lg;
+		font: $smallcaps-lg;
 	}
 	@include md {
 		min-width: 75px;
 		min-height: 15px;
-		@include smallcaps-md;
+		font: $smallcaps-md;
 	}
 	@include sm {
 		min-width: 69px;
 		min-height: 15px;
-		@include smallcaps-sm;
+		font: $smallcaps-sm;
 	}
 
 	&:hover,
@@ -52,6 +57,22 @@ button {
 	&:disabled:active {
 		cursor: default;
 		color: rgba($color-black, 0.4);
+	}
+
+	&.close {
+		background-color: rgba(0, 0, 0, 0);
+		box-shadow: none;
+		&:hover:not([disabled]) {
+			color: $color-secondary;
+		}
+		&:focus:not([disabled]) {
+			color: $color-primary;
+			background-color: rgba($color-primary, 0.25);
+		}
+		&:active:not([disabled]) {
+			color: $color-light;
+			background-color: rgba($color-primary, 0.15);
+		}
 	}
 
 	&.flat {
@@ -197,6 +218,56 @@ button {
 			&:active {
 				background-color: $color-secondary-dark;
 				border-color: $color-secondary-dark;
+			}
+		}
+	}
+}
+
+.modal-root {
+	display: block;
+	&.small {
+		color: red;
+	}
+	.dialog {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		z-index: 990;
+		background-color: rgba($color: #000000, $alpha: 0.5);
+		width: 100%;
+		height: 100%;
+		overflow-y: hidden;
+		transition: visibility 0.6s, opacity 0.5s ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+		&.show {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	.modal {
+		display: flex;
+		width: 50%;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: $spacing-lg;
+		background-color: #fff;
+		border: 0;
+		z-index: 999;
+
+		.header {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			flex-direction: row;
+
+			#close,
+			.icon {
+				font-family: 'Material Icons';
+				font-size: 30px;
 			}
 		}
 	}

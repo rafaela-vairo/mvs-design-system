@@ -1,5 +1,5 @@
 {
-	"name": "@guilhermevairo/mvs-ds",
+	"name": "@ufrj/mvs-ds",
 	"version": "0.0.1",
 	"description": "Mvs Design System",
 	"repository": {
@@ -28,16 +28,10 @@
 	"devDependencies": {
 		"@stencil/core": "^1.2.3",
 		"@stencil/sass": "^1.0.1",
-		"@types/jest": "24.0.15",
-		"@types/puppeteer": "1.12.4",
-		"jest": "24.8.0",
-		"jest-cli": "24.8.0",
-		"puppeteer": "1.17.0",
 		"workbox-build": "4.3.1"
 	},
 	"license": "AGPL-3.0",
 	"dependencies": {
-		"axios": "^0.19.0",
-		"material-design-icons": "^3.0.1"
+		"axios": "^0.19.0"
 	}
 }

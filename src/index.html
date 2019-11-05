@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>UFRJ - 100 anos</title>
+		<title>UFRJ</title>
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
@@ -10,20 +10,18 @@
 		<meta name="description" content="" />
 		<meta
 			property="og:image"
-			content="https://admin.100anos.ufrj.br/wp-content/uploads/sites/3/2019/09/100anos.png"
+			content=""
 		/>
 		<meta property="og:description" content="" />
-		<meta property="og:title" content="UFRJ 100 Anos" />
-		<meta name="twitter:title" content="UFRJ 100 Anos" />
+		<meta property="og:title" content="UFRJ" />
+		<meta name="twitter:title" content="UFRJ" />
 		<link
 			rel="shortcut icon"
 			href="https://ufrj.br/sites/default/files/favicon_1.ico"
 			type="image/vnd.microsoft.icon"
 		/>
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
+<!-- 		<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i|Playfair+Display:400i,700|Proza+Libre:600&display=swap"/>
+		<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons" /> -->
 		<script type="module" src="/build/mvs-ds.esm.js"></script>
 		<script nomodule src="/build/mvs-ds.js"></script>
 
@@ -36,7 +34,14 @@
 		</script> -->
 	</head>
 	<body>
-		<mvs-modal name="modal1">Olá mundo</mvs-modal>
+		<mvs-modal size='small' name="modal1" closebtn>
+			<mvs-paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum nec risus semper vulputate. Donec dolor
+			magna, interdum non tellus non, sollicitudin dignissim sem. Nulla massa magna, pretium at diam ut, luctus varius dolor.
+			Suspendisse erat mauris, maximus nec tellus sit amet, ultricies volutpat purus.</mvs-paragraph>
+		</mvs-modal>
+		<mvs-modal size='small' name="modal2">
+			<mvs-paragraph>Lorem ipsum dolor sit amet</mvs-paragraph>
+		</mvs-modal>
 		<div style="position: relative;width: 100%; z-index: 999999;">
 			<div
 				id="barra-brasil"
@@ -58,6 +63,9 @@
 		<mvs-base></mvs-base>
 		<mvs-bg>
 			<div>
+				<mvs-button-modal modal="modal1" variant='contained'>Modal 1</mvs-button-modal>
+			</div>
+			<div>
 				<mvs-card-list></mvs-card-list>
 			</div>
 			<div>
@@ -66,9 +74,8 @@
 			<div>
 				<mvs-questions-common />
 			</div>
-			<mvs-button-modal modal="modal1">Modal 1</mvs-button-modal>
+			
 		</mvs-bg>
-		<!-- <mvs-formulario/> -->
 		<mvs-footer />
 		<script
 			defer="defer"

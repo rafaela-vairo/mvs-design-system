@@ -67,7 +67,7 @@ export namespace Components {
     /**
     * Define estilo do botão.
     */
-    'variant': 'flat' | 'ghost' | 'contained';
+    'variant': 'flat' | 'ghost' | 'contained' | 'close';
   }
   interface MvsCard {
     'alt': string;
@@ -209,8 +209,10 @@ export namespace Components {
     'open': boolean;
   }
   interface MvsModal {
+    'closebtn': boolean;
     'name': string;
     'show': boolean;
+    'size': 'small' | 'medium' | 'large';
   }
   interface MvsNavbar {
     'color': 'inherit' | 'primary' | 'secondary' | 'default';
@@ -635,7 +637,7 @@ declare namespace LocalJSX {
     /**
     * Define estilo do botão.
     */
-    'variant'?: 'flat' | 'ghost' | 'contained';
+    'variant'?: 'flat' | 'ghost' | 'contained' | 'close';
   }
   interface MvsCard extends JSXBase.HTMLAttributes<HTMLMvsCardElement> {
     'alt'?: string;
@@ -777,8 +779,10 @@ declare namespace LocalJSX {
     'open'?: boolean;
   }
   interface MvsModal extends JSXBase.HTMLAttributes<HTMLMvsModalElement> {
+    'closebtn'?: boolean;
     'name'?: string;
     'show'?: boolean;
+    'size'?: 'small' | 'medium' | 'large';
   }
   interface MvsNavbar extends JSXBase.HTMLAttributes<HTMLMvsNavbarElement> {
     'color'?: 'inherit' | 'primary' | 'secondary' | 'default';
