@@ -33,7 +33,7 @@
 			document.title = hostname.charAt(0).toUpperCase() + hostname.slice(1);
 		</script> -->
 	</head>
-	<body>
+	<body style="display: block;">
 		<mvs-modal size='small' name="modal1" closebtn>
 			<mvs-paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum nec risus semper vulputate. Donec dolor
 			magna, interdum non tellus non, sollicitudin dignissim sem. Nulla massa magna, pretium at diam ut, luctus varius dolor.
@@ -61,6 +61,7 @@
 			</div>
 		</div>
 		<mvs-base></mvs-base>
+		<mvs-navigation></mvs-navigation>
 		<mvs-bg>
 			<div>
 				<mvs-button-modal modal="modal1" variant='contained'>Modal 1</mvs-button-modal>

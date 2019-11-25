@@ -228,6 +228,7 @@ export namespace Components {
     'disabled': boolean;
     'type': string;
   }
+  interface MvsNavigation {}
   interface MvsOverline {
     'blah': 1 | 2 | 34 | null | 'string';
     'color': 'light' | 'dark' | 'primary' | 'secondary';
@@ -475,6 +476,12 @@ declare global {
     new (): HTMLMvsNavbuttonElement;
   };
 
+  interface HTMLMvsNavigationElement extends Components.MvsNavigation, HTMLStencilElement {}
+  var HTMLMvsNavigationElement: {
+    prototype: HTMLMvsNavigationElement;
+    new (): HTMLMvsNavigationElement;
+  };
+
   interface HTMLMvsOverlineElement extends Components.MvsOverline, HTMLStencilElement {}
   var HTMLMvsOverlineElement: {
     prototype: HTMLMvsOverlineElement;
@@ -564,6 +571,7 @@ declare global {
     'mvs-modal': HTMLMvsModalElement;
     'mvs-navbar': HTMLMvsNavbarElement;
     'mvs-navbutton': HTMLMvsNavbuttonElement;
+    'mvs-navigation': HTMLMvsNavigationElement;
     'mvs-overline': HTMLMvsOverlineElement;
     'mvs-paragraph': HTMLMvsParagraphElement;
     'mvs-pre': HTMLMvsPreElement;
@@ -798,6 +806,7 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'type'?: string;
   }
+  interface MvsNavigation extends JSXBase.HTMLAttributes<HTMLMvsNavigationElement> {}
   interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {
     'blah'?: 1 | 2 | 34 | null | 'string';
     'color'?: 'light' | 'dark' | 'primary' | 'secondary';
@@ -897,6 +906,7 @@ declare namespace LocalJSX {
     'mvs-modal': MvsModal;
     'mvs-navbar': MvsNavbar;
     'mvs-navbutton': MvsNavbutton;
+    'mvs-navigation': MvsNavigation;
     'mvs-overline': MvsOverline;
     'mvs-paragraph': MvsParagraph;
     'mvs-pre': MvsPre;
