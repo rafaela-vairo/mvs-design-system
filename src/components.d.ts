@@ -228,7 +228,9 @@ export namespace Components {
     'disabled': boolean;
     'type': string;
   }
-  interface MvsNavigation {}
+  interface MvsNavigation {
+    'title': string;
+  }
   interface MvsOverline {
     'blah': 1 | 2 | 34 | null | 'string';
     'color': 'light' | 'dark' | 'primary' | 'secondary';
@@ -260,6 +262,9 @@ export namespace Components {
     | 'error'
     | 'warning'
     | 'confirm';
+  }
+  interface MvsSidebar {
+    'sidenav': boolean;
   }
   interface MvsSinglePage {
     'data': any;
@@ -512,6 +517,12 @@ declare global {
     new (): HTMLMvsShapeElement;
   };
 
+  interface HTMLMvsSidebarElement extends Components.MvsSidebar, HTMLStencilElement {}
+  var HTMLMvsSidebarElement: {
+    prototype: HTMLMvsSidebarElement;
+    new (): HTMLMvsSidebarElement;
+  };
+
   interface HTMLMvsSinglePageElement extends Components.MvsSinglePage, HTMLStencilElement {}
   var HTMLMvsSinglePageElement: {
     prototype: HTMLMvsSinglePageElement;
@@ -577,6 +588,7 @@ declare global {
     'mvs-pre': HTMLMvsPreElement;
     'mvs-questions-common': HTMLMvsQuestionsCommonElement;
     'mvs-shape': HTMLMvsShapeElement;
+    'mvs-sidebar': HTMLMvsSidebarElement;
     'mvs-single-page': HTMLMvsSinglePageElement;
     'mvs-strong': HTMLMvsStrongElement;
     'mvs-subtitle': HTMLMvsSubtitleElement;
@@ -806,7 +818,10 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'type'?: string;
   }
-  interface MvsNavigation extends JSXBase.HTMLAttributes<HTMLMvsNavigationElement> {}
+  interface MvsNavigation extends JSXBase.HTMLAttributes<HTMLMvsNavigationElement> {
+    'onOnShowSidenav'?: (event: CustomEvent<any>) => void;
+    'title'?: string;
+  }
   interface MvsOverline extends JSXBase.HTMLAttributes<HTMLMvsOverlineElement> {
     'blah'?: 1 | 2 | 34 | null | 'string';
     'color'?: 'light' | 'dark' | 'primary' | 'secondary';
@@ -838,6 +853,9 @@ declare namespace LocalJSX {
     | 'error'
     | 'warning'
     | 'confirm';
+  }
+  interface MvsSidebar extends JSXBase.HTMLAttributes<HTMLMvsSidebarElement> {
+    'sidenav'?: boolean;
   }
   interface MvsSinglePage extends JSXBase.HTMLAttributes<HTMLMvsSinglePageElement> {
     'data'?: any;
@@ -912,6 +930,7 @@ declare namespace LocalJSX {
     'mvs-pre': MvsPre;
     'mvs-questions-common': MvsQuestionsCommon;
     'mvs-shape': MvsShape;
+    'mvs-sidebar': MvsSidebar;
     'mvs-single-page': MvsSinglePage;
     'mvs-strong': MvsStrong;
     'mvs-subtitle': MvsSubtitle;

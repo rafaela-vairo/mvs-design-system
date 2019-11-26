@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, State, Prop, Event, EventEmitter } from '@stencil/core';
 
 
 @Component({
@@ -10,6 +10,12 @@ import { Component, h, State } from '@stencil/core';
 export class MvsNavigation {
 
 	@State() side:boolean = false;
+	@Prop() title: string = 'Lorem ipsum'; 
+
+	@Event() onShowSidenav: EventEmitter
+	showSidenav() {
+		this.onShowSidenav.emit();
+	}
 
 	toggle() {
 		this.side = !this.side;
@@ -25,21 +31,16 @@ export class MvsNavigation {
 
     render() {
         return (
-            <div>
-            	<div class={"sidenav " + (this.side && "active")}>
-            		<div class="sidenav-social">
-            			<a class="closebtn btn" onClick={this.toggle.bind(this)}>&times;</a>
-            		</div>
-            		<div class="sidenav-content">
-            			<a href="#">About</a>
-						<a href="#">Services</a>
-						<a href="#">Clients</a>
-						<a href="#">Contact</a>
-            		</div>
-				</div>
-				<div class={(this.side && "content")}></div>
-                <span class="btn" onClick={this.toggle.bind(this)}>&#9776; open</span>
-            </div>
+        	<nav>
+        		<div>
+        			<span class="icon-menu" onClick={this.showSidenav.bind(this)}>menu</span>
+        		</div>
+        		<div class="title">
+        			<mvs-title level="t6" color="light">
+        				{this.title}
+        			</mvs-title>
+        		</div>
+        	</nav>
         );
     }
 }

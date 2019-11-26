@@ -1,80 +1,79 @@
 :host {
-	
-	.btn {
-		cursor: pointer;
-	}
 
-	.content {
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0,0,0, .7);
-		z-index: 9999999999;
-		position: fixed;
-		transition: 0.5s ease-in-out;
-	}
+	/* Navbar */
+	nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: $color-primary;
+		z-index: 998;
 
-    .sidenav {
-	  height: 100%;
-	  width: 0;
-	  position: fixed;
-	  z-index: 998;
-	  top: 0;
-	  left: 0;
-	  background-color: $color-white;
-	  overflow-x: hidden;
-	  transition: 0.5s;
-	  padding-top: 60px;
-	}
-
-	.active {
-		width: 300px !important;
-		
-		@include xl { 
-	  		padding: $inset-squish-lg;
-	  	}
-	}
-
-	.sidenav a {
-	  text-decoration: none;
-	  font-size: 25px;
-	  color: $text-dark-70;
-	  display: block;
-	  transition: 0.3s;
-	}
-
-	.sidenav .closebtn {
-	  position: absolute;
-	  top: 0;
-	  right: 25px;
-	  font-size: 36px;
-	  margin-left: 50px;
-	}
-
-	@media screen and (max-height: 450px) {
-	  .sidenav {padding-top: 15px;}
-	  .sidenav a {font-size: 18px;}
-	}
-
-	.sidenav-social {
 		@include sm {
-			padding: $spacing-sm 0;
-			margin-bottom: $spacing-xl;
+			margin-top: $spacing-sm;
+			padding: $spacing-sm $spacing-md;
+		}
+
+		@include md {
+			margin-top: $spacing-md;
+			padding: $spacing-sm $spacing-xl;
+		}
+
+		@include lg {
+			margin-top: $spacing-md;
+			padding: $spacing-sm $spacing-xl;
+		}
+
+		@include xl {
+			margin-top: $spacing-md;
+			padding: $spacing-sm $spacing-xl;
+		}
+
+		.icon-menu {
+			content: 'menu';
+			font-family: 'Material Icons';
+			cursor: pointer;
+			color: $color-light;
+
+			@include sm {
+				font-size: 32px;
+				margin-right: $spacing-md;
+			}
+
+			@include md {
+				font-size: 40px;
+			}
+
+			@include lg {
+				font-size: 48px;
+			}
+
+			@include xl {
+				font-size: 56px;
+			}
+
+		}
+
+		.title {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+
+			@include sm {
+				justify-content: flex-start;
+			}
+
+			@include md {
+				margin-right: 40px;
+			}
+
+			@include lg {
+				margin-right: 48px;
+			}
+
+			@include xl {
+				margin-right: 56px;
+			}
+
 		}
 	}
-
-	.sidenav-content {
-
-		@include xl { 
-			padding: $inset-lg;
-		}
-
-		a {
-			padding: $spacing-xl 0;
-		}
-
-		a:first-child {
-			padding-top: 0;
-		}
-	}
-
 }
