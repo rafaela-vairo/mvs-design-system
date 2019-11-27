@@ -24,7 +24,6 @@
  - [mvs-card](../../layout/mvs-card)
  - [mvs-form](../../layout/mvs-form)
  - [mvs-hero](../../layout/mvs-hero)
- - [mvs-modal](../../layout/mvs-modal)
 
 ### Graph
 ```mermaid
@@ -32,7 +31,6 @@ graph TD;
   mvs-card --> mvs-button
   mvs-form --> mvs-button
   mvs-hero --> mvs-button
-  mvs-modal --> mvs-button
   style mvs-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

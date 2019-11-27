@@ -1,30 +1,11 @@
-:host { 
-
-	.sidenav-active {
-		
-		@include sm { 
-			width: calc((100vw / 2) * 2) !important;
-	  	}
-
-		@include md { 
-			width: calc((100vw / 4) * 2) !important;
-	  	}
-
-		@include lg { 
-			width: calc((100vw / 6) * 2) !important;
-	  	}
-
-		@include xl {
-			width: calc((100vw / 6) * 2) !important;
-	  	}
-	}
+:host {
 
 	/* Sidenav */
-    .sidenav {
+	.sidenav {
 		height: 100%;
 		width: 0;
 		position: fixed;
-		z-index: 999;
+		z-index: 999999999;
 		top: 0;
 		left: 0;
 		background-color: $color-white;
@@ -33,55 +14,151 @@
 		display: flex;
 		flex-direction: column;
 
-		.actions {
+		.sidenav-actions {
 			display: flex;
 			justify-content: flex-end;
-			color: $text-primary;
-			border-bottom: 1px solid $color-primary;
-			font-family: 'Material Icons';
-
-			@include sm {
-				padding: $spacing-sm 0;
-				margin-bottom: $spacing-xl;
-			}
-
-			@include xl {
-				font-size: 36px;
-			}
+			border-bottom: 2px solid rgba($color-black, .15);
 
 			.social {
 				flex: 1;
 				display: flex;
 				justify-content: flex-start;
+
+				@include sm {
+					margin-left: $spacing-xl;
+				}
+
+				@include md {
+					margin-left: $spacing-xxl;
+				}
+
+				@include lg {
+					margin-left: $spacing-md;
+				}
+
+				@include xl {
+					margin-left: $spacing-lg;
+				}
+			}
+
+			span {
+				cursor: pointer;
+				color: $color-primary;
+				font-family: 'Material Icons';
+
+				@include sm {
+					font-size: 27px;
+					padding: $spacing-sm 0;
+					margin-right: $spacing-lg;
+				}
+
+				@include md {
+					font-size: 32px;
+					padding: $spacing-sm 0;
+					margin-right: $spacing-lg;
+				}
+
+				@include lg {
+					font-size: 38px;
+					padding: $spacing-sm 0;
+					margin-right: $spacing-xl;
+				}
+
+				@include xl {
+					font-size: 38px;
+					padding: $spacing-md 0;
+					margin-right: $spacing-xl;
+				}
+			}
+
+			> span {
+				border-left: 2px solid rgba($color-black, .15);
+				margin-right: 0;
+
+				@include sm {
+					padding: $spacing-sm $spacing-md;
+				}
+
+				@include md {
+					padding: $spacing-sm $spacing-md;
+				}
+
+				@include lg {
+					padding: $spacing-sm $spacing-md;
+				}
+
+				@include xl {
+					padding: $spacing-md $spacing-lg;
+				}
 			}
 		}
 
 		.sidenav-content {
+			display: flex;
+			flex-direction: column;
 
-			@include sm { 
-		  		padding: $inset-squish-lg;
-		  	}
+			@include sm {
+				padding: $inset-lg;
+			}
 
-			@include md { 
-		  		padding: $inset-squish-lg;
-		  	}
+			@include md {
+				padding: $inset-lg $inset-xl;
+			}
 
-			@include lg { 
-		  		padding: $inset-squish-lg;
-		  	}
+			@include lg {
+				padding: $inset-md;
+			}
 
 			@include xl {
-		  		padding: calc($inset-squish-lg * 2);
-		  	}
+				padding: $inset-lg;
+			}
 
 			a {
-				padding: $spacing-xl 0;
-			}
+				text-decoration: none;
+				border-bottom: 2px solid rgba($color-black, .15);
+				color: $text-dark;
+				@include sm {
+					font: $t4-sm;
+					padding: $spacing-md 0;
+				}
 
-			a:first-child {
-				padding-top: 0;
+				@include md {
+					font: $t4-md;
+					padding: $spacing-md 0;
+				}
+
+				@include lg {
+					font: $t6-lg;
+					padding: $spacing-sm 0;
+				}
+
+				@include xl {
+					font: $t6-xl;
+					padding: $spacing-lg 0;
+				}
 			}
 		}
+	}
+
+	.sidenav-active {
+
+		@include sm {
+			width: calc((100vw / 2) * 2) !important;
+	  }
+
+		@include md {
+			width: calc((100vw / 4) * 2) !important;
+	  }
+
+		@include lg {
+			width: calc((100vw / 6) * 2) !important;
+			// padding: $inset-squish-md;
+	  }
+
+		@include xl {
+			width: calc((100vw / 6) * 1.8) !important;
+			// padding: $inset-squish-lg;
+	  }
 	}
 
 	/* Content */
@@ -90,7 +167,7 @@
 		height: 100%;
 		background-color: rgba(0,0,0, .5);
 		z-index: 999;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		transition: 0.5s ease-in-out;
 	}

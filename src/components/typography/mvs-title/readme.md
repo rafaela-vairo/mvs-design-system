@@ -24,6 +24,7 @@
  - [mvs-contact-list](../../layout/mvs-contact-list)
  - [mvs-countdown](../../layout/mvs-countdown)
  - [mvs-hero](../../layout/mvs-hero)
+ - [mvs-navigation](../../layout/mvs-navigation)
  - [mvs-questions-common](../../layout/mvs-questions-common)
 
 ### Graph
@@ -36,6 +37,7 @@ graph TD;
   mvs-contact-list --> mvs-title
   mvs-countdown --> mvs-title
   mvs-hero --> mvs-title
+  mvs-navigation --> mvs-title
   mvs-questions-common --> mvs-title
   style mvs-title fill:#f9f,stroke:#333,stroke-width:4px
 ```
