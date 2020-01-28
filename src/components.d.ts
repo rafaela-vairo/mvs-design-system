@@ -212,7 +212,7 @@ export namespace Components {
     'closebtn': boolean;
     'name': string;
     'show': boolean;
-    'size': 'small' | 'medium' | 'large';
+    'size': "small" | "medium" | "large";
   }
   interface MvsNavbar {
     'color': 'inherit' | 'primary' | 'secondary' | 'default';
@@ -802,7 +802,7 @@ declare namespace LocalJSX {
     'closebtn'?: boolean;
     'name'?: string;
     'show'?: boolean;
-    'size'?: 'small' | 'medium' | 'large';
+    'size'?: "small" | "medium" | "large";
   }
   interface MvsNavbar extends JSXBase.HTMLAttributes<HTMLMvsNavbarElement> {
     'color'?: 'inherit' | 'primary' | 'secondary' | 'default';

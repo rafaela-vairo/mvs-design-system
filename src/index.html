@@ -8,10 +8,7 @@
 			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
 		/>
 		<meta name="description" content="" />
-		<meta
-			property="og:image"
-			content=""
-		/>
+		<meta property="og:image" content="" />
 		<meta property="og:description" content="" />
 		<meta property="og:title" content="UFRJ" />
 		<meta name="twitter:title" content="UFRJ" />
@@ -20,7 +17,7 @@
 			href="https://ufrj.br/sites/default/files/favicon_1.ico"
 			type="image/vnd.microsoft.icon"
 		/>
-<!-- 		<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i|Playfair+Display:400i,700|Proza+Libre:600&display=swap"/>
+		<!-- 		<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i|Playfair+Display:400i,700|Proza+Libre:600&display=swap"/>
 		<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons" /> -->
 		<script type="module" src="/build/mvs-ds.esm.js"></script>
 		<script nomodule src="/build/mvs-ds.js"></script>
@@ -34,12 +31,16 @@
 		</script> -->
 	</head>
 	<body style="display: block;">
-		<mvs-modal size='small' name="modal1" closebtn>
-			<mvs-paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum nec risus semper vulputate. Donec dolor
-			magna, interdum non tellus non, sollicitudin dignissim sem. Nulla massa magna, pretium at diam ut, luctus varius dolor.
-			Suspendisse erat mauris, maximus nec tellus sit amet, ultricies volutpat purus.</mvs-paragraph>
+		<mvs-modal size="small" name="modal1" closebtn>
+			<mvs-paragraph
+				>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+				tincidunt ipsum nec risus semper vulputate. Donec dolor magna, interdum
+				non tellus non, sollicitudin dignissim sem. Nulla massa magna, pretium
+				at diam ut, luctus varius dolor. Suspendisse erat mauris, maximus nec
+				tellus sit amet, ultricies volutpat purus.</mvs-paragraph
+			>
 		</mvs-modal>
-		<mvs-modal size='small' name="modal2">
+		<mvs-modal size="small" name="modal2">
 			<mvs-paragraph>Lorem ipsum dolor sit amet</mvs-paragraph>
 		</mvs-modal>
 		<div style="position: relative;width: 100%; z-index: 999999;">
@@ -60,24 +61,25 @@
 				</ul>
 			</div>
 		</div>
-		<mvs-base></mvs-base>
-		<mvs-navigation></mvs-navigation>
-		<mvs-sidebar></mvs-sidebar>
-		<mvs-bg>
-			<div>
-				<mvs-button-modal modal="modal1" variant='contained'>Modal 1</mvs-button-modal>
-			</div>
-			<div>
-				<mvs-card-list></mvs-card-list>
-			</div>
-			<div>
-				<mvs-contact-list />
-			</div>
-			<div>
-				<mvs-questions-common />
-			</div>
-			
-		</mvs-bg>
+		<mvs-base>
+			<mvs-navigation></mvs-navigation>
+			<mvs-sidebar></mvs-sidebar>
+			<mvs-bg>
+				<div>
+					<mvs-card-list></mvs-card-list>
+				</div>
+				<div style="padding: 115px">
+					<mvs-button-modal modal="modal1" variant="contained"
+						>Modal 1</mvs-button-modal
+					>
+				</div>
+				<div>
+					<mvs-contact-list />
+				</div>
+				<div>
+					<mvs-questions-common />
+				</div> </mvs-bg
+		></mvs-base>
 		<mvs-footer />
 		<script
 			defer="defer"
